@@ -8,10 +8,7 @@
 	</head>
 	<body>
 		<div id="main_content">
-			<h1>Thanks!</h1>
-			<p>We'll let you know when the Awesomeness arrives!</p>
+			<h1>Thanks, You're Awesome!</h1>
 		</div>
-		
-		<p>Got a minute? Let us know what you think is <a href="surveyInput">Awesome</a>!
 	</body>
 </html>
