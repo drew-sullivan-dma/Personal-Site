@@ -4,12 +4,12 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 
-public class NotificationSignupLog {
+public class NotificationSignupDAO {
 	
 	private PrintWriter writer;
 
-	public NotificationSignupLog(OutputStream outputDestination) {
-		this.writer = new PrintWriter(outputDestination);
+	public NotificationSignupDAO(OutputStream outputDestination) {
+		this.writer = new PrintWriter(outputDestination, true);
 	}
 	
 	public void saveNotificationSignup(String firstName, String lastName, int age, String emailAddress) {
