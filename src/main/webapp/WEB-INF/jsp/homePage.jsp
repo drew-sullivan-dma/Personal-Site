@@ -1,23 +1,35 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Hello Spring MVC</title>
-		<link rel="stylesheet" href="site.css"></link>
-	</head>
-	<body>
-		<div id="main_content">
-			<h1>Do you want to be more Awesome?</h1>
-			<p>Of course you do!  Everyone wants more <strong>awesomeness</strong> in their life!  Well, guess what you lucky stiff?  Your desire for more awesomeness is about to be <strong>fulfilled</strong>!  Just do the following:</p>
-			<ol>
-				<li>Grab your mouse (or other pointing device of choice)</li>
-				<li>Assure yourself that you deserve to <strong>be more awesome</strong></li>
-				<li><strong>Click the green button</strong></li>
-				<li>Provide your name and email address and we'll let you know when it's time to <strong>unveil the awesomeness</strong></li>
-			</ol>
-			
-			<a href="notificationSignupInput"><img alt="I Want Awesome Button" src="img/button.png"></a>
-		</div>
-	</body>
-</html>
+<c:import url="/WEB-INF/jsp/headerLinks.jsp" />	
+<c:import url="/WEB-INF/jsp/header.jsp" />	
+
+<div class="home-page">
+	<div class="container-fluid bg-1 text-center">
+		<h3 class="margin">Software Developer</h3>
+		<img src="resources/images/pic2.jpg" class="img-responsive margin center-block hero">
+		<a href="https://www.linkedin.com/in/drew-sullivan"><i class="fa fa-linkedin-square"></i></a>
+		<a href="mailto:drew.sullivan.dma@gmail.com"><i class="fa fa-envelope-o"></i></a>
+		<i class="fa fa-mobile test" data-toggle="tooltip" title="(909) 418-8114"></i>
+	</div>
+	
+	<div class="container-fluid bg-3 text-center">    
+	  		<div class="row">
+	    		<div class="col-sm-4">
+	      			<h3>About Me</h3>
+	      			<a href="pastLife"><img src="resources/images/pic2.jpg" class="img-responsive margin center-block about-me" style="width:100%" alt="Image"></a>
+				</div>
+				<div class="col-sm-4"> 
+					<h3>Books</h3>
+					<a href="bookRecommendations"><img src="resources/images/ereader.png" class="img-responsive margin center-block book-recommendations" alt="e-reader-image"></a>
+				</div>
+				<div class="col-sm-4"> 
+					<h3>Past Life</h3>
+					<a href="pastLife"><img src="resources/images/clarinet.png" class="img-responsive margin center-block past-life" style="width:65%" alt="clarinet-image"></a>
+	    		</div>
+	  		</div>
+	</div>
+</div>
+
+<c:import url="/WEB-INF/jsp/footer.jsp" />
+
+
