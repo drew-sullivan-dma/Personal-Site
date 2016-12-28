@@ -74,6 +74,12 @@ p {
 	text-align: left;
 }
 
+.modal-body,
+.modal-header h3,
+.modal-footer li {
+	color: #2f2f2f !important;
+}
+
 
 /* Header: */
 

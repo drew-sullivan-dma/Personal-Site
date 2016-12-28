@@ -16,7 +16,7 @@
 	  		<div class="row">
 	    		<div class="col-sm-4">
 	      			<h3>About Me</h3>
-	      			<a href="pastLife"><img src="resources/images/pic2.jpg" class="img-responsive margin center-block about-me" style="width:100%" alt="Image"></a>
+	      			<a href="aboutMe"><img src="resources/images/pic2.jpg" class="img-responsive margin center-block about-me" style="width:100%" alt="Image"></a>
 				</div>
 				<div class="col-sm-4"> 
 					<h3>Books</h3>
