@@ -1,10 +1,25 @@
 package com.drewsullivandma;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.drewsullivandma.DAO.BookDAO;
+import com.drewsullivandma.model.Book;
+
 @Controller 
 public class HelloController {
+	
+	BookDAO bookDAO;
+	List<Book> bookList = new ArrayList<>();
+	
+	@Autowired
+	public HelloController(BookDAO bookDAO) {
+		this.bookDAO = bookDAO;
+	}
 
 	@RequestMapping({"/", "/homePage"})
 	public String displayHomePage() {
@@ -16,16 +31,6 @@ public class HelloController {
 		return "aboutMe";
 	}
 	
-	@RequestMapping("/contact")
-	public String displayContact() {
-		return "contact";
-	}
-	
-	@RequestMapping("/linkedInAndResume")
-	public String displayLinkedInAndResume() {
-		return "linkedInAndResume";
-	}
-	
 	@RequestMapping("/bookRecommendations")
 	public String displayBookRecommendations() {
 		return "bookRecommendations";
@@ -34,10 +39,5 @@ public class HelloController {
 	@RequestMapping("/pastLife")
 	public String displayPastLife() {
 		return "pastLife";
-	}
-	
-	@RequestMapping("/resourcesAndLinks")
-	public String displayResourcesAndLinks() {
-		return "resourcesAndLinks";
 	}
 }

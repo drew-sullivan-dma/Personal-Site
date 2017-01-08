@@ -3,6 +3,13 @@
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
+<!-- TODO: Build tool for choosing the next book based on:
+1. Different genre than last time
+2. Inspirational/Interesting
+3. Getaway
+4. How long it's been on the list
+5. Sounds good at the moment -->
+
 <div class="container-fluid bg-1 text-center">
 	<div class="mid-page bg-2">
 	    <div class="row">
@@ -10,7 +17,7 @@
 	    </div>
 	    <div class="row">
 	        <div class="col-md-12">
-	        <p>I've been fortunate enough to read a ton of great stuff. Please consider purchasing through this site. 
+	        <p>I've read a ton of great stuff. Please consider purchasing through this site. 
 	        It helps me improve the list. Click <a href="mailto:drew.sullivan.dma@gmail.com">here</a> to contact me</p>
 	        </div>
 	    </div>
