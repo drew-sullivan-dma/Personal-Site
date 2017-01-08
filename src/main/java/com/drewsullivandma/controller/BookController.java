@@ -1,4 +1,4 @@
-package com.drewsullivandma;
+package com.drewsullivandma.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +11,13 @@ import com.drewsullivandma.DAO.BookDAO;
 import com.drewsullivandma.model.Book;
 
 @Controller 
-public class HelloController {
+public class BookController {
 	
 	BookDAO bookDAO;
 	List<Book> bookList = new ArrayList<>();
 	
 	@Autowired
-	public HelloController(BookDAO bookDAO) {
+	public BookController(BookDAO bookDAO) {
 		this.bookDAO = bookDAO;
 	}
 
