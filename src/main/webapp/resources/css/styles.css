@@ -203,44 +203,53 @@ footer .row {
   border-radius: 4px;
 }
 
+/* Book Recommendations */
+
+.mid-page .book {
+	font-size: 18px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid white;
+}
+
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
+/* @media only screen and (min-width : 480px) {
     .mid-page {
-        margin-left: 5% !important;    
-        margin-right: 5% !important;
+        margin-left: 1% !important;    
+        margin-right: 1% !important;
     }
-}
+} */
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
     .mid-page {
-        margin-left: 12% !important;    
-        margin-right: 12% !important;
+        margin-left: 7% !important;    
+        margin-right: 7% !important;
     }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
     .mid-page  {
-        margin-left: 20% !important;    
-        margin-right: 20% !important;
+        margin-left: 12% !important;    
+        margin-right: 12% !important;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     .mid-page {
-        margin-left: 25% !important;    
-        margin-right: 25% !important;
+        margin-left: 17% !important;    
+        margin-right: 17% !important;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1450px) {
     .mid-page  {
-        margin-left: 30% !important;    
-        margin-right: 30% !important;
+        margin-left: 22% !important;    
+        margin-right: 22% !important;
     }
 }
 

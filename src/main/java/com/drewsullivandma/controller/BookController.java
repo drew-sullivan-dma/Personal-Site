@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.drewsullivandma.DAO.BookDAO;
@@ -32,7 +33,9 @@ public class BookController {
 	}
 	
 	@RequestMapping("/bookRecommendations")
-	public String displayBookRecommendations() {
+	public String displayBookRecommendations(ModelMap model) {
+		bookList = bookDAO.getAllBooks();
+		model.put("books", bookList);
 		return "bookRecommendations";
 	}
 	

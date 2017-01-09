@@ -34,6 +34,19 @@ public class JDBCBookDAO implements BookDAO {
 		return bookList;
 	}
 	
+	@Override
+	public List<Book> getBooksByCategory(String category) {
+		List<Book> booksByCategory = new ArrayList<>();
+		String sqlCategory = "SELECT * FROM book " + "WHERE category = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlCategory, category);
+		while(results.next()) {
+			Book b = new Book();
+			b = mapRowToBook(results);
+			booksByCategory.add(b);
+		}
+		return booksByCategory;
+	}
+
 	private Book mapRowToBook(SqlRowSet results) {
 		Book book = new Book();
 		book.setBookId(results.getInt("book_id"));
@@ -44,5 +57,6 @@ public class JDBCBookDAO implements BookDAO {
 		book.setDescription(results.getString("description"));
 		return book;
 	}
+
 
 }
