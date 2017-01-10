@@ -80,6 +80,12 @@ p {
 	color: #2f2f2f !important;
 }
 
+.cut-text { 
+  text-overflow: ellipsis; 
+  overflow: hidden;
+  white-space: nowrap; 
+}
+
 
 /* Header: */
 
@@ -210,6 +216,14 @@ footer .row {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid white;
+}
+
+.book-recommendations i {
+	padding-left: 15px;
+}
+
+.book a {
+	font-style: italic;
 }
 
 

@@ -3,10 +3,10 @@ package com.drewsullivandma.model;
 public class Book {
 
 	private int id;
+	private int categoryId;
 	private String title;
 	private String authorFirstName;
 	private String authorLastName;
-	private String category;
 	private String description;
 	
 	public int getId() {
@@ -15,6 +15,14 @@ public class Book {
 	
 	public void setBookId(int id) {
 		this.id = id;
+	}
+	
+	public int getCategoryId() {
+		return categoryId;
+	}
+	
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
 	}
 	
 	public String getTitle() {
@@ -41,13 +49,6 @@ public class Book {
 		this.authorLastName = authorLastName;
 	}
 	
-	public String getCategory() {
-		return category;
-	}
-	
-	public void setCategory(String category) {
-		this.category = category;
-	}
 	
 	public String getDescription() {
 		return description;

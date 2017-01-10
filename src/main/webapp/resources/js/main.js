@@ -60,4 +60,18 @@ $(document).ready(function() {
 	
 	
 	$('[data-toggle="tooltip"]').tooltip();
+	
+//	TODO: Make switchable between categories
+	$('#categoryFilter').on('change', function() {
+		if(this.value == '1') {
+			$('h2:not(.1)').hide();
+			$('.book:not(.book-1)').hide();
+		} else if(this.value == '2') {
+			$('h2:not(.2)').hide();
+			$('.book:not(.book-2)').hide();
+		} else if(this.value == '0') {
+			$('h2').show();
+			$('.book').show();
+		}
+	});
 });

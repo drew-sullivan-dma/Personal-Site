@@ -7,5 +7,4 @@ import com.drewsullivandma.model.Book;
 public interface BookDAO {
 
 	public List<Book> getAllBooks();
-	public List<Book> getBooksByCategory(String category);
 }
