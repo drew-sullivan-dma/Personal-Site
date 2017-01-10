@@ -62,16 +62,33 @@ $(document).ready(function() {
 	$('[data-toggle="tooltip"]').tooltip();
 	
 //	TODO: Make switchable between categories
-	$('#categoryFilter').on('change', function() {
-		if(this.value == '1') {
-			$('h2:not(.1)').hide();
-			$('.book:not(.book-1)').hide();
-		} else if(this.value == '2') {
-			$('h2:not(.2)').hide();
-			$('.book:not(.book-2)').hide();
-		} else if(this.value == '0') {
-			$('h2').show();
-			$('.book').show();
+	
+	$('#categoryFilter').change(function() {
+		if($(this).val() == '1') {
+			$('h2:not(.category-id-1)').toggle();
+			$('.book:not(.book-category-1)').toggle();
+		} 
+		if($(this).val() == '2') {
+			$('h2:not(.category-id-2)').toggle();
+			$('.book:not(.book-category-2)').toggle();
 		}
+		if($(this).val() == '0') {
+			location.reload();
+		}
+		
 	});
+		
+		
+//		if($(this).val() == '1') {
+//			$('h2:not(.category-id-1)').hide();
+//			$('.book:not(.book-category-1)').hide();
+//		} 
+//		if($(this).val() == '2') {
+//			$('h2:not(.category-id-2)').hide();
+//			$('.book:not(.book-category-2)').hide();
+//		} 
+//		if($(this).val() == '0') {
+//			location.reload();
+//		}
+//	});
 });

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Drew Sullivan, DMA - Software Developer</title>
+		<title>Drew Sullivan, DMA, Software Developer</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<link href="<c:url value="/resources/css/styles.css" />" rel="stylesheet">
     	<script src="<c:url value="/resources/js/main.js" />"></script>

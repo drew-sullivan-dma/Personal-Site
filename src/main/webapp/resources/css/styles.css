@@ -68,6 +68,8 @@ p {
 .mid-page select {
     color: #2f2f2f;
     border-radius: 3px;
+    width: 33%;
+    font-size: 20px;
 }
 
 .mid-page .row {
@@ -90,14 +92,15 @@ p {
 /* Header: */
 
 .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0 !important;
-      margin-bottom: 0 !important;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: 0;
+	border-radius: 0 !important;
+	margin-bottom: 0 !important;
+	font-size: 12px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
   
   
   
@@ -105,25 +108,19 @@ p {
 
 footer {
 	background-color: #474e5d !important;
-}
-footer a {
-	color: white;
-}
-footer div {
-	margin-top: 20px;
-}
-footer a:hover {
-	text-decoration: none;
-	color: white;
-}
-footer h3 {
-	margin-top: 0;
-	margin-bottom: 0;
+	padding: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
 }
 
-footer .row {
-	margin-top: 10px;
-	margin-bottom: 20px;
+footer a {
+	color: white;
+	padding-right: 30px;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: white;
 }
 
 
@@ -236,36 +233,36 @@ footer .row {
 } */
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+/* @media only screen and (min-width : 768px) {
     .mid-page {
         margin-left: 7% !important;    
         margin-right: 7% !important;
     }
-}
+} */
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+/* @media only screen and (min-width : 992px) {
     .mid-page  {
         margin-left: 12% !important;    
         margin-right: 12% !important;
     }
-}
+} */
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+/* @media only screen and (min-width : 1200px) {
     .mid-page {
         margin-left: 17% !important;    
         margin-right: 17% !important;
     }
-}
+} */
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1450px) {
+/* @media only screen and (min-width : 1450px) {
     .mid-page  {
         margin-left: 22% !important;    
         margin-right: 22% !important;
     }
-}
+} */
 
 
 

@@ -35,8 +35,9 @@ Build tool for choosing the next book based on:
 	                    <select id="categoryFilter">
 	                        <option selected="selected" disabled="disabled" value="1">Filter By...</option>
 	                        <option value="0">The Whole List</option>
-	                        <option value="1">Fiction</option>
-	                        <option value="2">Non-Fiction</option>
+	                        <c:forEach items="${categories}" var="category">
+	                        	<option value="${category.categoryId}">${category.name}</option>
+	                        </c:forEach>
 	                    </select>
 	                </form>
 	            </div>
@@ -46,7 +47,7 @@ Build tool for choosing the next book based on:
     	<c:forEach items="${categories}" var="category">
 		    <div class="row">
 		        <div class="col-md-12 section-title">
-		        	<h2 class="${category.categoryId}">${category.name}</h2>
+		        	<h2 class="category-id-${category.categoryId}">${category.name}</h2>
 		        </div>
 		    </div>
 			<c:forEach items="${books}" var="book">
@@ -54,7 +55,7 @@ Build tool for choosing the next book based on:
 			    	<c:when test="${book.categoryId == category.categoryId}">
 					    <div class="row">
 					        <div class="col-md-12 section-content">
-					        	<div class="book cut-text book-${book.categoryId}">
+					        	<div class="book cut-text book-category-${book.categoryId}">
 					            	<span data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</span> &mdash; ${book.authorFirstName} ${book.authorLastName}
 						            <div class="pull-right icon-list">
 						                <a href="#"><i class="fa fa-book" aria-hidden="true"></i></a>
