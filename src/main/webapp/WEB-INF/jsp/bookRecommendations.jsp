@@ -33,7 +33,7 @@ Build tool for choosing the next book based on:
 	                <form action="bookRecommendations.jsp" method="POST">
 	                	<!-- Just in case you need it: onchange="this.form.submit()" -->
 	                    <select id="categoryFilter">
-	                        <option selected="selected" disabled="disabled" value="1">Filter By...</option>
+	                        <option selected="selected" disabled="disabled">Filter By...</option>
 	                        <option value="0">The Whole List</option>
 	                        <c:forEach items="${categories}" var="category">
 	                        	<option value="${category.categoryId}">${category.name}</option>
@@ -47,7 +47,7 @@ Build tool for choosing the next book based on:
     	<c:forEach items="${categories}" var="category">
 		    <div class="row">
 		        <div class="col-md-12 section-title">
-		        	<h2 class="category-id-${category.categoryId}">${category.name}</h2>
+		        	<h2 class="category-${category.categoryId}">${category.name}</h2>
 		        </div>
 		    </div>
 			<c:forEach items="${books}" var="book">
