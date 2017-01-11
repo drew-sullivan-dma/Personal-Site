@@ -8,6 +8,7 @@
 		<h3 class="margin">Software Developer</h3>
 		<img src="resources/images/pic2.jpg" class="img-responsive margin center-block hero">
 		<a href="https://www.linkedin.com/in/drew-sullivan"><i class="fa fa-linkedin-square"></i></a>
+		<a href="https://github.com/drew-sullivan-dma"><i class="fa fa-github-square"></i></a>
 		<a href="mailto:drew.sullivan.dma@gmail.com"><i class="fa fa-envelope-o"></i></a>
 		<i class="fa fa-mobile test" data-toggle="tooltip" title="(909) 418-8114"></i>
 	</div>
