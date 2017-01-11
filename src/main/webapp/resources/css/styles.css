@@ -45,6 +45,7 @@ p {
 
 .container-fluid {
     padding: 45px !important;
+    min-height: calc(100vh - 40px);
 }
 
 .mid-page {
@@ -115,6 +116,7 @@ footer {
 	padding: 20px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
+	font-size: 14px
 }
 
 footer a {
@@ -181,6 +183,10 @@ footer a:hover {
 	box-shadow: 0 2px 5px black;
 }
 
+.home-page .container-fluid {
+	min-height: 0 !important;
+}
+
 
 /* Past Life: */
 
@@ -229,44 +235,44 @@ footer a:hover {
 
 
 /* Extra Small Devices, Phones */ 
-/* @media only screen and (min-width : 480px) {
+@media only screen and (min-width : 480px) {
     .mid-page {
         margin-left: 1% !important;    
         margin-right: 1% !important;
     }
-} */
+}
 
 /* Small Devices, Tablets */
-/* @media only screen and (min-width : 768px) {
+@media only screen and (min-width : 768px) {
     .mid-page {
         margin-left: 7% !important;    
         margin-right: 7% !important;
     }
-} */
+}
 
 /* Medium Devices, Desktops */
-/* @media only screen and (min-width : 992px) {
+@media only screen and (min-width : 992px) {
     .mid-page  {
         margin-left: 12% !important;    
         margin-right: 12% !important;
     }
-} */
+}
 
 /* Large Devices, Wide Screens */
-/* @media only screen and (min-width : 1200px) {
+@media only screen and (min-width : 1200px) {
     .mid-page {
-        margin-left: 17% !important;    
-        margin-right: 17% !important;
+        margin-left: 15% !important;    
+        margin-right: 15% !important;
     }
-} */
+}
 
 /* Large Devices, Wide Screens */
-/* @media only screen and (min-width : 1450px) {
+@media only screen and (min-width : 1450px) {
     .mid-page  {
-        margin-left: 22% !important;    
-        margin-right: 22% !important;
+        margin-left: 18% !important;    
+        margin-right: 18% !important;
     }
-} */
+}
 
 
 

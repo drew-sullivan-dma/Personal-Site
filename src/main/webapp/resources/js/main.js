@@ -60,57 +60,7 @@ $(document).ready(function() {
 	
 	
 	$('[data-toggle="tooltip"]').tooltip();
-	
-//	TODO: Make switchable between categories
-	
-//	var $opt1 = $('[class$="category-1"]');
-//	var $opt2 = $('[class$="category-2"]');
-//	var $selector = $('#categoryFilter');
-//	
-//	window.onload = init();
-//	
-//	function init() {
-//		$selector.on('change', function() {
-//			if($selector.val() == 0) {
-//				$opt2.show();
-//				$opt1.show();
-//			}
-//		    if($selector.val() == 1) {
-//		    	$opt1.show();
-//		    	$opt2.hide();
-//		    }
-//		    if($selector.val() == 2) {
-//		    	$opt2.show();
-//		    	$opt1.hide()
-//		    }
-//		});
-//	}
-	
-//	$('#categoryFilter').on('change', function() {
-//	    var sel = $(this).val();
-//	      $('.category').hide();
-//	      $('.book').hide();
-//	      $('.category'+ sel).show();
-//	      $('.book' + sel).show();
-//	  });
-	
-	
-	
-	
-//		if($(this).val() == '1') {
-//			$('h2:not(.category-id-1)').toggle();
-//			$('.book:not(.book-category-1)').toggle();
-//		} 
-//		if($(this).val() == '2') {
-//			$('h2:not(.category-id-2)').toggle();
-//			$('.book:not(.book-category-2)').toggle();
-//		}
-//		if($(this).val() == '0') {
-//			location.reload();
-//		}
-//		
-//	});
-//		
+		
 	$('#categoryFilter').change(function() {
 		var $selection = $(this).val();
 		var $opt1 = $('[class$="category-1"]');
