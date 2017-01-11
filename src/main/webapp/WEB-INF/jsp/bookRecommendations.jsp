@@ -56,8 +56,47 @@ Build tool for choosing the next book based on:
 					    <div class="row">
 					        <div class="col-md-12 section-content">
 					        	<div class="book cut-text book-category-${book.categoryId}">
-					            	<span data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</span> &mdash; ${book.authorFirstName} ${book.authorLastName}
-						            <div class="pull-right icon-list">
+					            	<span data-toggle="modal" data-target="#largeModal${book.id}">${book.title} &mdash; </span>
+					            	<c:choose>
+					            		<c:when test="${book.authorMiddleInitials != null && book.authorPostNominalInitials != null}">
+					            			${book.authorFirstName} ${book.authorMiddleInitials} ${book.authorLastName}, ${book.authorPostNominalInitials}
+					            		</c:when>
+					            		<c:when test="${book.authorMiddleInitials == null && book.authorPostNominalInitials != null}">
+					            			${book.authorFirstName} ${book.authorLastName}, ${book.authorPostNominalInitials}
+					            		</c:when>
+					            		<c:when test="${book.authorMiddleInitials != null && book.authorPostNominalInitials == null}">
+					            			${book.authorFirstName} ${book.authorMiddleInitials} ${book.authorLastName}
+					            		</c:when>
+					            		<c:otherwise>
+					            			${book.authorFirstName} ${book.authorLastName}
+					            		</c:otherwise>
+					            	</c:choose>
+					            	<c:choose>
+					            		<c:when test="${book.secondAuthorMiddleInitials != null && book.secondAuthorPostNominalInitials != null}">
+					            			and ${book.secondAuthorFirstName} ${book.secondAuthorMiddleInitials} ${book.secondAuthorLastName}, ${book.secondAuthorPostNominalInitials}
+					            		</c:when>
+					            		<c:when test="${book.secondAuthorMiddleInitials == null && book.secondAuthorPostNominalInitials != null}">
+					            			and ${book.secondAuthorFirstName} ${book.secondAuthorLastName}, ${book.secondAuthorPostNominalInitials}
+					            		</c:when>
+					            		<c:when test="${book.secondAuthorMiddleInitials != null && book.secondAuthorPostNominalInitials == null}">
+					            			and ${book.secondAuthorFirstName} ${book.secondAuthorMiddleInitials} ${book.secondAuthorLastName}
+					            		</c:when>
+					            		<c:when test="${book.secondAuthorFirstName == null}">
+					            			
+					            		</c:when>
+					            		<c:otherwise>
+					            			and ${book.secondAuthorFirstName} ${book.secondAuthorLastName}
+					            		</c:otherwise>
+					            	</c:choose>
+					            	<c:choose>
+					            		<c:when test="${book.etAl != null}">
+					            			, ${book.etAl}
+					            		</c:when>
+					            		<c:otherwise>
+					            			 ${book.etAl}
+					            		</c:otherwise>
+					            	</c:choose>
+					     			<div class="pull-right icon-list">
 						                <a href="#"><i class="fa fa-book" aria-hidden="true"></i></a>
 						                <a href="#"><i class="fa fa-tablet" aria-hidden="true"></i></a>
 						                <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i></a>

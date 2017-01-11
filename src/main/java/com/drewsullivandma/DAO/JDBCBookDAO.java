@@ -38,11 +38,18 @@ public class JDBCBookDAO implements BookDAO {
 
 	private Book mapRowToBook(SqlRowSet results) {
 		Book book = new Book();
-		book.setBookId(results.getInt("book_id"));
+		book.setId(results.getInt("book_id"));
 		book.setCategoryId(results.getInt("category_id"));
 		book.setTitle(results.getString("title"));
 		book.setAuthorFirstName(results.getString("author_first_name"));
+		book.setAuthorMiddleInitials(results.getString("author_middle_initials"));
 		book.setAuthorLastName(results.getString("author_last_name"));
+		book.setAuthorPostNominalInitials(results.getString("author_post_nominal_initials"));
+		book.setSecondAuthorFirstName(results.getString("second_author_first_name"));
+		book.setSecondAuthorMiddleInitials(results.getString("second_author_middle_initials"));
+		book.setSecondAuthorLastName(results.getString("second_author_last_name"));
+		book.setSecondAuthorPostNominalInitials(results.getString("second_author_post_nominal_initials"));
+		book.setEtAl(results.getString("et_al"));
 		book.setDescription(results.getString("description"));
 		return book;
 	}

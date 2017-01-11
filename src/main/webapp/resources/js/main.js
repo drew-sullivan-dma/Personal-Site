@@ -65,17 +65,131 @@ $(document).ready(function() {
 		var $selection = $(this).val();
 		var $opt1 = $('[class$="category-1"]');
 		var $opt2 = $('[class$="category-2"]');
+		var $opt3 = $('[class$="category-3"]');
+		var $opt4 = $('[class$="category-4"]');
+		var $opt5 = $('[class$="category-5"]');
+		var $opt6 = $('[class$="category-6"]');
+		var $opt7 = $('[class$="category-7"]');
+		var $opt8 = $('[class$="category-8"]');
+		var $opt9 = $('[class$="category-9"]');
+		
+//		for(var i = 1; i <= 9; i++) {
+//			if($selection == i) {
+//				$opt + i.show('slow');
+//			} else {
+//				$opt + i.hide('slow');
+//			}
+//		}
+		
 		if($selection == 0) {
 			$opt1.show('slow');
 			$opt2.show('slow');
+			$opt3.show('slow');
+			$opt4.show('slow');
+			$opt5.show('slow');
+			$opt6.show('slow');
+			$opt7.show('slow');
+			$opt8.show('slow');
+			$opt9.show('slow');
 		}
 		if($selection == 1) {
 			$opt1.show('slow');
 			$opt2.hide('slow');
+			$opt3.hide('slow');
+			$opt4.hide('slow');
+			$opt5.hide('slow');
+			$opt6.hide('slow');
+			$opt7.hide('slow');
+			$opt8.hide('slow');
+			$opt9.hide('slow');
 		} 
 		if($selection == 2) {
 			$opt1.hide('slow');
 			$opt2.show('slow');
+			$opt3.hide('slow');
+			$opt4.hide('slow');
+			$opt5.hide('slow');
+			$opt6.hide('slow');
+			$opt7.hide('slow');
+			$opt8.hide('slow');
+			$opt9.hide('slow');
+		}
+		if($selection == 3) {
+			$opt1.hide('slow');
+			$opt2.hide('slow');
+			$opt3.show('slow');
+			$opt4.hide('slow');
+			$opt5.hide('slow');
+			$opt6.hide('slow');
+			$opt7.hide('slow');
+			$opt8.hide('slow');
+			$opt9.hide('slow');
+		} 
+		if($selection == 4) {
+			$opt1.hide('slow');
+			$opt2.hide('slow');
+			$opt3.hide('slow');
+			$opt4.show('slow');
+			$opt5.hide('slow');
+			$opt6.hide('slow');
+			$opt7.hide('slow');
+			$opt8.hide('slow');
+			$opt9.hide('slow');
+		} 
+		if($selection == 5) {
+			$opt1.hide('slow');
+			$opt2.hide('slow');
+			$opt3.hide('slow');
+			$opt4.hide('slow');
+			$opt5.show('slow');
+			$opt6.hide('slow');
+			$opt7.hide('slow');
+			$opt8.hide('slow');
+			$opt9.hide('slow');
+		} 
+		if($selection == 6) {
+			$opt1.hide('slow');
+			$opt2.hide('slow');
+			$opt3.hide('slow');
+			$opt4.hide('slow');
+			$opt5.hide('slow');
+			$opt6.show('slow');
+			$opt7.hide('slow');
+			$opt8.hide('slow');
+			$opt9.hide('slow');
+		} 
+		if($selection == 7) {
+			$opt1.hide('slow');
+			$opt2.hide('slow');
+			$opt3.hide('slow');
+			$opt4.hide('slow');
+			$opt5.hide('slow');
+			$opt6.hide('slow');
+			$opt7.show('slow');
+			$opt8.hide('slow');
+			$opt9.hide('slow');
+		} 
+		if($selection == 8) {
+			$opt1.hide('slow');
+			$opt2.hide('slow');
+			$opt3.hide('slow');
+			$opt4.hide('slow');
+			$opt5.hide('slow');
+			$opt6.hide('slow');
+			$opt7.hide('slow');
+			$opt8.show('slow');
+			$opt9.hide('slow');
+		} 
+		if($selection == 9) {
+			$opt1.hide('slow');
+			$opt2.hide('slow');
+			$opt3.hide('slow');
+			$opt4.hide('slow');
+			$opt5.hide('slow');
+			$opt6.hide('slow');
+			$opt7.hide('slow');
+			$opt8.hide('slow');
+			$opt9.show('slow');
 		} 
 	});
 });
