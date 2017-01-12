@@ -1,8 +1,6 @@
-package com.drewsullivandma.DAO;
+package com.drewsullivandma.model.Book;
 
 import java.util.List;
-
-import com.drewsullivandma.model.Book;
 
 public interface BookDAO {
 

@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.drewsullivandma.DAO.BookDAO;
-import com.drewsullivandma.DAO.CategoryDAO;
-import com.drewsullivandma.model.Book;
-import com.drewsullivandma.model.Category;
+import com.drewsullivandma.model.Book.Book;
+import com.drewsullivandma.model.Book.BookDAO;
+import com.drewsullivandma.model.Category.Category;
+import com.drewsullivandma.model.Category.CategoryDAO;
 
 @Controller 
 public class SiteController {

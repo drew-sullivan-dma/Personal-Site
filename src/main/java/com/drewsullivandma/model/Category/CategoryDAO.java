@@ -1,8 +1,6 @@
-package com.drewsullivandma.DAO;
+package com.drewsullivandma.model.Category;
 
 import java.util.List;
-
-import com.drewsullivandma.model.Category;
 
 public interface CategoryDAO {
 

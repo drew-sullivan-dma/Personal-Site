@@ -1,8 +1,6 @@
-package com.drewsullivandma.DAO;
+package com.drewsullivandma.model.Author;
 
 import java.util.List;
-
-import com.drewsullivandma.model.Author;
 
 public interface AuthorDAO {
 	

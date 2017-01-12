@@ -1,4 +1,4 @@
-package com.drewsullivandma.DAO;
+package com.drewsullivandma.model.Author;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
-
-import com.drewsullivandma.model.Author;
 
 @Component
 public class JDBCAuthorDAO implements AuthorDAO {

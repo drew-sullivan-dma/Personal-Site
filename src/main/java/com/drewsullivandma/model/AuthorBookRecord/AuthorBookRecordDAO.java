@@ -1,8 +1,6 @@
-package com.drewsullivandma.DAO;
+package com.drewsullivandma.model.AuthorBookRecord;
 
 import java.util.List;
-
-import com.drewsullivandma.model.AuthorBookRecord;
 
 public interface AuthorBookRecordDAO {
 	

@@ -1,4 +1,4 @@
-package com.drewsullivandma.model;
+package com.drewsullivandma.model.Category;
 
 public class Category {
 	

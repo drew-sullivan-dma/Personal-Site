@@ -1,4 +1,4 @@
-package com.drewsullivandma.model;
+package com.drewsullivandma.model.Book;
 
 public class Book {
 

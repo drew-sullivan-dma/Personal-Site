@@ -1,4 +1,4 @@
-package com.drewsullivandma.DAO;
+package com.drewsullivandma.model.AuthorBookRecord;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +10,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
-import com.drewsullivandma.model.Author;
-import com.drewsullivandma.model.AuthorBookRecord;
-import com.drewsullivandma.model.Book;
+import com.drewsullivandma.model.Author.Author;
+import com.drewsullivandma.model.Book.Book;
 
 @Component
 public class JDBCAuthorBookRecordDAO implements AuthorBookRecordDAO{

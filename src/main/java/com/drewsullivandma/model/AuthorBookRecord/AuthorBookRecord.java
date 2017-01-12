@@ -1,9 +1,17 @@
-package com.drewsullivandma.model;
+package com.drewsullivandma.model.AuthorBookRecord;
+
+import com.drewsullivandma.model.Author.Author;
+import com.drewsullivandma.model.Book.Book;
 
 public class AuthorBookRecord {
 
 	private Book book;
 	private Author author;
+	
+	public AuthorBookRecord(Book book, Author author) {
+		this.book = book;
+		this.author = author;
+	}
 	
 	public Book getBook() {
 		return book;
