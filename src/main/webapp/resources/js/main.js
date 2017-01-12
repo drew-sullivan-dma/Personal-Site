@@ -72,14 +72,15 @@ $(document).ready(function() {
 		var $opt7 = $('[class$="category-7"]');
 		var $opt8 = $('[class$="category-8"]');
 		var $opt9 = $('[class$="category-9"]');
+		const NUM_CATEGORIES = 9;
 		
-//		for(var i = 1; i <= 9; i++) {
-//			if($selection == i) {
-//				$opt + i.show('slow');
-//			} else {
-//				$opt + i.hide('slow');
-//			}
-//		}
+		for(var i = 1; i <= NUM_CATEGORIES; i++) {
+			if($selection == i) {
+				$('[class$="category-i"]').show('slow');
+			} else {
+				$('[class$="category-i"]').hide('slow');
+			}
+		}
 		
 		if($selection == 0) {
 			$opt1.show('slow');
