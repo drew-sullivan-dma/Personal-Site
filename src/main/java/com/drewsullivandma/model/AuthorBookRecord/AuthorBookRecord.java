@@ -8,11 +8,6 @@ public class AuthorBookRecord {
 	private Book book;
 	private Author author;
 	
-	public AuthorBookRecord(Book book, Author author) {
-		this.book = book;
-		this.author = author;
-	}
-	
 	public Book getBook() {
 		return book;
 	}

@@ -10,6 +10,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
+import com.drewsullivandma.model.Author.Author;
+import com.drewsullivandma.model.Book.Book;
+
 @Component
 public class JDBCDescriptionDAO implements DescriptionDAO{
 
@@ -18,13 +21,6 @@ public class JDBCDescriptionDAO implements DescriptionDAO{
 	@Autowired
 	public JDBCDescriptionDAO(DataSource ds) {
 		jdbcTemplate = new JdbcTemplate(ds);
-	}
-	
-	private Description mapRowToDescription(SqlRowSet results) {
-		Description description = new Description();
-		description.setId(results.getInt("description_id"));
-		description.setDescription(results.getString("description"));
-		return description;
 	}
 
 	@Override
@@ -37,6 +33,29 @@ public class JDBCDescriptionDAO implements DescriptionDAO{
 			d = mapRowToDescription(results);
 			descriptionList.add(d);
 		}
+		return descriptionList;
+	}
+
+	private Description mapRowToDescription(SqlRowSet results) {
+		Description description = new Description();
+		description.setId(results.getInt("description_id"));
+		return description;
+	}
+	
+	@Override
+	public List<String> getAllDescriptionsByBookId(int id) {
+		List<String> descriptionList = new ArrayList<>();
+		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT DISTINCT d.description "
+													  + "FROM book_description bd "
+													  + "JOIN book b ON bd.book_id = b.book_id "
+													  + "JOIN description d ON bd.description_id = d.description_id "
+													  + "ORDER BY b.title ASC;", id);
+		while(results.next()) {
+			String d = results.getString("description");
+			descriptionList.add(d);
+		}
+		Description d = new Description();
+		d.setDescription(descriptionList);
 		return descriptionList;
 	}
 

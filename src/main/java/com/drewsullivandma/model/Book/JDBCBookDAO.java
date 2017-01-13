@@ -33,15 +33,14 @@ public class JDBCBookDAO implements BookDAO {
 		}
 		return bookList;
 	}
-
+	
+	
+	
 	private Book mapRowToBook(SqlRowSet results) {
 		Book book = new Book();
 		book.setId(results.getInt("book_id"));
-		book.setCategoryId(results.getInt("category_id"));
 		book.setTitle(results.getString("title"));
-		book.setDescription(results.getString("description"));
 		return book;
 	}
-
 
 }

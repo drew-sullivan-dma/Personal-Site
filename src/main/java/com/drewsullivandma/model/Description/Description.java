@@ -1,9 +1,11 @@
 package com.drewsullivandma.model.Description;
 
+import java.util.List;
+
 public class Description {
 	
 	private int id;
-	private String description;
+	private List<String> description;
 	
 	public int getId() {
 		return id;
@@ -11,10 +13,10 @@ public class Description {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getDescription() {
+	public List<String> getDescription() {
 		return description;
 	}
-	public void setDescription(String description) {
+	public void setDescription(List<String> description) {
 		this.description = description;
 	}
 	

@@ -1,14 +1,15 @@
 package com.drewsullivandma.model.Author;
 
+import java.util.List;
+
 public class Author {
 	
 	private int id;
 	private int bookId;
-	private String firstName;
-	private String middleInitials;
-	private String lastName;
-	private String postNominalInitials;
-	
+	private List<String> authorFirstNames;
+	private List<String> authorMiddleInitials;
+	private List<String> authorLastNames;
+	private List<String> authorPostNominalInitials;
 	
 	public int getId() {
 		return id;
@@ -22,30 +23,29 @@ public class Author {
 	public void setBookId(int bookId) {
 		this.bookId = bookId;
 	}
-	public String getFirstName() {
-		return firstName;
+	public List<String> getAuthorFirstNames() {
+		return authorFirstNames;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setAuthorFirstNames(List<String> authorFirstNames) {
+		this.authorFirstNames = authorFirstNames;
 	}
-	public String getMiddleInitials() {
-		return middleInitials;
+	public List<String> getAuthorMiddleInitials() {
+		return authorMiddleInitials;
 	}
-	public void setMiddleInitials(String middleInitials) {
-		this.middleInitials = middleInitials;
+	public void setAuthorMiddleInitials(List<String> authorMiddleInitials) {
+		this.authorMiddleInitials = authorMiddleInitials;
 	}
-	public String getLastName() {
-		return lastName;
+	public List<String> getAuthorLastNames() {
+		return authorLastNames;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setAuthorLastNames(List<String> authorLastNames) {
+		this.authorLastNames = authorLastNames;
 	}
-	public String getPostNominalInitials() {
-		return postNominalInitials;
+	public List<String> getAuthorPostNominalInitials() {
+		return authorPostNominalInitials;
 	}
-	public void setPostNominalInitials(String postNominalInitials) {
-		this.postNominalInitials = postNominalInitials;
+	public void setAuthorPostNominalInitials(List<String> authorPostNominalInitials) {
+		this.authorPostNominalInitials = authorPostNominalInitials;
 	}
-	
 	
 }

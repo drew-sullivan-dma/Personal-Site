@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface AuthorBookRecordDAO {
 	
-	public List<AuthorBookRecord> getAllBookAuthorRecords();
+	public List<AuthorBookRecord> getAllAuthorBookRecords();
 }
