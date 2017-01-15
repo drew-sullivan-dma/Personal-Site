@@ -10,6 +10,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
+import com.drewsullivandma.model.Book.Book;
+
 @Component
 public class JDBCCategoryDAO implements CategoryDAO{
 

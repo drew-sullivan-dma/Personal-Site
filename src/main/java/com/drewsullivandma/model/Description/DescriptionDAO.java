@@ -4,6 +4,5 @@ import java.util.List;
 
 public interface DescriptionDAO {
 
-	public List<Description> getAllDesciptions();
-	public List<String> getAllDescriptionsByBookId(int id);
+	public List<Description> getAllDescriptionsByBookId(int id);
 }

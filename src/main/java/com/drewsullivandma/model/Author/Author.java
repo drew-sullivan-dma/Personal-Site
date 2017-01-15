@@ -1,15 +1,12 @@
 package com.drewsullivandma.model.Author;
 
-import java.util.List;
-
 public class Author {
 	
 	private int id;
-	private int bookId;
-	private List<String> authorFirstNames;
-	private List<String> authorMiddleInitials;
-	private List<String> authorLastNames;
-	private List<String> authorPostNominalInitials;
+	private String firstName;
+	private String middleInitials;
+	private String lastName;
+	private String postNominalInitials;
 	
 	public int getId() {
 		return id;
@@ -17,35 +14,29 @@ public class Author {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getBookId() {
-		return bookId;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setBookId(int bookId) {
-		this.bookId = bookId;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public List<String> getAuthorFirstNames() {
-		return authorFirstNames;
+	public String getMiddleInitials() {
+		return middleInitials;
 	}
-	public void setAuthorFirstNames(List<String> authorFirstNames) {
-		this.authorFirstNames = authorFirstNames;
+	public void setMiddleInitials(String middleInitials) {
+		this.middleInitials = middleInitials;
 	}
-	public List<String> getAuthorMiddleInitials() {
-		return authorMiddleInitials;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setAuthorMiddleInitials(List<String> authorMiddleInitials) {
-		this.authorMiddleInitials = authorMiddleInitials;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public List<String> getAuthorLastNames() {
-		return authorLastNames;
+	public String getPostNominalInitials() {
+		return postNominalInitials;
 	}
-	public void setAuthorLastNames(List<String> authorLastNames) {
-		this.authorLastNames = authorLastNames;
+	public void setPostNominalInitials(String postNominalInitials) {
+		this.postNominalInitials = postNominalInitials;
 	}
-	public List<String> getAuthorPostNominalInitials() {
-		return authorPostNominalInitials;
-	}
-	public void setAuthorPostNominalInitials(List<String> authorPostNominalInitials) {
-		this.authorPostNominalInitials = authorPostNominalInitials;
-	}
-	
+
 }

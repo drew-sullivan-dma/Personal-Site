@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface BookDAO {
 
-	public List<Book> getAllBooks();
+	public List<Book> getAllBooksByCategoryId(int id);
 }
