@@ -9,14 +9,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.drewsullivandma.model.Author.Author;
-import com.drewsullivandma.model.Author.AuthorDAO;
-import com.drewsullivandma.model.Book.Book;
-import com.drewsullivandma.model.Book.BookDAO;
-import com.drewsullivandma.model.Category.Category;
-import com.drewsullivandma.model.Category.CategoryDAO;
-import com.drewsullivandma.model.Description.Description;
-import com.drewsullivandma.model.Description.DescriptionDAO;
+import com.drewsullivandma.model.AuthorStuff.Author;
+import com.drewsullivandma.model.AuthorStuff.AuthorDAO;
+import com.drewsullivandma.model.BookStuff.Book;
+import com.drewsullivandma.model.BookStuff.BookDAO;
+import com.drewsullivandma.model.CategoryStuff.Category;
+import com.drewsullivandma.model.CategoryStuff.CategoryDAO;
+import com.drewsullivandma.model.DescriptionStuff.Description;
+import com.drewsullivandma.model.DescriptionStuff.DescriptionDAO;
 
 @Controller 
 public class SiteController {
@@ -52,9 +52,6 @@ public class SiteController {
 		List<Description> descriptionList = new ArrayList<>();
 		
 		categoryList = categoryDAO.getAllCategories();
-		bookList = bookDAO.getAllBooksByCategoryId(categoryId);
-		authorList = authorDAO.getAllAuthorsByBookId(id);
-		descriptionList = descriptionDAO.getAllDescriptionsByBookId(id);
 		
 		model.put("categories", categoryList);
 		model.put("books", bookList);

@@ -1,4 +1,4 @@
-package com.drewsullivandma.model.Category;
+package com.drewsullivandma.model.CategoryStuff;
 
 import java.util.List;
 

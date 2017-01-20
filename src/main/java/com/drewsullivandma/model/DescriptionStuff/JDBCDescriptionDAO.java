@@ -1,4 +1,4 @@
-package com.drewsullivandma.model.Description;
+package com.drewsullivandma.model.DescriptionStuff;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +21,12 @@ public class JDBCDescriptionDAO implements DescriptionDAO {
 	}
 
 	@Override
-	public List<Description> getAllDescriptionsByBookId(int id) {
+	public List<Description> getAllDescriptions() {
 		List<Description> descriptionList = new ArrayList<>();
 		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
 													  + "FROM book_description bd "
 													  + "JOIN book b ON bd.book_id = b.book_id "
-													  + "JOIN description d ON bd.description_id = d.description_id "
-													  + "WHERE b.book_id = ?;", id);
+													  + "JOIN description d ON bd.description_id = d.description_id");
 		while(results.next()) {
 			Description d = new Description();
 			d = mapRowToDescription(results);

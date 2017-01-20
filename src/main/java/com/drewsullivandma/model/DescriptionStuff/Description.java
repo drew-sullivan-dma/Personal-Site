@@ -1,4 +1,4 @@
-package com.drewsullivandma.model.Description;
+package com.drewsullivandma.model.DescriptionStuff;
 
 public class Description {
 	

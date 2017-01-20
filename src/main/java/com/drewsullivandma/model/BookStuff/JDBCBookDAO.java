@@ -1,4 +1,4 @@
-package com.drewsullivandma.model.Book;
+package com.drewsullivandma.model.BookStuff;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
-
-import com.drewsullivandma.model.Author.Author;
 
 @Component
 public class JDBCBookDAO implements BookDAO {
@@ -23,13 +21,12 @@ public class JDBCBookDAO implements BookDAO {
 	}
 
 	@Override
-	public List<Book> getAllBooksByCategoryId(int id) {
+	public List<Book> getAllBooks() {
 		List<Book> bookList = new ArrayList<>();
-		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT DISTINCT * "
+		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
 													  + "FROM book_category bc "
 													  + "JOIN book b ON bc.book_id = b.book_id "
-													  + "JOIN category c ON bc.category_id = c.category_id "
-													  + "WHERE c.category_id = ?;", id);
+													  + "JOIN category c ON bc.category_id = c.category_id");
 		while(results.next()) {
 			Book b = new Book();
 			b = mapRowToBook(results);

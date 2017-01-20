@@ -1,9 +1,9 @@
-package com.drewsullivandma.model.Book;
+package com.drewsullivandma.model.BookStuff;
 
 import java.util.List;
 
-import com.drewsullivandma.model.Author.Author;
-import com.drewsullivandma.model.Description.Description;
+import com.drewsullivandma.model.AuthorStuff.Author;
+import com.drewsullivandma.model.DescriptionStuff.Description;
 
 public class Book {
 
