@@ -1,4 +1,4 @@
-package com.drewsullivandma.model.AuthorStuff;
+package com.drewsullivandma.model;
 
 public class Author {
 	

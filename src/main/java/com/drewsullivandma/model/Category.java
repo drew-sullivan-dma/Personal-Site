@@ -1,8 +1,6 @@
-package com.drewsullivandma.model.CategoryStuff;
+package com.drewsullivandma.model;
 
 import java.util.List;
-
-import com.drewsullivandma.model.BookStuff.Book;
 
 public class Category {
 	
