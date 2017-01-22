@@ -43,14 +43,41 @@ Build tool for choosing the next book based on:
 	            </div>
 	        </div>
     	</div>
-    	
     	<c:forEach items="${categories}" var="category">
 		    <div class="row">
 		        <div class="col-md-12 section-title">
 		        	<h2 class="category-${category.categoryId}">${category.name}</h2>
+		        	<c:forEach items="${category.books}" var="book">
+		        		<div class="row">
+		        			<div class="col-md-12 section-content">
+		        				<div class="book cut-text book-category-${category.categoryId}">
+		        					<div>${book.title} 
+		        						<div class="row">
+		        							<div class="col-md-12">
+				        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
+				        							<c:choose>
+					        							<c:when test="${author.postNominalInitials == null}">
+					        								${author.firstName} ${author.middleInitials} ${author.lastName}
+					        							</c:when>
+					        							<c:otherwise>
+					        								${author.firstName} ${author.middleInitials} ${author.lastName} ${author.postNominalInitials}
+					        							</c:otherwise>
+				        							</c:choose>
+					        						<c:if test="${!loop.last}">,</c:if>
+				        						</c:forEach>
+			        						</div>
+		        						</div>
+		        					</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</c:forEach>
 		        </div>
 		    </div>
-			<c:forEach items="${books}" var="book">
+		</c:forEach> 
+		   <%--      
+		    </div>
+			<c:forEach items="${category.books}" var="book">
 			    <c:choose>
 			    	<c:when test="${book.categoryId == category.categoryId}">
 					    <div class="row">
@@ -121,8 +148,8 @@ Build tool for choosing the next book based on:
 					    </div> <!-- .row -->
 				 	</c:when>
 			    </c:choose>
-			</c:forEach>
-	    </c:forEach>
+			</c:forEach> 
+	    </c:forEach> --%>
 	    
 	    <div class="row">
 	        <div class="col-md-12 section-title"><h2>More to Come!</h2></div>

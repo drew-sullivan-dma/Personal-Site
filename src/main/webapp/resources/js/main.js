@@ -72,15 +72,16 @@ $(document).ready(function() {
 		var $opt7 = $('[class$="category-7"]');
 		var $opt8 = $('[class$="category-8"]');
 		var $opt9 = $('[class$="category-9"]');
-		const NUM_CATEGORIES = 9;
-		
-		for(var i = 1; i <= NUM_CATEGORIES; i++) {
-			if($selection == i) {
-				$('[class$="category-i"]').show('slow');
-			} else {
-				$('[class$="category-i"]').hide('slow');
-			}
-		}
+		var $opt10 = $('[class$="category-10"]');
+//		const NUM_CATEGORIES = 10;
+//		
+//		for(var i = 1; i <= NUM_CATEGORIES; i++) {
+//			if($selection == i) {
+//				$('[class$="category-i"]').show('slow');
+//			} else {
+//				$('[class$="category-i"]').hide('slow');
+//			}
+//		}
 		
 		if($selection == 0) {
 			$opt1.show('slow');
@@ -92,6 +93,7 @@ $(document).ready(function() {
 			$opt7.show('slow');
 			$opt8.show('slow');
 			$opt9.show('slow');
+			$opt10.show('slow');
 		}
 		if($selection == 1) {
 			$opt1.show('slow');
@@ -103,6 +105,7 @@ $(document).ready(function() {
 			$opt7.hide('slow');
 			$opt8.hide('slow');
 			$opt9.hide('slow');
+			$opt10.hide('slow');
 		} 
 		if($selection == 2) {
 			$opt1.hide('slow');
@@ -114,6 +117,7 @@ $(document).ready(function() {
 			$opt7.hide('slow');
 			$opt8.hide('slow');
 			$opt9.hide('slow');
+			$opt10.hide('slow');
 		}
 		if($selection == 3) {
 			$opt1.hide('slow');
@@ -125,6 +129,7 @@ $(document).ready(function() {
 			$opt7.hide('slow');
 			$opt8.hide('slow');
 			$opt9.hide('slow');
+			$opt10.hide('slow');
 		} 
 		if($selection == 4) {
 			$opt1.hide('slow');
@@ -136,6 +141,7 @@ $(document).ready(function() {
 			$opt7.hide('slow');
 			$opt8.hide('slow');
 			$opt9.hide('slow');
+			$opt10.hide('slow');
 		} 
 		if($selection == 5) {
 			$opt1.hide('slow');
@@ -147,6 +153,7 @@ $(document).ready(function() {
 			$opt7.hide('slow');
 			$opt8.hide('slow');
 			$opt9.hide('slow');
+			$opt10.hide('slow');
 		} 
 		if($selection == 6) {
 			$opt1.hide('slow');
@@ -158,6 +165,7 @@ $(document).ready(function() {
 			$opt7.hide('slow');
 			$opt8.hide('slow');
 			$opt9.hide('slow');
+			$opt10.hide('slow');
 		} 
 		if($selection == 7) {
 			$opt1.hide('slow');
@@ -169,6 +177,7 @@ $(document).ready(function() {
 			$opt7.show('slow');
 			$opt8.hide('slow');
 			$opt9.hide('slow');
+			$opt10.hide('slow');
 		} 
 		if($selection == 8) {
 			$opt1.hide('slow');
@@ -180,6 +189,7 @@ $(document).ready(function() {
 			$opt7.hide('slow');
 			$opt8.show('slow');
 			$opt9.hide('slow');
+			$opt10.hide('slow');
 		} 
 		if($selection == 9) {
 			$opt1.hide('slow');
@@ -191,6 +201,19 @@ $(document).ready(function() {
 			$opt7.hide('slow');
 			$opt8.hide('slow');
 			$opt9.show('slow');
+			$opt10.hide('slow');
+		}
+		if($selection == 10) {
+			$opt1.hide('slow');
+			$opt2.hide('slow');
+			$opt3.hide('slow');
+			$opt4.hide('slow');
+			$opt5.hide('slow');
+			$opt6.hide('slow');
+			$opt7.hide('slow');
+			$opt8.hide('slow');
+			$opt9.hide('slow');
+			$opt10.show('slow');
 		} 
 	});
 });

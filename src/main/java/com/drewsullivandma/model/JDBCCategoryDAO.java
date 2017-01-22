@@ -24,8 +24,7 @@ public class JDBCCategoryDAO implements CategoryDAO{
 	public List<Category> getAllCategories() {
 		List<Category> categoryList = new ArrayList<>();
 		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
-													  + "FROM category "
-													  + "ORDER BY category.name ASC;");
+													  + "FROM category;");
 		while(results.next()) {
 			Category c = new Category();
 			c = mapRowToCategory(results);
@@ -38,16 +37,17 @@ public class JDBCCategoryDAO implements CategoryDAO{
 		Category category = new Category();
 		category.setCategoryId(results.getInt("category_id"));
 		category.setName(results.getString("name"));
-		category.setBooks(getAllBooks());
+		category.setBooks(getAllBooks(category.getCategoryId()));
 		return category;
 	}
 	
-	private List<Book> getAllBooks() {
+	private List<Book> getAllBooks(int categoryId) {
 		List<Book> bookList = new ArrayList<>();
 		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
 													  + "FROM book_category bc "
 													  + "JOIN book b ON bc.book_id = b.book_id "
-													  + "JOIN category c ON bc.category_id = c.category_id");
+													  + "JOIN category c ON bc.category_id = c.category_id "
+													  + "WHERE c.category_id = ?;", categoryId);
 		while(results.next()) {
 			Book b = new Book();
 			b = mapRowToBook(results);
@@ -60,17 +60,19 @@ public class JDBCCategoryDAO implements CategoryDAO{
 		Book book = new Book();
 		book.setId(results.getInt("book_id"));
 		book.setTitle(results.getString("title"));
-		book.setAuthors(getAllAuthors());
-		book.setDescriptions(getAllDescriptions());
+		book.setAuthors(getAllAuthors(book.getId()));
+		book.setDescriptions(getAllDescriptions(book.getId()));
 		return book;
 	}
 
-	private List<Author> getAllAuthors() {
+	private List<Author> getAllAuthors(int bookId) {
 		List<Author> authorList = new ArrayList<>();
 		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
 													  + "FROM author_book ab "
 													  + "JOIN author a ON ab.author_id = a.author_id "
-													  + "JOIN book b ON ab.book_id = b.book_id");
+													  + "JOIN book b ON ab.book_id = b.book_id "
+													  + "WHERE b.book_id = ? "
+													  + "ORDER BY a.first_name;", bookId);
 		while(results.next()) {
 			Author a = new Author();
 			a = mapRowToAuthor(results);
@@ -89,12 +91,13 @@ public class JDBCCategoryDAO implements CategoryDAO{
 		return author;
 	}
 
-	private List<Description> getAllDescriptions() {
+	private List<Description> getAllDescriptions(int bookId) {
 		List<Description> descriptionList = new ArrayList<>();
 		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
 													  + "FROM book_description bd "
 													  + "JOIN book b ON bd.book_id = b.book_id "
-													  + "JOIN description d ON bd.description_id = d.description_id");
+													  + "JOIN description d ON bd.description_id = d.description_id "
+													  + "WHERE b.book_id = ?;", bookId);
 		while(results.next()) {
 			Description d = new Description();
 			d = mapRowToDescription(results);

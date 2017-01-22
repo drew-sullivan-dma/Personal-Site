@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.drewsullivandma.model.Category;
 import com.drewsullivandma.model.CategoryDAO;
@@ -33,7 +32,7 @@ public class SiteController {
 	}
 	
 	@RequestMapping("/bookRecommendations")
-	public String displayBookRecommendations(ModelMap model, @RequestParam int categoryId) {
+	public String displayBookRecommendations(ModelMap model) {
 		List<Category> categoryList = new ArrayList<>();
 		categoryList = categoryDAO.getAllCategories();
 		model.put("categories", categoryList);
