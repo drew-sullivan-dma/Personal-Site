@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
@@ -56,13 +58,35 @@ Build tool for choosing the next book based on:
 		        						<div class="row">
 		        							<div class="col-md-12">
 				        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
-				        							${author.firstName} ${author.middleInitials} ${author.lastName}
 				        							<c:choose>
-					        							<c:when test="${author.postNominalInitials != null}">
-					        								 ${author.postNominalInitials}
-					        							</c:when>
+				        								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">
+				        									${author.firstName}&nbsp;${author.lastName}
+				        								</c:when>
+				        								<c:when test="${author.middleInitials != null && author.postNominalInitials == null}">
+				        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}
+				        								</c:when>
+				        								<c:when test="${author.middleInitials == null && author.postNominalInitials != null}">
+				        									${author.firstName}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
+				        								</c:when>
+				        								<c:otherwise>
+				        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
+				        								</c:otherwise>
 				        							</c:choose>
-					        						<c:if test="${!loop.last}">,</c:if>
+					        						<c:choose>
+						        						<c:when test="${fn:length(book.authors) == 2}">
+						        							<c:if test="${!loop.last}">
+						        								and
+						        							</c:if>
+						        						</c:when>
+						        						<c:when test="${fn:length(book.authors) gt 2}">
+						        							<c:if test="${!loop.last}">
+							        							<c:choose>
+								        							<c:when test="${loop.index == fn:length(book.authors) - 2}">,&nbsp;and&nbsp;</c:when>
+								        							<c:otherwise>,&nbsp;</c:otherwise>
+							        							</c:choose>
+						        							</c:if>
+						        						</c:when>
+					        						</c:choose>
 				        						</c:forEach>
 			        						</div>
 		        						</div>
