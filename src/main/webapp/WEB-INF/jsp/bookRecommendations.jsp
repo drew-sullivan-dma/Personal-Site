@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
@@ -55,13 +56,11 @@ Build tool for choosing the next book based on:
 		        						<div class="row">
 		        							<div class="col-md-12">
 				        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
+				        							${author.firstName} ${author.middleInitials} ${author.lastName}
 				        							<c:choose>
-					        							<c:when test="${author.postNominalInitials == null}">
-					        								${author.firstName} ${author.middleInitials} ${author.lastName}
+					        							<c:when test="${author.postNominalInitials != null}">
+					        								 ${author.postNominalInitials}
 					        							</c:when>
-					        							<c:otherwise>
-					        								${author.firstName} ${author.middleInitials} ${author.lastName} ${author.postNominalInitials}
-					        							</c:otherwise>
 				        							</c:choose>
 					        						<c:if test="${!loop.last}">,</c:if>
 				        						</c:forEach>
