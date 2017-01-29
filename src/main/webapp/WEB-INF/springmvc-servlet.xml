@@ -27,11 +27,21 @@
 	    <property name="suffix" value=".jsp"/>
 	</bean>
 	
-	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url" value="jdbc:postgresql://localhost:5432/book" />
 		<property name="username" value="postgres" />
 		<property name="password" value="yas82zgp" />
+	</bean> -->
+	
+	<bean class="java.net.URI" id="dbUrl">
+    	<constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	    <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
+	    <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
+	    <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
 	</bean>
 	
 	<tx:annotation-driven transaction-manager="txManager"/>
