@@ -217,8 +217,8 @@ $(document).ready(function() {
 		} 
 	});
 	
-	var numAllowedAttempts = 5;
-	function validate() {
+	function validateSecretLoginPassword() {
+		var numAllowedAttempts = 5;
 	    var password = document.getElementById("password").value;
 	    if (password == "1") {
 	        alert ("Hi, Drew!");

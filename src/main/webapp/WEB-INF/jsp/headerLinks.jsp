@@ -7,8 +7,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<link href="<c:url value="/resources/css/styles.css" />" rel="stylesheet">
     	<script src="<c:url value="/resources/js/main.js" />"></script>
-		
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    	<script type="text/javascript">validateSecretLoginPassword();</script>
+    	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
 			  rel="stylesheet" 
 			  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
 			  crossorigin="anonymous">
