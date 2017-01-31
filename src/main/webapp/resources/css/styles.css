@@ -233,6 +233,15 @@ footer a:hover {
 	font-style: italic;
 }
 
+.secret-login-form,
+.secret-input-form {
+    padding: 24px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
+
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {

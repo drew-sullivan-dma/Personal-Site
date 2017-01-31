@@ -216,4 +216,47 @@ $(document).ready(function() {
 			$opt10.show('slow');
 		} 
 	});
+	
+	var numAllowedAttempts = 5;
+	function validate() {
+	    var password = document.getElementById("password").value;
+	    if (password == "1") {
+	        alert ("Hi, Drew!");
+	        $(".secret-input-form").show('slow');
+	        return false;
+	    } else {
+	        numAllowedAttempts--;// Decrementing by one.
+	        alert(numAllowedAttempts + " guess(es) remaining.");
+	        if(numAllowedAttempts == 0) {
+	            document.getElementById("password").disabled = true;
+	            document.getElementById("submit").disabled = true;
+	            return false;
+	        }
+	    }
+	}
+	var authorCount = 1;
+	$(document).on('click', '.author-add', function(e) {
+	    if(authorCount <= 5) {
+	        var $authorInputLast = $(".author-input:last");
+	        $authorInputLast.clone().insertAfter($authorInputLast).addClass("author-" + authorCount);
+	        authorCount++;
+	    } else {
+	        document.getElementByClass("author-add").disabled = true;
+	    }
+	}).on('click', '.author-subtract', function(e) {
+	    var $authorInputLast = $(".author-input:last");
+	    $authorInputLast.remove();
+	    authorCount--;
+	})
+
+	var descriptionCount = 1;
+	$(document).on('click', '.description-add', function(e) {
+	    var $descriptionInputLast = $(".description-input:last");
+	    $descriptionInputLast.clone().insertAfter($descriptionInputLast).addClass("description-" + descriptionCount);
+	    descriptionCount++;
+	}).on('click', '.description-subtract', function(e) {
+	    var $descriptionInputLast = $(".description-input:last");
+	    $descriptionInputLast.remove();
+	    descriptionCount--;
+	})
 });
