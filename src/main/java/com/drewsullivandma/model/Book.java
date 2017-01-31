@@ -3,12 +3,19 @@ package com.drewsullivandma.model;
 import java.util.List;
 
 public class Book {
-
+	
+	private List<Category> categories;
 	private int id;
 	private String title;
 	private List<Author> authors;
 	private List<Description> descriptions;
 	
+	public List<Category> getCategories() {
+		return categories;
+	}
+	public void setCategories(List<Category> categories) {
+		this.categories = categories;
+	}
 	public int getId() {
 		return id;
 	}
