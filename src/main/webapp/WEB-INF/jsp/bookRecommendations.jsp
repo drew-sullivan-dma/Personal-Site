@@ -22,7 +22,7 @@ Build tool for choosing the next book based on:
             <label>Password</label>
             <input type="password" class="form-control" name="password" placeholder="Password" id="password">
         </div>
-        <input type="button" value="Login" id="submit" class="btn btn-primary" onclick="validate()"/>
+        <input type="button" value="Login" id="submit" class="btn btn-primary" onclick="validateSecretLoginPassword();"/>
     </form>
 </div>
 
