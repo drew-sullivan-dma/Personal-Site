@@ -104,9 +104,9 @@ Build tool for choosing the next book based on:
 		        		<div class="row">
 		        			<div class="col-md-12 section-content">
 		        				<div class="book cut-text book-category-${category.categoryId}">
-		        					<div>${book.title} 
+		        					<div class="book-title">${book.title} 
 		        						<div class="row">
-		        							<div class="col-md-12">
+		        							<div class="col-md-12 book-author">
 				        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
 				        							<c:choose>
 				        								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">

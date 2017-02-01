@@ -234,16 +234,21 @@ $(document).ready(function() {
 	        }
 	    }
 	})
+
 	var authorCount = 1;
 	$(document).on('click', '.author-add', function(e) {
 	    if(authorCount <= 5) {
 	        var $authorInputLast = $(".author-input:last");
-	        $authorInputLast.clone().insertAfter($authorInputLast).removeClass("author-" + (authorCount - 1)).addClass("author-" + authorCount);
+	        $authorInputLast.clone().insertAfter($authorInputLast);
+	        $authorInputLast.addClass("author-" + authorCount);   
 	        authorCount++;
 	    } else {
 	        document.getElementByClass("author-add").disabled = true;
 	    }
 	}).on('click', '.author-subtract', function(e) {
+	    if(authorCount <= 1) {
+	        document.getElementByClass("author-subtract").disabled = true;
+	    }
 	    var $authorInputLast = $(".author-input:last");
 	    $authorInputLast.remove();
 	    authorCount--;
@@ -251,10 +256,18 @@ $(document).ready(function() {
 
 	var descriptionCount = 1;
 	$(document).on('click', '.description-add', function(e) {
-	    var $descriptionInputLast = $(".description-input:last");
-	    $descriptionInputLast.clone().insertAfter($descriptionInputLast).addClass("description-" + descriptionCount);
-	    descriptionCount++;
+	    if(descriptionCount <= 5) {
+	        var $descriptionInputLast = $(".description-input:last");
+	        $descriptionInputLast.clone().insertAfter($descriptionInputLast);
+	        $descriptionInputLast.addClass("description-" + descriptionCount);
+	        descriptionCount++;
+	    } else {
+	        document.getElementByClass("description-add").disabled = true;
+	    }   
 	}).on('click', '.description-subtract', function(e) {
+	    if(descriptionCount <= 1) {
+	        document.getElementByClass("desciption-subtract").disabled = true;
+	    }
 	    var $descriptionInputLast = $(".description-input:last");
 	    $descriptionInputLast.remove();
 	    descriptionCount--;
