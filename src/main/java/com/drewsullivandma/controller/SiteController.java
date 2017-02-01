@@ -45,19 +45,19 @@ public class SiteController {
 //	2. Be able to pass in multiples where the dynamic inputs are
 //	3. Turn those into lists
 //	4. Set these in their classes
-	@RequestMapping("/bookRecommendations")
-	public String processBookSubmission(@RequestParam String title,
-										@RequestParam String firstName,
-										@RequestParam String middleInitials,
-										@RequestParam String lastName, 
-										@RequestParam String postNominalInitials,
-										@RequestParam String description,
-										@RequestParam int id) {
-		return "bookRecommendations";
-	}
-	
-	@RequestMapping("/pastLife")
-	public String displayPastLife() {
-		return "pastLife";
-	}
+//	@RequestMapping("/bookRecommendations")
+//	public String processBookSubmission(@RequestParam String title,
+//										@RequestParam String firstName,
+//										@RequestParam String middleInitials,
+//										@RequestParam String lastName, 
+//										@RequestParam String postNominalInitials,
+//										@RequestParam String description,
+//										@RequestParam int id) {
+//		return "bookRecommendations";
+//	}
+//	
+//	@RequestMapping("/pastLife")
+//	public String displayPastLife() {
+//		return "pastLife";
+//	}
 }
