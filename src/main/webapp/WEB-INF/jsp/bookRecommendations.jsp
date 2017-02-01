@@ -27,17 +27,17 @@ Build tool for choosing the next book based on:
 </div>
 
 <div class="secret-input-form" hidden=hidden>
-    <form>
+    <form action="bookRecommendations" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
-            <input type="text" class="form-control" placeholder="Title">
+            <input type="text" name="title" class="form-control" placeholder="Title">
         </div>
         <label for="exampleInputPassword1">Author</label>
         <div class="form-inline author-input">
-            <input type="text" class="form-control" placeholder="First Name">
-            <input type="text" class="form-control" placeholder="Middle Initials">
-            <input type="text" class="form-control" placeholder="Last Name">
-            <input type="text" class="form-control" placeholder="Post Nominal Initials">
+            <input type="text" name="firstName" class="form-control" placeholder="First Name">
+            <input type="text" name="middleInitials" class="form-control" placeholder="Middle Initials">
+            <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+            <input type="text" name="postNominalInitials" class="form-control" placeholder="Post Nominal Initials">
             <button class="btn btn-success author-add" type="button">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
@@ -48,7 +48,7 @@ Build tool for choosing the next book based on:
         <br>
         <label for="exampleInputPassword1">Description</label>
         <div class="form-inline description-input">
-            <input type="text" class="form-control" placeholder="Description">
+            <input type="text" name="description" class="form-control" placeholder="Description">
             <button class="btn btn-success description-add" type="button">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
@@ -61,7 +61,7 @@ Build tool for choosing the next book based on:
         <c:forEach items="${categories}" var="category">
 	        <div class="form-check">
 	            <label class="form-check-label">
-	                <input class="form-check-input" type="checkbox" value="${category.categoryId}">${category.name}
+	                <input class="form-check-input" name="${category.name}" type="checkbox" value="${category.categoryId}">${category.name}
 	            </label>
 	        </div>
         </c:forEach>
