@@ -238,7 +238,7 @@ $(document).ready(function() {
 	$(document).on('click', '.author-add', function(e) {
 	    if(authorCount <= 5) {
 	        var $authorInputLast = $(".author-input:last");
-	        $authorInputLast.clone().insertAfter($authorInputLast).addClass("author-" + authorCount);
+	        $authorInputLast.clone().insertAfter($authorInputLast).removeClass("author-" + authorCount - 1).addClass("author-" + authorCount);
 	        authorCount++;
 	    } else {
 	        document.getElementByClass("author-add").disabled = true;
