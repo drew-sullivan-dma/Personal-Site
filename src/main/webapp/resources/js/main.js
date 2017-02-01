@@ -217,11 +217,11 @@ $(document).ready(function() {
 		} 
 	});
 	
-	function validateSecretLoginPassword() {
+	$(document).on('click', 'secret-login-btn', function() {
 		var numAllowedAttempts = 5;
 	    var password = document.getElementById("password").value;
 	    if (password == "1") {
-	        alert ("Hi, Drew!");
+	        alert("Hi, Drew!");
 	        $(".secret-input-form").show('slow');
 	        return false;
 	    } else {
@@ -233,7 +233,7 @@ $(document).ready(function() {
 	            return false;
 	        }
 	    }
-	}
+	})
 	var authorCount = 1;
 	$(document).on('click', '.author-add', function(e) {
 	    if(authorCount <= 5) {
