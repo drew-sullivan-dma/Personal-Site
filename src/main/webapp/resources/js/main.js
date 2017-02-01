@@ -217,7 +217,7 @@ $(document).ready(function() {
 		} 
 	});
 	
-	$(document).on('click', 'secret-login-btn', function() {
+	$(document).on('click', '.secret-login-btn', function() {
 		var numAllowedAttempts = 5;
 	    var password = document.getElementById("password").value;
 	    if (password == "1") {
@@ -225,7 +225,7 @@ $(document).ready(function() {
 	        $(".secret-input-form").show('slow');
 	        return false;
 	    } else {
-	        numAllowedAttempts--;// Decrementing by one.
+	        numAllowedAttempts--;
 	        alert(numAllowedAttempts + " guess(es) remaining.");
 	        if(numAllowedAttempts == 0) {
 	            document.getElementById("password").disabled = true;

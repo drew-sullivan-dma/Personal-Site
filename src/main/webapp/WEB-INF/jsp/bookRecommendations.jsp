@@ -22,7 +22,7 @@ Build tool for choosing the next book based on:
             <label>Password</label>
             <input type="password" class="form-control" name="password" placeholder="Password" id="password">
         </div>
-        <input type="button" value="Login" id="submit" class="btn btn-primary" onclick="validateSecretLoginPassword();"/>
+        <input type="button" value="Login" id="submit" class="btn btn-primary secret-login-btn"/>
     </form>
 </div>
 
@@ -68,10 +68,6 @@ Build tool for choosing the next book based on:
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
-
-<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-
-
 <div class="container-fluid bg-1 text-center book-recommendations">
 	<div class="mid-page bg-2">
 	    <div class="row">
