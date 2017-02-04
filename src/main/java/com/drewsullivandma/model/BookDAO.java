@@ -3,5 +3,5 @@ package com.drewsullivandma.model;
 
 public interface BookDAO {
 	
-	public Book saveNewBook(Book book);
+	public void saveNewBook(Book book);
 }

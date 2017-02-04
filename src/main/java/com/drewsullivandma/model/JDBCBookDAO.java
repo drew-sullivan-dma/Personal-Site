@@ -18,16 +18,29 @@ public class JDBCBookDAO implements BookDAO {
 	}
 	
 	@Override
-	public Book saveNewBook(Book book) {
+	public void saveNewBook(Book book) {
 		int newBookId = getNextBookId();
+		insertBook(book);
+		insertBookCategoryRelationship(book, newBookId);
+		insertBookDescriptionRelationship(book, newBookId);
+		insertAuthorBookRelationship(book, newBookId);
+	}
+
+	private void insertBook(Book book) {
 		String sqlSaveNewBook = "INSERT INTO book(title) "
 							  + "VALUES(?)";
 		jdbcTemplate.update(sqlSaveNewBook, book.getTitle());
+	}
+	
+	private void insertBookCategoryRelationship(Book book, int newBookId) {
 		for(Category category : book.getCategories()) {
 			String sqlSaveNewBookCategoryRelationship = "INSERT INTO book_category(book_id, category_id) "
 							  						  + "VALUES(?, ?)";
 			jdbcTemplate.update(sqlSaveNewBookCategoryRelationship, newBookId, category.getCategoryId());
 		}
+	}
+	
+	private void insertBookDescriptionRelationship(Book book, int newBookId) {
 		for(Description description : book.getDescriptions()) {
 			int newDescriptionId = getNextDescriptionId();
 			String sqlSaveNewBookDescriptionRelationship = "INSERT INTO book_description(book_id, description_id) "
@@ -37,6 +50,9 @@ public class JDBCBookDAO implements BookDAO {
 			jdbcTemplate.update(sqlSaveNewBookDescriptionRelationship, newBookId, newDescriptionId);
 			jdbcTemplate.update(sqlSaveNewDescription, description.getDescription());
 		}
+	}
+
+	private void insertAuthorBookRelationship(Book book, int newBookId) {
 		for(Author author : book.getAuthors()) {
 			int newAuthorId = getNextAuthorId();
 			String sqlSaveNewAuthorBookRelationship = "INSERT INTO author_book(author_id, book_id) "
@@ -46,9 +62,8 @@ public class JDBCBookDAO implements BookDAO {
 			jdbcTemplate.update(sqlSaveNewAuthorBookRelationship, newBookId, newAuthorId);
 			jdbcTemplate.update(sqlSaveNewAuthor, author.getFirstName(), author.getMiddleInitials(), author.getLastName(), author.getPostNominalInitials());
 		}
-		return book;
 	}
-	
+
 	private int getNextBookId() {
 		String sqlGetNextBookId = "SELECT nextval('book_book_id_seq')";
 		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetNextBookId);
