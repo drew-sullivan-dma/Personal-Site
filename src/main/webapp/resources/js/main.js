@@ -217,7 +217,11 @@ $(document).ready(function() {
 		} 
 	});
 	
-	$(document).on('click', '.secret-login-btn', function() {
+	$(document).on('click', '.secret-login-button', function() {
+		$('.secret-login-form').show('slow');
+	})
+	
+	$(document).on('click', '.login-btn', function() {
 		var numAllowedAttempts = 5;
 	    var password = document.getElementById("password").value;
 	    if (password == "1") {
@@ -235,18 +239,26 @@ $(document).ready(function() {
 	    }
 	})
 
-	var authorCount = 1;
+	var authorCount = 2;
 	$(document).on('click', '.author-add', function(e) {
-	    if(authorCount <= 5) {
+	    if(authorCount <= 6) {
 	        var $authorInputLast = $(".author-input:last");
 	        $authorInputLast.clone().insertAfter($authorInputLast);
-	        $authorInputLast.addClass("author-" + authorCount);   
+	        var $firstName = $(".form-first-name:last");
+	        var $middleInitials = $(".form-middle-initials:last")
+	        var $lastName = $(".form-last-name:last")
+	        var $postNominalInitials = $(".form-post-nominal-initials:last")
+	        $firstName.attr("name", "author" + authorCount + "FirstName");
+	        $middleInitials.attr("name", "author" + authorCount + "MiddleInitials");
+	        $lastName.attr("name", "author" + authorCount + "LastName");
+	        $postNominalInitials.attr("name", "author" + authorCount + "PostNominalInitials");
+//	        $firstName.css("background-color", "red");
 	        authorCount++;
 	    } else {
 	        document.getElementByClass("author-add").disabled = true;
 	    }
 	}).on('click', '.author-subtract', function(e) {
-	    if(authorCount <= 1) {
+	    if(authorCount <= 2) {
 	        document.getElementByClass("author-subtract").disabled = true;
 	    }
 	    var $authorInputLast = $(".author-input:last");
@@ -254,18 +266,19 @@ $(document).ready(function() {
 	    authorCount--;
 	})
 
-	var descriptionCount = 1;
+	var descriptionCount = 2;
 	$(document).on('click', '.description-add', function(e) {
-	    if(descriptionCount <= 5) {
+	    if(descriptionCount <= 6) {
 	        var $descriptionInputLast = $(".description-input:last");
 	        $descriptionInputLast.clone().insertAfter($descriptionInputLast);
-	        $descriptionInputLast.addClass("description-" + descriptionCount);
+	        var $description = $(".form-description:last");
+	        $description.attr("name", "description" + descriptionCount);
 	        descriptionCount++;
 	    } else {
 	        document.getElementByClass("description-add").disabled = true;
 	    }   
 	}).on('click', '.description-subtract', function(e) {
-	    if(descriptionCount <= 1) {
+	    if(descriptionCount <= 2) {
 	        document.getElementByClass("desciption-subtract").disabled = true;
 	    }
 	    var $descriptionInputLast = $(".description-input:last");

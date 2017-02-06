@@ -218,6 +218,17 @@ footer a:hover {
 
 /* Book Recommendations */
 
+.secret-login-form,
+.secret-input-form {
+	color: #474e5d;
+}
+
+.secret-login-button {
+	background: transparent;
+    border: none !important;
+    font-size: 0;
+}
+
 .mid-page .book {
 	font-size: 18px;
 	padding-top: 15px;

@@ -16,17 +16,16 @@ Build tool for choosing the next book based on:
 4. How long it's been on the list
 5. Sounds good at the moment -->
 
-<div class="secret-login-form">
+<div class="secret-login-form" hidden>
     <form>
         <div class="form-group">
             <label>Password</label>
             <input type="password" class="form-control" name="password" placeholder="Password" id="password">
         </div>
-        <input type="button" value="Login" id="submit" class="btn btn-primary secret-login-btn"/>
+        <input type="button" value="Login" id="submit" class="btn btn-primary login-btn"/>
     </form>
 </div>
-
-<div class="secret-input-form" hidden=hidden>
+<div class="secret-input-form" hidden>
     <form action="bookRecommendations" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
@@ -34,10 +33,10 @@ Build tool for choosing the next book based on:
         </div>
         <label for="exampleInputPassword1">Author</label>
         <div class="form-inline author-input">
-            <input type="text" name="firstName" class="form-control" placeholder="First Name">
-            <input type="text" name="middleInitials" class="form-control" placeholder="Middle Initials">
-            <input type="text" name="lastName" class="form-control" placeholder="Last Name">
-            <input type="text" name="postNominalInitials" class="form-control" placeholder="Post Nominal Initials">
+            <input type="text" name="author1FirstName" class="form-control form-first-name" placeholder="First Name">
+            <input type="text" name="author1MiddleInitials" class="form-control form-middle-initials" placeholder="Middle Initials">
+            <input type="text" name="author1LastName" class="form-control form-last-name" placeholder="Last Name">
+            <input type="text" name="author1PostNominalInitials" class="form-control form-post-nominal-initials" placeholder="Post Nominal Initials">
             <button class="btn btn-success author-add" type="button">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
@@ -48,7 +47,7 @@ Build tool for choosing the next book based on:
         <br>
         <label for="exampleInputPassword1">Description</label>
         <div class="form-inline description-input">
-            <input type="text" name="description" class="form-control" placeholder="Description">
+            <input type="text" name="description1" class="form-control form-description" placeholder="Description">
             <button class="btn btn-success description-add" type="button">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
@@ -61,7 +60,7 @@ Build tool for choosing the next book based on:
         <c:forEach items="${categories}" var="category">
 	        <div class="form-check">
 	            <label class="form-check-label">
-	                <input class="form-check-input" name="${category.name}" type="checkbox" value="${category.categoryId}">${category.name}
+	                <input class="form-check-input" name="category-${category.name}" type="checkbox" value="${category.categoryId}">&nbsp;${category.name}
 	            </label>
 	        </div>
         </c:forEach>
@@ -79,6 +78,7 @@ Build tool for choosing the next book based on:
 	        <div class="col-md-12">
 		        <p>I've read a ton of great stuff. Please consider purchasing by clicking through to Amazon.com from this site. 
 		        I get a small kickback, and it helps me improve the list. <a href="mailto:drew.sullivan.dma@gmail.com">Click here</a> to contact me.</p>
+		        <button class="secret-login-button">(Login)</button>
 	        </div>
 	    </div>
 	    <div class="row">
