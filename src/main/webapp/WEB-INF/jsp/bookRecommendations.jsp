@@ -102,7 +102,7 @@ Build tool for choosing the next book based on:
 		        	<h2 class="category-${category.categoryId}">${category.name}</h2>
 		        	<c:forEach items="${category.books}" var="book">
 		        		<div class="row">
-		        			<div class="col-md-12 section-content">
+		        			<div class="col-md-12 section-content book-box">
 		        				<div class="book cut-text book-category-${category.categoryId}">
 		        					<div class="book-title">${book.title} 
 		        						<div class="row">
