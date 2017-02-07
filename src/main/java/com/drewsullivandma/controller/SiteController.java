@@ -48,21 +48,22 @@ public class SiteController {
 		return "bookRecommendations";
 	}
 
-//	WIP:
+//	TODO: Break out into another class
 //	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
 //	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
 //		Book b = new Book();
+//		List<Author> authors = new ArrayList<>();
+//		List<Description> descriptions = new ArrayList<>();
+//		List<Category> categories = new ArrayList<>();
 //		List<String> authorInformation = new ArrayList<>();
-//		List<String> descriptions = new ArrayList<>();
-//		List<String> categories = new ArrayList<>();
+//		List<String> descriptionInfo = new ArrayList<>();
+//		List<String> categoryInfo = new ArrayList<>();
 //		for (Map.Entry<String, String> entry : formInput.entrySet()) {
 //			System.out.println(entry.getKey() + " : " + entry.getValue());
-//			Author a = new Author();
 //			if(entry.getKey().substring(0, 1).toLowerCase().equals("t")){
 //				b.setTitle(entry.getValue());
 //			}
 //			if(entry.getKey().substring(0, 1).toLowerCase().equals("a")){
-//				a.setFirstName(entry.getValue());
 //				authorInformation.add(entry.getValue());
 //			}
 //			if(entry.getKey().substring(0, 1).toLowerCase().equals("d")) {
@@ -72,18 +73,20 @@ public class SiteController {
 //				categories.add(entry.getValue());
 //			}
 //		}
-//		for(int i = 0; i < authorInformation.size(); i += 4)
-//			if(i <= 3) {
-//				Author a = new Author();
-//				a.setFirstName(authorInformation.get(0));
-//				a.setMiddleInitials(authorInformation.get(1));
-//				a.setLastName(authorInformation.get(2));
-//				a.setPostNominalInitials(authorInformation.get(3));
-//			}
+//		THIS WILL BE A PUBLIC FINAL INT
+//		int NUM_BITS_OF_INFO_ABOUT_AUTHORS = 4;
+//		int numAuthors = authorInformation.size() / NUM_BITS_OF_INFO_ABOUT_AUTHORS;
+//		int i = 0;
+//		while(numAuthors >= 1) {
 //			Author a = new Author();
-//			if(i == 0 || i % 4 == 0) {
-//				a.setFirstName(authorInformation.get(i));
-//			}
+//			a.setFirstName(authorInformation.get(i));
+//			a.setMiddleInitials(authorInformation.get(i + 1));
+//			a.setLastName(authorInformation.get(i + 2));
+//			a.setPostNominalInitials(authorInformation.get(i + 3));
+//			authors.add(a);
+//			i += 4;
+//			numAuthors--;
+//		}
 //		for(String bitOfAuthorInfo : authorInformation) {
 //			System.out.println(bitOfAuthorInfo);
 //		}
