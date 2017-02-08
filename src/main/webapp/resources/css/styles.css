@@ -261,13 +261,27 @@ footer a:hover {
 }
 
 
+/* About Me */
+
+
+.about-me-pic {
+	margin-right: 15px;
+    margin-top: 5px;
+    width: 40%;
+    border-radius: 4px;
+}
+
+
 
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
+@media only screen and (max-width : 480px) {
     .mid-page {
         margin-left: 1% !important;    
         margin-right: 1% !important;
+    }
+    .about-me-pic {
+    	width: 80%;
     }
 }
 
@@ -290,16 +304,16 @@ footer a:hover {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     .mid-page {
-        margin-left: 15% !important;    
-        margin-right: 15% !important;
+        margin-left: 18% !important;    
+        margin-right: 18% !important;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1450px) {
     .mid-page  {
-        margin-left: 18% !important;    
-        margin-right: 18% !important;
+        margin-left: 23% !important;    
+        margin-right: 23% !important;
     }
 }
 
