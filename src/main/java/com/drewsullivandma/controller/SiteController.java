@@ -19,6 +19,7 @@ import com.drewsullivandma.model.Category;
 import com.drewsullivandma.model.CategoryDAO;
 import com.drewsullivandma.model.Description;
 //import com.drewsullivandma.model.InputParser;
+import com.drewsullivandma.model.InputParser;
 
 @Controller 
 public class SiteController {
@@ -50,13 +51,13 @@ public class SiteController {
 	}
 
 //	WIP:
-//	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
-//	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
-//		InputParser ip = new InputParser();
-//		ip.setFormInput(formInput);
-//		
-//		return "bookRecommendations";
-//	}
+	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
+	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
+		InputParser ip = new InputParser();
+		Book bookRecordToSave = ip.getBookRecord(formInput);
+		bookDAO.saveNewBook(bookRecordToSave);
+		return "bookRecommendations";
+	}
 	
 	@RequestMapping("/pastLife")
 	public String displayPastLife() {
