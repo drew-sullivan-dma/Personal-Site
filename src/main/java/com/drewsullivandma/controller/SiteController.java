@@ -48,13 +48,13 @@ public class SiteController {
 	}
 
 //	WIP:
-	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
-	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
-		InputParser ip = new InputParser();
-		Book bookRecordToSave = ip.getBookRecord(formInput);
-		bookDAO.saveNewBook(bookRecordToSave);
-		return "bookRecommendations";
-	}
+//	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
+//	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
+//		InputParser ip = new InputParser();
+//		Book bookRecordToSave = ip.getBookRecord(formInput);
+//		bookDAO.saveNewBook(bookRecordToSave);
+//		return "bookRecommendations";
+//	}
 	
 	@RequestMapping("/pastLife")
 	public String displayPastLife() {
