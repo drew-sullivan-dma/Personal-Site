@@ -271,7 +271,16 @@ footer a:hover {
     border-radius: 4px;
 }
 
+.about-me .fa {
+	font-size: 250%;
+	padding: 25px;
+}
 
+.about-me .fa:hover {
+	transition: .15s;
+    box-shadow: 0px 2px 5px #2f2f2f;
+    border-radius: 5px;
+}
 
 
 /* Extra Small Devices, Phones */ 

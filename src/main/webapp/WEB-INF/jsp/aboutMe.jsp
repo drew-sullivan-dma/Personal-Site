@@ -3,11 +3,12 @@
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-<div class="container-fluid bg-1">
+<div class="container-fluid bg-1 about-me">
     <div class="mid-page bg-2">
 	    <div class="row">
 	        <div class="col-md-12">
-	        <h1>About Me</h1></div>
+	        	<h1>About Me</h1>
+	        </div>
 	    </div>
 	    <div class="row">
 	        <div class="col-md-12 text-left">
@@ -20,6 +21,12 @@
 	        	<p>At the intersection of technology and the arts, I enjoy combining my passion for learning, working in groups, and achievement-orientation to contribute to my organization and benefit those around me.</p>
             </div>
 	    </div> <!-- row -->
+	    <div class="text-center">
+			        	<a href="https://www.linkedin.com/in/drew-sullivan"><i class="fa fa-linkedin-square"></i></a>
+						<a href="https://github.com/drew-sullivan-dma"><i class="fa fa-github-square"></i></a>
+						<a href="mailto:drew.sullivan.dma@gmail.com"><i class="fa fa-envelope-o"></i></a>
+						<i class="fa fa-mobile test" data-toggle="tooltip" title="(909) 418-8114"></i>
+					</div>
 	</div> <!-- mid-page -->
 </div> <!-- container-fluid -->
 	
