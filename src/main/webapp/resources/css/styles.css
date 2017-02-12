@@ -319,6 +319,12 @@ footer a:hover {
 	#categoryFilter {
 		width: 100%;
 	}
+	.home-page .about-me {
+		border-radius: 0;
+	}
+	.book-box:hover {
+		border-radius: 0;
+	}
 	
 }
 
