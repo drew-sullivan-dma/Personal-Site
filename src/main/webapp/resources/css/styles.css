@@ -87,12 +87,6 @@ p {
 	color: #2f2f2f !important;
 }
 
-.cut-text { 
-  text-overflow: ellipsis; 
-  overflow: hidden;
-  white-space: nowrap; 
-}
-
 
 /* Header: */
 
@@ -219,6 +213,13 @@ footer a:hover {
 
 /* Book Recommendations */
 
+.book-author {
+	font-style: normal !important;
+}
+
+.book-title {
+	font-style: italic;
+}
 
 .book-box:hover {
 	transform: translate(0px, -1px) !important;
@@ -285,13 +286,40 @@ footer a:hover {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
-    .mid-page {
-        margin-left: 1% !important;    
-        margin-right: 1% !important;
-    }
     .about-me-pic {
-    	width: 80%;
+    	width: 100%;
     }
+    .about-me .fa {
+		display: inline-block;
+		font-size: 250%;
+		padding: 25px;
+	}
+	.container-fluid {
+		padding: 0px !important;
+	}
+	footer a {
+		display: inline-block;
+	}
+	.mid-page {
+		padding: 15px;
+	}
+	.home-page .fa {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.home-page .margin {
+		margin-bottom: 20px;
+	}
+	.home-page .hero {
+		display: none;
+	}
+	.home-page .container-fluid {
+		padding: 0 !important;
+	}
+	#categoryFilter {
+		width: 100%;
+	}
+	
 }
 
 /* Small Devices, Tablets */
