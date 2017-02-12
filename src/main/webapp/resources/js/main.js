@@ -225,7 +225,7 @@ $(document).ready(function() {
 		var numAllowedAttempts = 5;
 	    var password = document.getElementById("password").value;
 	    if (password == "1") {
-	        alert("Hi, Drew!");
+//	        alert("Hi, Drew!");
 	        $(".secret-input-form").show('slow');
 	        return false;
 	    } else {

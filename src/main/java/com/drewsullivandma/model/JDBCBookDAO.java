@@ -35,7 +35,9 @@ public class JDBCBookDAO implements BookDAO {
 	private void insertBookCategoryRelationship(Book book, int newBookId) {
 		for(Category category : book.getCategories()) {
 			String sqlSaveNewBookCategoryRelationship = "INSERT INTO book_category(book_id, category_id) "
-							  						  + "VALUES(?, ?)";
+							  						  + "VALUES(?,?)";
+			System.out.println("New Book ID: " + newBookId);
+			System.out.println("Category ID: " + category.getCategoryId());
 			jdbcTemplate.update(sqlSaveNewBookCategoryRelationship, newBookId, category.getCategoryId());
 		}
 	}
@@ -43,24 +45,24 @@ public class JDBCBookDAO implements BookDAO {
 	private void insertBookDescriptionRelationship(Book book, int newBookId) {
 		for(Description description : book.getDescriptions()) {
 			int newDescriptionId = getNextDescriptionId();
-			String sqlSaveNewBookDescriptionRelationship = "INSERT INTO book_description(book_id, description_id) "
-														 + "VALUES(?, ?)";
 			String sqlSaveNewDescription = "INSERT INTO description(description) "
-										 + "VALUES(?)";
-			jdbcTemplate.update(sqlSaveNewBookDescriptionRelationship, newBookId, newDescriptionId);
+					+ "VALUES(?)";
+			String sqlSaveNewBookDescriptionRelationship = "INSERT INTO book_description(book_id, description_id) "
+														 + "VALUES(?,?)";
 			jdbcTemplate.update(sqlSaveNewDescription, description.getDescription());
+			jdbcTemplate.update(sqlSaveNewBookDescriptionRelationship, newBookId, newDescriptionId);
 		}
 	}
 
 	private void insertAuthorBookRelationship(Book book, int newBookId) {
 		for(Author author : book.getAuthors()) {
 			int newAuthorId = getNextAuthorId();
-			String sqlSaveNewAuthorBookRelationship = "INSERT INTO author_book(author_id, book_id) "
-													+ "VALUES(?, ?)";
 			String sqlSaveNewAuthor = "INSERT INTO author(first_name, middle_initials, last_name, post_nominal_initials)"
-									+ "VALUES(?,?,?,?)";
-			jdbcTemplate.update(sqlSaveNewAuthorBookRelationship, newBookId, newAuthorId);
+					+ "VALUES(?,?,?,?)";
+			String sqlSaveNewAuthorBookRelationship = "INSERT INTO author_book(author_id, book_id) "
+													+ "VALUES(?,?)";
 			jdbcTemplate.update(sqlSaveNewAuthor, author.getFirstName(), author.getMiddleInitials(), author.getLastName(), author.getPostNominalInitials());
+			jdbcTemplate.update(sqlSaveNewAuthorBookRelationship, newBookId, newAuthorId);
 		}
 	}
 

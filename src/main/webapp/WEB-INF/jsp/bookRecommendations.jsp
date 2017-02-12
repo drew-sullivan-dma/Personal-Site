@@ -25,7 +25,7 @@ Build tool for choosing the next book based on:
         <input type="button" value="Login" id="submit" class="btn btn-primary login-btn"/>
     </form>
 </div>
-<div class="secret-input-form" hidden>
+<div class="secret-input-form">
     <form action="bookRecommendations" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
