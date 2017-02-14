@@ -140,11 +140,23 @@ Build tool for choosing the next book based on:
 			        						</c:forEach>
 			        						</div>
 	        						</div>
-	        						<div class="col-sm-4 btn-box">
-							            <a href="#"><i class="fa fa-book" aria-hidden="true"></i></a>
-						                <a href="#"><i class="fa fa-tablet" aria-hidden="true"></i></a>
-						                <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i></a>
-	        						</div>
+	        						<div class="btn-box text-center" role="group" aria-label="...">
+									    <a href="#">
+										    <button type="button" class="btn btn-default">
+										    	<i class="fa fa-book" aria-hidden="true"></i>
+										    </button>
+									    </a>
+									    <a href="#">
+										    <button type="button" class="btn btn-default">
+										    	<i class="fa fa-tablet" aria-hidden="true"></i>
+										    </button>
+									    </a>
+									    <a href="#">
+										    <button type="button" class="btn btn-default">
+										    	<i class="fa fa-headphones" aria-hidden="true"></i>
+										    </button>
+									    </a>
+									</div>
         						</div>
 	        				</div>
 	        			</div>
