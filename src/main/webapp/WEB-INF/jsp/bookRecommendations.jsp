@@ -101,49 +101,53 @@ Build tool for choosing the next book based on:
 		        <div class="col-md-12 section-title">
 		        	<h2 class="category-${category.categoryId}">${category.name}</h2>
 		        	<c:forEach items="${category.books}" var="book">
-		        		<div class="row">
-		        			<div class="col-md-12 section-content book-box">
-		        				<div class="book cut-text book-category-${category.categoryId}">
-		        					<div class="book-title">${book.title} 
-		        						<div class="row">
-		        							<div class="col-md-12 book-author">
-				        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
-				        							<c:choose>
-				        								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">
-				        									${author.firstName}&nbsp;${author.lastName}
-				        								</c:when>
-				        								<c:when test="${author.middleInitials != null && author.postNominalInitials == null}">
-				        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}
-				        								</c:when>
-				        								<c:when test="${author.middleInitials == null && author.postNominalInitials != null}">
-				        									${author.firstName}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
-				        								</c:when>
-				        								<c:otherwise>
-				        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
-				        								</c:otherwise>
-				        							</c:choose>
-					        						<c:choose>
-						        						<c:when test="${fn:length(book.authors) == 2}">
-						        							<c:if test="${!loop.last}">
-						        								and
-						        							</c:if>
-						        						</c:when>
-						        						<c:when test="${fn:length(book.authors) gt 2}">
-						        							<c:if test="${!loop.last}">
-							        							<c:choose>
-								        							<c:when test="${loop.index == fn:length(book.authors) - 2}">,&nbsp;and&nbsp;</c:when>
-								        							<c:otherwise>,&nbsp;</c:otherwise>
-							        							</c:choose>
-						        							</c:if>
-						        						</c:when>
-					        						</c:choose>
-				        						</c:forEach>
+	        			<div class="section-content book-box">
+	        				<div class="book cut-text book-category-${category.categoryId}">
+	        					<div class="row">
+		        					<div class="col-sm-8">
+		        					<h3 class="book-title">${book.title}</h3> 
+		       							<div class="book-author">
+			        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
+			        							<c:choose>
+			        								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">
+			        									${author.firstName}&nbsp;${author.lastName}
+			        								</c:when>
+			        								<c:when test="${author.middleInitials != null && author.postNominalInitials == null}">
+			        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}
+			        								</c:when>
+			        								<c:when test="${author.middleInitials == null && author.postNominalInitials != null}">
+			        									${author.firstName}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
+			        								</c:when>
+			        								<c:otherwise>
+			        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
+			        								</c:otherwise>
+			        							</c:choose>
+				        						<c:choose>
+					        						<c:when test="${fn:length(book.authors) == 2}">
+					        							<c:if test="${!loop.last}">
+					        								and
+					        							</c:if>
+					        						</c:when>
+					        						<c:when test="${fn:length(book.authors) gt 2}">
+					        							<c:if test="${!loop.last}">
+						        							<c:choose>
+							        							<c:when test="${loop.index == fn:length(book.authors) - 2}">,&nbsp;and&nbsp;</c:when>
+							        							<c:otherwise>,&nbsp;</c:otherwise>
+						        							</c:choose>
+					        							</c:if>
+					        						</c:when>
+				        						</c:choose>
+			        						</c:forEach>
 			        						</div>
-		        						</div>
-		        					</div>
-		        				</div>
-		        			</div>
-		        		</div>
+	        						</div>
+	        						<div class="col-sm-4 btn-box">
+							            <a href="#"><i class="fa fa-book" aria-hidden="true"></i></a>
+						                <a href="#"><i class="fa fa-tablet" aria-hidden="true"></i></a>
+						                <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i></a>
+	        						</div>
+        						</div>
+	        				</div>
+	        			</div>
 		        	</c:forEach>
 		        </div>
 		    </div>

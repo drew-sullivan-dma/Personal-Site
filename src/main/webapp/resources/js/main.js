@@ -48,12 +48,12 @@ $(document).ready(function() {
 	    $(this).css('color', 'grey');
 	});
 	
-	$('footer a, .mid-page i').mouseenter(function() {
+	$('footer a').mouseenter(function() {
 	    var rand = colors[Math.floor(Math.random() * colors.length)];
 	    $(this).css('color', rand);
 	});
 	
-	$('footer a, .mid-page i').mouseleave(function() {
+	$('footer a').mouseleave(function() {
 	    var rand = colors[Math.floor(Math.random() * colors.length)];
 	    $(this).css('color', 'white');
 	});
