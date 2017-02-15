@@ -101,11 +101,10 @@ Build tool for choosing the next book based on:
 		        <div class="col-md-12 section-title">
 		        	<h2 class="category-${category.categoryId}">${category.name}</h2>
 		        	<c:forEach items="${category.books}" var="book">
-	        			<div class="section-content book-box">
-	        				<div class="book cut-text book-category-${category.categoryId}">
+	        				<div class="book book-category-${category.categoryId}">
 	        					<div class="row">
-		        					<div class="col-sm-8">
-		        					<h3 class="book-title">${book.title}</h3> 
+		        					<div class="col-sm-9">
+		        					<h3><a href="#">${book.title}</a></h3>
 		       							<div class="book-author">
 			        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
 			        							<c:choose>
@@ -138,28 +137,21 @@ Build tool for choosing the next book based on:
 					        						</c:when>
 				        						</c:choose>
 			        						</c:forEach>
-			        						</div>
+			        					</div>
 	        						</div>
-	        						<div class="btn-box text-center" role="group" aria-label="...">
+	        						<div class="col-sm-3 btn-box">
 									    <a href="#">
-										    <button type="button" class="btn btn-default">
-										    	<i class="fa fa-book" aria-hidden="true"></i>
-										    </button>
+									    	<i class="fa fa-book" aria-hidden="true"></i>
 									    </a>
 									    <a href="#">
-										    <button type="button" class="btn btn-default">
-										    	<i class="fa fa-tablet" aria-hidden="true"></i>
-										    </button>
+									    	<i class="fa fa-tablet" aria-hidden="true"></i>
 									    </a>
 									    <a href="#">
-										    <button type="button" class="btn btn-default">
-										    	<i class="fa fa-headphones" aria-hidden="true"></i>
-										    </button>
+									    	<i class="fa fa-headphones" aria-hidden="true"></i>
 									    </a>
 									</div>
         						</div>
 	        				</div>
-	        			</div>
 		        	</c:forEach>
 		        </div>
 		    </div>
