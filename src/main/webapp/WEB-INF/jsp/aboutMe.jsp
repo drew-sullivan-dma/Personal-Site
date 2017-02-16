@@ -22,11 +22,11 @@
             </div>
 	    </div> <!-- row -->
 	    <div class="text-center">
-			        	<a href="https://www.linkedin.com/in/drew-sullivan"><i class="fa fa-linkedin-square"></i></a>
-						<a href="https://github.com/drew-sullivan-dma"><i class="fa fa-github-square"></i></a>
-						<a href="mailto:drew.sullivan.dma@gmail.com"><i class="fa fa-envelope-o"></i></a>
-						<i class="fa fa-mobile test" data-toggle="tooltip" title="(909) 418-8114"></i>
-					</div>
+	       	<a href="https://www.linkedin.com/in/drew-sullivan"><i class="fa fa-linkedin-square"></i></a>
+			<a href="https://github.com/drew-sullivan-dma"><i class="fa fa-github-square"></i></a>
+			<a href="mailto:drew.sullivan.dma@gmail.com"><i class="fa fa-envelope-o"></i></a>
+			<a href="tel:+19094188114" class="fa fa-mobile test" data-toggle="tooltip" data-placement="right" title="(909) 418-8114"></a>
+		</div>
 	</div> <!-- mid-page -->
 </div> <!-- container-fluid -->
 	

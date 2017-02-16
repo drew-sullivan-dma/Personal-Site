@@ -57,6 +57,7 @@ p {
 .mid-page a:hover {
     text-decoration: underline;
 }
+
 .mid-page a:active {
     color: lightgrey;
 }
@@ -210,11 +211,11 @@ footer a:hover {
 
 .btn-box i {
 	float: right;
-	font-size: 30px;
+	font-size: 22px;
 	padding-left: 10px;
 }
 
-.fa:hover:before {
+.book-recommendations .fa:hover:before {
 	color: #c1bcbc;
 	transition: .15s;
 }
@@ -248,7 +249,15 @@ footer a:hover {
 
 .book-recommendations i {
 	padding-left: 15%;
-	padding-top: 5%;
+	padding-top: 8%;
+}
+
+.book-recommendations a {
+	color: white;
+}
+
+.book-recommendations a:hover {
+	color: #c1bcbc;
 }
 
 .book a {
@@ -283,17 +292,18 @@ footer a:hover {
 .about-me .fa {
 	font-size: 250%;
 	padding: 25px;
+	color: white;
 }
 
 .about-me .fa:hover {
 	transition: .15s;
-    box-shadow: 0px 2px 5px #2f2f2f;
-    border-radius: 5px;
+	color: #c1bcbc;
+	text-decoration: none;
 }
 
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 768px) {
     .about-me-pic {
     	width: 100%;
     }
@@ -333,38 +343,34 @@ footer a:hover {
 	.book-box:hover {
 		border-radius: 0;
 	}
-	
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-    .mid-page {
-        margin-left: 7% !important;    
-        margin-right: 7% !important;
+	.book-recommendations i {
+    	padding-left: 25px;
+    	padding-top: 0;
     }
+	
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
     .mid-page  {
-        margin-left: 12% !important;    
-        margin-right: 12% !important;
+        margin-left: 15% !important;    
+        margin-right: 15% !important;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     .mid-page {
-        margin-left: 18% !important;    
-        margin-right: 18% !important;
+        margin-left: 22% !important;    
+        margin-right: 22% !important;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1450px) {
     .mid-page  {
-        margin-left: 25% !important;    
-        margin-right: 25% !important;
+        margin-left: 27% !important;    
+        margin-right: 27% !important;
     }
 }
 
