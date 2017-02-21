@@ -227,6 +227,7 @@ $(document).ready(function() {
 	    if (password == "1") {
 //	        alert("Hi, Drew!");
 	        $(".secret-input-form").show('slow');
+	        $(".delete-book").show('slow');
 	        return false;
 	    } else {
 	        numAllowedAttempts--;

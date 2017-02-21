@@ -47,13 +47,13 @@ public class SiteController {
 		return "bookRecommendations";
 	}
 
-//	WIP:
 	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
 	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
 		InputParser ip = new InputParser();
 		Book bookRecordToSave = ip.getBookRecord(formInput);
 		bookDAO.saveNewBook(bookRecordToSave);
-		return "bookRecommendations";
+		//IF THIS BREAKS, CHECK HERE AND POSSIBLY CHANGE BACK TO return "bookRecommendations";
+		return "redirect:/bookRecommendations";
 	}
 	
 	@RequestMapping("/pastLife")

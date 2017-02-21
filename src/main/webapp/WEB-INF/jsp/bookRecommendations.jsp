@@ -6,16 +6,6 @@
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-<!-- TODO: 
-Remove modal from row w/o changing styling
-
-Build tool for choosing the next book based on:
-1. Different genre than last time
-2. Inspirational/Interesting
-3. Getaway
-4. How long it's been on the list
-5. Sounds good at the moment -->
-
 <div class="secret-login-form" hidden>
     <form>
         <div class="form-group">
@@ -101,57 +91,66 @@ Build tool for choosing the next book based on:
 		        <div class="col-md-12 section-title">
 		        	<h2 class="category-${category.categoryId}">${category.name}</h2>
 		        	<c:forEach items="${category.books}" var="book">
-	        				<div class="book book-category-${category.categoryId}">
-	        					<div class="row">
-		        					<div class="col-sm-9">
+		        		<input id="book" name="book-id-${book.id}" type="hidden" value="${book.id}"></input>
+        				<div class="book book-category-${category.categoryId} book-book-id-${book.id}">
+        					<div class="row">
+	        					<div class="col-sm-9">
+	        						<div class="delete-book" hidden>
+						        		<form action="bookRecommendations" method="POST" class="book-delete-form">
+			        						<input name="bookRecord" type="hidden" value="${book.id}">
+			        						<button type="submit" onClick="return confirm('Are you sure?')" class="btn btn-danger">
+							                	<span class="glyphicon glyphicon-remove"></span>
+							                </button>
+							            </form>
+						            </div>
 		        					<h3><a href="#">${book.title}</a></h3>
-		       							<div class="book-author">
-			        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
-			        							<c:choose>
-			        								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">
-			        									${author.firstName}&nbsp;${author.lastName}
-			        								</c:when>
-			        								<c:when test="${author.middleInitials != null && author.postNominalInitials == null}">
-			        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}
-			        								</c:when>
-			        								<c:when test="${author.middleInitials == null && author.postNominalInitials != null}">
-			        									${author.firstName}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
-			        								</c:when>
-			        								<c:otherwise>
-			        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
-			        								</c:otherwise>
-			        							</c:choose>
-				        						<c:choose>
-					        						<c:when test="${fn:length(book.authors) == 2}">
-					        							<c:if test="${!loop.last}">
-					        								and
-					        							</c:if>
-					        						</c:when>
-					        						<c:when test="${fn:length(book.authors) gt 2}">
-					        							<c:if test="${!loop.last}">
-						        							<c:choose>
-							        							<c:when test="${loop.index == fn:length(book.authors) - 2}">,&nbsp;and&nbsp;</c:when>
-							        							<c:otherwise>,&nbsp;</c:otherwise>
-						        							</c:choose>
-					        							</c:if>
-					        						</c:when>
-				        						</c:choose>
-			        						</c:forEach>
-			        					</div>
-	        						</div>
-	        						<div class="col-sm-3 btn-box">
-									    <a href="#">
-									    	<i class="fa fa-book" aria-hidden="true"></i>
-									    </a>
-									    <a href="#">
-									    	<i class="fa fa-tablet" aria-hidden="true"></i>
-									    </a>
-									    <a href="#">
-									    	<i class="fa fa-headphones" aria-hidden="true"></i>
-									    </a>
-									</div>
+	       							<div class="book-author">
+		        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
+		        							<c:choose>
+		        								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">
+		        									${author.firstName}&nbsp;${author.lastName}
+		        								</c:when>
+		        								<c:when test="${author.middleInitials != null && author.postNominalInitials == null}">
+		        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}
+		        								</c:when>
+		        								<c:when test="${author.middleInitials == null && author.postNominalInitials != null}">
+		        									${author.firstName}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
+		        								</c:when>
+		        								<c:otherwise>
+		        									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
+		        								</c:otherwise>
+		        							</c:choose>
+			        						<c:choose>
+				        						<c:when test="${fn:length(book.authors) == 2}">
+				        							<c:if test="${!loop.last}">
+				        								and
+				        							</c:if>
+				        						</c:when>
+				        						<c:when test="${fn:length(book.authors) gt 2}">
+				        							<c:if test="${!loop.last}">
+					        							<c:choose>
+						        							<c:when test="${loop.index == fn:length(book.authors) - 2}">,&nbsp;and&nbsp;</c:when>
+						        							<c:otherwise>,&nbsp;</c:otherwise>
+					        							</c:choose>
+				        							</c:if>
+				        						</c:when>
+			        						</c:choose>
+		        						</c:forEach>
+		        					</div>
         						</div>
-	        				</div>
+        						<div class="col-sm-3 btn-box">
+								    <a href="#">
+								    	<i class="fa fa-book" aria-hidden="true"></i>
+								    </a>
+								    <a href="#">
+								    	<i class="fa fa-tablet" aria-hidden="true"></i>
+								    </a>
+								    <a href="#">
+								    	<i class="fa fa-headphones" aria-hidden="true"></i>
+								    </a>
+								</div>
+       						</div>
+        				</div>
 		        	</c:forEach>
 		        </div>
 		    </div>

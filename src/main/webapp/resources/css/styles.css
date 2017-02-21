@@ -54,10 +54,6 @@ p {
     box-shadow: 0 2px 5px black;
 }
 
-.mid-page a:hover {
-    text-decoration: underline;
-}
-
 .mid-page a:active {
     color: lightgrey;
 }
@@ -208,6 +204,13 @@ footer a:hover {
 
 /* Book Recommendations */
 
+.book-recommendations h3 {
+	display: inline-block;
+}
+
+.book button {
+	background-color: red;
+}
 
 .btn-box i {
 	float: right;
@@ -233,6 +236,7 @@ footer a:hover {
 	text-align: right;
 	font-style: italic;
 	color: white;
+	transition: .05s ease-out;
 }
 
 .secret-login-button {
@@ -258,6 +262,7 @@ footer a:hover {
 
 .book-recommendations a:hover {
 	color: #c1bcbc;
+	text-decoration: none;
 }
 
 .book a {
