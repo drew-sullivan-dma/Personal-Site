@@ -63,6 +63,11 @@ public class SiteController {
 		return "redirect:/bookRecommendations";
 	}
 	
+	//TODO: Break out book recs into another controller
+	//see http://stackoverflow.com/questions/25268000/handling-multiple-forms-spring
+	//for handling multiple posts to the same uri
+	//also https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=spring+controller+params
+	
 	@RequestMapping("/pastLife")
 	public String displayPastLife() {
 		return "pastLife";

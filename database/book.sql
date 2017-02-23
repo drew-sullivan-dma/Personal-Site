@@ -255,7 +255,7 @@ INSERT INTO author_book (author_id, book_id) VALUES (6, 19);
 
 ALTER TABLE book_category ADD FOREIGN KEY (category_id) REFERENCES category(category_id);
 ALTER TABLE book_category ADD FOREIGN KEY (book_id) REFERENCES book(book_id);
-ALTER TABLE book_description ADD FOREIGN KEY (description_id) REFERENCES description(description_id);
-ALTER TABLE book_description ADD FOREIGN KEY (book_id) REFERENCES book(book_id);
-ALTER TABLE author_book ADD FOREIGN KEY (author_id) REFERENCES author(author_id);
-ALTER TABLE author_book ADD FOREIGN KEY (book_id) REFERENCES book(book_id);
+ALTER TABLE book_description ADD FOREIGN KEY (description_id) REFERENCES description(description_id) ON DELETE CASCADE;
+ALTER TABLE book_description ADD FOREIGN KEY (book_id) REFERENCES book(book_id) ON DELETE CASCADE;
+ALTER TABLE author_book ADD FOREIGN KEY (author_id) REFERENCES author(author_id) ON DELETE CASCADE;
+ALTER TABLE author_book ADD FOREIGN KEY (book_id) REFERENCES book(book_id) ON DELETE CASCADE;
