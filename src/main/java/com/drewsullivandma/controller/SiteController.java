@@ -52,7 +52,14 @@ public class SiteController {
 		InputParser ip = new InputParser();
 		Book bookRecordToSave = ip.getBookRecord(formInput);
 		bookDAO.saveNewBook(bookRecordToSave);
-		//IF THIS BREAKS, CHECK HERE AND POSSIBLY CHANGE BACK TO return "bookRecommendations";
+		//This redirect reloads the page and prevents parts of the page 
+		//from not reloading after form submission
+		return "redirect:/bookRecommendations";
+	}
+	
+	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
+	public String deleteBookRecordsByBookId(@RequestParam int id) {
+		bookDAO.deleteBookRecordsByBookId(id);
 		return "redirect:/bookRecommendations";
 	}
 	

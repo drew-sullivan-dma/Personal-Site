@@ -32,6 +32,46 @@ public class JDBCBookDAO implements BookDAO {
 		insertBookDescriptionRelationship(descriptions, latestBookId);
 	}
 
+	@Override
+	public void deleteBookRecordsByBookId(int id) {
+//		--delete book_category records
+		deleteBookCategoryRecord(id);
+//		--delete author_book records
+//		--delete book_description records
+//		--delete descriptions associated with the book
+//		--delete authors associated with the book 
+//		--delete book record
+		deleteBookRecord(id);
+	}
+	
+	private void deleteBookRecord(int id) {
+		String sqlDeleteBook = "DELETE FROM book "
+				 			 + "WHERE book_id = ?;";
+		jdbcTemplate.update(sqlDeleteBook, id);
+	}
+	
+	private void deleteBookCategoryRecord(int id) {
+		String sqlDeleteBook = "DELETE FROM book_category "
+	 			 			 + "WHERE book_id = ?;";
+		jdbcTemplate.update(sqlDeleteBook, id);
+	}
+	
+	private void deleteAuthorBookRecord(int id) {
+		String sqlDeleteBook = "DELETE FROM author_book "
+	 			 			 + "WHERE book_id = ?;";
+		jdbcTemplate.update(sqlDeleteBook, id); 
+		
+		String sqlGetAuthorsByBookId = "SELECT * "
+									    + "FROM author_book ab "
+									    + "JOIN author a ON ab.author_id = a.author_id "
+									    + "JOIN book b ON ab.book_id = b.book_id "
+									    + "WHERE b.book_id = ?";
+	}
+	
+	private List<String> getAllAuthorsByBookId(int id) {
+		
+	}
+
 	private void insertBook(Book book) {
 		String sqlSaveNewBook = "INSERT INTO book(title) "
 							  + "VALUES(?)";
@@ -78,6 +118,7 @@ public class JDBCBookDAO implements BookDAO {
 		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetLatestBookId);
 		result.next();
 		int latestBookId = result.getInt(1);
+//		System.out.println("Latest Book id: " + latestBookId);
 		return latestBookId;
 	}
 	
@@ -87,6 +128,7 @@ public class JDBCBookDAO implements BookDAO {
 		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetLatestAuthorId);
 		result.next();
 		int latestAuthorId = result.getInt(1);
+//		System.out.println("Latest Author id: " + latestAuthorId);
 		return latestAuthorId;
 	}
 	
@@ -96,33 +138,8 @@ public class JDBCBookDAO implements BookDAO {
 		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetLatestDescriptionId);
 		result.next();
 		int latestDescriptionId = result.getInt(1);
+//		System.out.println("Latest Description id: " + latestDescriptionId);
 		return latestDescriptionId;
 	}
-	
-
-//	private int getNextBookId() {
-//		String sqlGetNextBookId = "SELECT nextval('book_book_id_seq')";
-//		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetNextBookId);
-//		result.next();
-//		int id = result.getInt(1);
-//		System.out.println("Before being called: " + id);
-//		return id;
-//	}
-//	
-//	private int getNextAuthorId() {
-//		String sqlGetNextAuthorId = "SELECT nextval('author_author_id_seq')";
-//		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetNextAuthorId);
-//		result.next();
-//		int id = result.getInt(1);
-//		return id;
-//	}
-//	
-//	private int getNextDescriptionId() {
-//		String sqlGetNextDescriptionId = "SELECT nextval('description_description_id_seq')";
-//		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetNextDescriptionId);
-//		result.next();
-//		int id = result.getInt(1);
-//		return id;
-//	}
 
 }
