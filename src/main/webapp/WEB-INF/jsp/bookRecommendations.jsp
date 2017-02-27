@@ -16,7 +16,7 @@
     </form>
 </div>
 <div class="secret-input-form" hidden>
-    <form action="bookRecommendations" method="POST">
+    <form <%-- action="bookRecommendations" --%> action="?newBook" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
             <input type="text" name="title" class="form-control" placeholder="Title">
@@ -96,8 +96,8 @@
         					<div class="row">
 	        					<div class="col-sm-9">
 	        						<div class="delete-book" hidden>
-						        		<form action="bookRecommendations" method="POST" class="book-delete-form">
-			        						<input name="bookRecord" type="hidden" value="${book.id}">
+						        		<form <%-- action="bookRecommendations" --%> action="?deleteBook" method="POST" class="book-delete-form">
+			        						<input name="id" type="hidden" value="${book.id}">
 			        						<button type="submit" onClick="return confirm('Are you sure?')" class="btn btn-danger">
 							                	<span class="glyphicon glyphicon-remove"></span>
 							                </button>

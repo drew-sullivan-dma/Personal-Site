@@ -47,7 +47,7 @@ public class SiteController {
 		return "bookRecommendations";
 	}
 
-	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
+	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST, params="newBook")
 	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
 		InputParser ip = new InputParser();
 		Book bookRecordToSave = ip.getBookRecord(formInput);
@@ -57,16 +57,11 @@ public class SiteController {
 		return "redirect:/bookRecommendations";
 	}
 	
-	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
+	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST, params="deleteBook")
 	public String deleteBookRecordsByBookId(@RequestParam int id) {
 		bookDAO.deleteBookRecordsByBookId(id);
 		return "redirect:/bookRecommendations";
 	}
-	
-	//TODO: Break out book recs into another controller
-	//see http://stackoverflow.com/questions/25268000/handling-multiple-forms-spring
-	//for handling multiple posts to the same uri
-	//also https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=spring+controller+params
 	
 	@RequestMapping("/pastLife")
 	public String displayPastLife() {

@@ -34,15 +34,8 @@ public class JDBCBookDAO implements BookDAO {
 
 	@Override
 	public void deleteBookRecordsByBookId(int id) {
-//		--delete book_category records
 		deleteBookCategoryRecord(id);
-//		--delete author_book records
-//		--delete book_description records
-//		--delete descriptions associated with the book
-//		--delete authors associated with the book 
-//		--delete book record
 		deleteBookRecord(id);
-		//Hopefully cascading delete will take care of the rest!
 	}
 	
 	private void deleteBookRecord(int id) {
@@ -56,22 +49,6 @@ public class JDBCBookDAO implements BookDAO {
 	 			 			 + "WHERE book_id = ?;";
 		jdbcTemplate.update(sqlDeleteBook, id);
 	}
-	
-//	private void deleteAuthorBookRecord(int id) {
-//		String sqlDeleteBook = "DELETE FROM author_book "
-//	 			 			 + "WHERE book_id = ?;";
-//		jdbcTemplate.update(sqlDeleteBook, id); 
-//		
-//		String sqlGetAuthorsByBookId = "SELECT * "
-//									    + "FROM author_book ab "
-//									    + "JOIN author a ON ab.author_id = a.author_id "
-//									    + "JOIN book b ON ab.book_id = b.book_id "
-//									    + "WHERE b.book_id = ?";
-//	}
-	
-//	private List<String> getAllAuthorsByBookId(int id) {
-//		
-//	}
 
 	private void insertBook(Book book) {
 		String sqlSaveNewBook = "INSERT INTO book(title) "
@@ -89,14 +66,14 @@ public class JDBCBookDAO implements BookDAO {
 	
 	private void insertAuthorBookRelationship(List<Author> authors, int latestBookId) {
 		for(Author author : authors) {
-			String sqlSaveNewAuthor = "INSERT INTO author(first_name, middle_initials, last_name, post_nominal_initials)"
+			String sqlSaveNewAuthor = "INSERT INTO author(first_name, middle_initials, last_name, post_nominal_initials) "
 								    + "VALUES(?,?,?,?)";
 			jdbcTemplate.update(sqlSaveNewAuthor, author.getFirstName(), author.getMiddleInitials(), author.getLastName(), author.getPostNominalInitials());
 
 			int latestAuthorId = getLatestAuthorId();
 			String sqlSaveNewAuthorBookRelationship = "INSERT INTO author_book(author_id, book_id) "
 													+ "VALUES(?,?)";
-			jdbcTemplate.update(sqlSaveNewAuthorBookRelationship, latestBookId, latestAuthorId);
+			jdbcTemplate.update(sqlSaveNewAuthorBookRelationship, latestAuthorId, latestBookId);
 		}
 	}
 	
