@@ -5,7 +5,7 @@
 				<a href="homePage">Drew Sullivan, DMA</a>
 				<a href="aboutMe">About Me</a>
 				<a href="bookRecommendations">Book Recommendations</a>
-				<a href="pastLife">Past Life</a>
+				<!-- <a href="pastLife">Past Life</a> -->
 			</div>
     	</footer>
     	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" 

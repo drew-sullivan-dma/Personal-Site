@@ -63,8 +63,8 @@ public class SiteController {
 		return "redirect:/bookRecommendations";
 	}
 	
-	@RequestMapping("/pastLife")
-	public String displayPastLife() {
-		return "pastLife";
-	}
+//	@RequestMapping("/pastLife")
+//	public String displayPastLife() {
+//		return "pastLife";
+//	}
 }

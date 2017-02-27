@@ -25,11 +25,14 @@
 	        	<p>At the intersection of technology and the arts, I enjoy combining my passion for learning, working in groups, and achievement-orientation to contribute to my organization and benefit those around me.</p>
             </div>
 	    </div> <!-- row -->
-	    <div class="col-sm-6">
-        	<div class="youtube-imbed-container intrinsic-container-4x3 pull-right">
-                <iframe src="https://www.youtube.com/embed/7WvkNJ-359Q" allowfullscreen></iframe>
-            </div>
-        
+	    <div class="row">
+		    <div class="col-md-6 rach-embed">
+                <h5>Yes, they really do offer a doctorate in clarinet. Here's a very small sample of what I used to do (The big solo starts at about 0:36 :D )</h5>
+	            <div class="youtube-imbed-container intrinsic-container-4x3">
+	                <iframe src="https://www.youtube.com/embed/7WvkNJ-359Q" allowfullscreen></iframe>
+	            </div>
+	        </div>
+        </div>
 	    <div class="text-center">
 	       	<a href="https://www.linkedin.com/in/drew-sullivan"><i class="fa fa-linkedin-square"></i></a>
 			<a href="https://github.com/drew-sullivan-dma"><i class="fa fa-github-square"></i></a>
