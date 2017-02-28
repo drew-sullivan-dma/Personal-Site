@@ -26,7 +26,7 @@
             </div>
 	    </div> <!-- row -->
 	    <div class="row">
-		    <div class="col-md-6 rach-embed">
+		    <div class="col-md-6 col-sm-12 rach-embed">
                 <h5>Yes, they really do offer a doctorate in clarinet. Here's a very small sample of what I used to do (The big solo starts at about 0:36 :D )</h5>
 	            <div class="youtube-imbed-container intrinsic-container-4x3">
 	                <iframe src="https://www.youtube.com/embed/7WvkNJ-359Q" allowfullscreen></iframe>

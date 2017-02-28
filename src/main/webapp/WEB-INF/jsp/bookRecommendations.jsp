@@ -37,7 +37,7 @@
         <br>
         <label for="exampleInputPassword1">Description</label>
         <div class="form-inline description-input">
-            <input type="text" name="description1" class="form-control form-description" placeholder="Description">
+            <textarea type="text" name="description1" class="form-control form-description" placeholder="Description"></textarea>
             <button class="btn btn-success description-add" type="button">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>

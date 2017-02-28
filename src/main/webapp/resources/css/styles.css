@@ -204,6 +204,11 @@ footer a:hover {
 
 /* Book Recommendations */
 
+.book-recommendations h2 {
+	text-transform: uppercase;
+	margin-top: 60px;
+}
+
 .book-recommendations h3 {
 	display: inline-block;
 }
@@ -214,7 +219,7 @@ footer a:hover {
 
 .btn-box i {
 	float: right;
-	font-size: 22px;
+	font-size: 30px;
 	padding-left: 10px;
 }
 
@@ -314,6 +319,10 @@ footer a:hover {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 768px) {
+    .rach-embed {
+    	width: 100%;
+    	margin: 0;
+    }
     .about-me-pic {
     	width: 100%;
     }
