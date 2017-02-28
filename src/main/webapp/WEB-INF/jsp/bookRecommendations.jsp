@@ -96,14 +96,14 @@
         					<div class="row">
 	        					<div class="col-sm-9">
 	        						<div class="delete-book" hidden>
-						        		<form <%-- action="bookRecommendations" --%> action="?deleteBook" method="POST" class="book-delete-form">
+						        		<form action="?deleteBook" method="POST" class="book-delete-form">
 			        						<input name="id" type="hidden" value="${book.id}">
 			        						<button type="submit" onClick="return confirm('Are you sure?')" class="btn btn-danger">
 							                	<span class="glyphicon glyphicon-remove"></span>
 							                </button>
 							            </form>
 						            </div>
-		        					<h3><a href="#">${book.title}</a></h3>
+		        					<h3><a data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</a></h3>
 	       							<div class="book-author">
 		        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
 		        							<c:choose>
@@ -139,15 +139,10 @@
 		        					</div>
         						</div>
         						<div class="col-sm-3 btn-box">
-								    <a href="#">
-								    	<i class="fa fa-book" aria-hidden="true"></i>
+								    <a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
+								    	<i class="fa fa-book"></i>
 								    </a>
-								    <a href="#">
-								    	<i class="fa fa-tablet" aria-hidden="true"></i>
-								    </a>
-								    <a href="#">
-								    	<i class="fa fa-headphones" aria-hidden="true"></i>
-								    </a>
+								    <img src="//ir-na.amazon-adsystem.com/e/ir?t=drewsullivand-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 								</div>
        						</div>
         				</div>
@@ -155,82 +150,45 @@
 		        </div>
 		    </div>
 		</c:forEach> 
-		   <%--      
-		    </div>
-			<c:forEach items="${category.books}" var="book">
-			    <c:choose>
-			    	<c:when test="${book.categoryId == category.categoryId}">
-					    <div class="row">
-					        <div class="col-md-12 section-content">
-					        	<div class="book cut-text book-category-${book.categoryId}">
-					            	<span data-toggle="modal" data-target="#largeModal${book.id}">${book.title} &mdash; </span>
-					            	<c:choose>
-					            		<c:when test="${book.authorMiddleInitials != null && book.authorPostNominalInitials != null}">
-					            			${book.authorFirstName} ${book.authorMiddleInitials} ${book.authorLastName}, ${book.authorPostNominalInitials}
-					            		</c:when>
-					            		<c:when test="${book.authorMiddleInitials == null && book.authorPostNominalInitials != null}">
-					            			${book.authorFirstName} ${book.authorLastName}, ${book.authorPostNominalInitials}
-					            		</c:when>
-					            		<c:when test="${book.authorMiddleInitials != null && book.authorPostNominalInitials == null}">
-					            			${book.authorFirstName} ${book.authorMiddleInitials} ${book.authorLastName}
-					            		</c:when>
-					            		<c:otherwise>
-					            			${book.authorFirstName} ${book.authorLastName}
-					            		</c:otherwise>
-					            	</c:choose>
-					            	<c:choose>
-					            		<c:when test="${book.secondAuthorMiddleInitials != null && book.secondAuthorPostNominalInitials != null}">
-					            			and ${book.secondAuthorFirstName} ${book.secondAuthorMiddleInitials} ${book.secondAuthorLastName}, ${book.secondAuthorPostNominalInitials}
-					            		</c:when>
-					            		<c:when test="${book.secondAuthorMiddleInitials == null && book.secondAuthorPostNominalInitials != null}">
-					            			and ${book.secondAuthorFirstName} ${book.secondAuthorLastName}, ${book.secondAuthorPostNominalInitials}
-					            		</c:when>
-					            		<c:when test="${book.secondAuthorMiddleInitials != null && book.secondAuthorPostNominalInitials == null}">
-					            			and ${book.secondAuthorFirstName} ${book.secondAuthorMiddleInitials} ${book.secondAuthorLastName}
-					            		</c:when>
-					            		<c:when test="${book.secondAuthorFirstName == null}">
-					            			
-					            		</c:when>
-					            		<c:otherwise>
-					            			and ${book.secondAuthorFirstName} ${book.secondAuthorLastName}
-					            		</c:otherwise>
-					            	</c:choose>
-					            	<c:choose>
-					            		<c:when test="${book.etAl != null}">
-					            			, ${book.etAl}
-					            		</c:when>
-					            		<c:otherwise>
-					            			 ${book.etAl}
-					            		</c:otherwise>
-					            	</c:choose>
-					     			<div class="pull-right icon-list">
-						                <a href="#"><i class="fa fa-book" aria-hidden="true"></i></a>
-						                <a href="#"><i class="fa fa-tablet" aria-hidden="true"></i></a>
-						                <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i></a>
-						            </div>
-					            </div>
-					            <div class="modal fade" id="largeModal${book.id}" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
-					                <div class="modal-dialog modal-lg">
-					                    <div class="modal-content">
-					                        <div class="modal-header">
-					                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					                            <h3 class="modal-title" id="myModalLabel">(At least) One Takeaway</h3>
-					                        </div>
-					                        <div class="modal-body">
-					                            <ul>
-					                            	<li>${book.description}</li>
-					                            </ul>
-					                        </div>
-					                    </div>
-					                </div>
-					            </div> <!-- .modal -->
-					        </div> <!-- .col-md-12 .section-content -->
-					    </div> <!-- .row -->
-				 	</c:when>
-			    </c:choose>
-			</c:forEach> 
-	    </c:forEach> --%>
-	    
+        <div class="modal fade" id="largeModal${book.id}" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3 class="modal-title" id="myModalLabel">(At least) One Takeaway</h3>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                        	<li>${book.description}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .modal -->
+        
+        <button data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+        
 	    <div class="row">
 	        <div class="col-md-12 section-title"><h2>More to Come!</h2></div>
 	    </div>
