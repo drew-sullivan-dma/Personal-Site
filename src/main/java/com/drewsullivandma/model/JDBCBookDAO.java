@@ -35,6 +35,8 @@ public class JDBCBookDAO implements BookDAO {
 	@Override
 	public void deleteBookRecordsByBookId(int id) {
 		deleteBookCategoryRecord(id);
+		deleteAuthorBookRecord(id);
+		deleteBookDescriptionRecord(id);
 		deleteBookRecord(id);
 	}
 	
@@ -44,10 +46,22 @@ public class JDBCBookDAO implements BookDAO {
 		jdbcTemplate.update(sqlDeleteBook, id);
 	}
 	
+	private void deleteAuthorBookRecord(int id) {
+		String sqlDeleteAuthorBookRecord = "DELETE FROM author_book ab "
+	 			 						 + "WHERE ab.book_id = ?;";
+		jdbcTemplate.update(sqlDeleteAuthorBookRecord, id);
+	}
+	
+	private void deleteBookDescriptionRecord(int id) {
+		String sqlDeleteBookDescriptionRecord = "DELETE FROM book_description bd"
+		 								      + "WHERE bd.book_id = ?;";
+		jdbcTemplate.update(sqlDeleteBookDescriptionRecord, id);
+	}
+	
 	private void deleteBookCategoryRecord(int id) {
-		String sqlDeleteBook = "DELETE FROM book_category "
-	 			 			 + "WHERE book_id = ?;";
-		jdbcTemplate.update(sqlDeleteBook, id);
+		String sqlDeleteBookBookCategoryRecord = "DELETE FROM book_category bc "
+ 			 			 					   + "WHERE bc.book_id = ?;";
+		jdbcTemplate.update(sqlDeleteBookBookCategoryRecord, id);
 	}
 
 	private void insertBook(Book book) {
