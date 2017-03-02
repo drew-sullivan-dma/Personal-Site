@@ -53,7 +53,7 @@ public class JDBCBookDAO implements BookDAO {
 	}
 	
 	private void deleteBookDescriptionRecord(int id) {
-		String sqlDeleteBookDescriptionRecord = "DELETE FROM book_description bd"
+		String sqlDeleteBookDescriptionRecord = "DELETE FROM book_description bd "
 		 								      + "WHERE bd.book_id = ?;";
 		jdbcTemplate.update(sqlDeleteBookDescriptionRecord, id);
 	}
