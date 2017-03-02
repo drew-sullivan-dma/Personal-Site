@@ -105,8 +105,7 @@
 							                </button>
 							            </form>
 						            </div>
-		        					<%-- <h3><a href="#" data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</a></h3> --%>
-		        					<h3><a type="button" data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</a></h3>
+		        					<h3><a class="clickable" type="button" data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</a></h3>
 	       							<div class="book-author">
 		        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
 		        							<c:choose>
