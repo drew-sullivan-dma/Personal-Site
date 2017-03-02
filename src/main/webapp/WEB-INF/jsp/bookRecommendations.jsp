@@ -57,6 +57,8 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+<!-- <img src="resources/images/OBLogo.png"> -->
+</img>
 <div class="container-fluid bg-1 text-center book-recommendations">
 	<div class="mid-page bg-2">
 	    <div class="row">
@@ -103,7 +105,8 @@
 							                </button>
 							            </form>
 						            </div>
-		        					<h3><a href="#" data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</a></h3>
+		        					<%-- <h3><a href="#" data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</a></h3> --%>
+		        					<h3><a type="button" data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</a></h3>
 	       							<div class="book-author">
 		        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
 		        							<c:choose>
@@ -137,47 +140,43 @@
 			        						</c:choose>
 		        						</c:forEach>
 		        					</div>
-        						</div>
+		        					<c:forEach items="${book.descriptions}" var="description">
+										<div class="modal fade" id="largeModal${book.id}" role="dialog">
+											<div class="modal-dialog">
+											    <!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+														<h4 class="modal-title">Modal Header</h4>
+													</div>
+													<div class="modal-body">
+														<p>${description.description}</p>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div> <!-- .modal -->
+									</c:forEach>
+        						</div> <!-- .col-sm-9 -->
         						<div class="col-sm-3 btn-box">
 								    <a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
 								    	<i class="fa fa-amazon"></i>
 								    </a>
 								    <img src="//ir-na.amazon-adsystem.com/e/ir?t=drewsullivand-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-								</div>
-       						</div>
-        				</div>
+								</div> <!-- .col-sm-3 -->
+       						</div> <!-- .row -->
+        				</div> <%-- .book .book-category-${category.categoryId} .book-book-id-${book.id} --%>
 		        	</c:forEach>
 		        </div>
 		    </div>
 		</c:forEach> 
-		
-		
-<%-- 		<button data-toggle="modal" data-target="#largeModal${book.id}">Open Modal</button>
-		  
-        
-        
-	    <div class="row">
-	        <div class="col-md-12 section-title"><h2>More to Come!</h2></div>
-	    </div>
-	    <div class="book-description">
-	       								<c:forEach items="${book.description}" var="description">
-				        					<div class="modal fade" id="largeModal${book.id}" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
-									            <div class="modal-dialog modal-lg">
-									                <div class="modal-content">
-									                    <div class="modal-header">
-									                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-									                        <h4 class="modal-title" id="myModalLabel">(At least) One Takeaway</h4>
-									                    </div>
-									                    <div class="modal-body">
-									                        <ul>
-									                        	<li>${book.description}</li>
-									                        </ul>
-									                    </div>
-									                </div>
-									            </div>
-									        </div> <!-- .modal -->
-	       								</c:forEach>
-	       							</div> --%>
+	
+
+
+  
+</div>
     </div>
 </div> <!-- container -->
 
