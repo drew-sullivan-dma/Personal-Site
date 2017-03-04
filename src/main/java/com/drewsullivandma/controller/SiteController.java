@@ -29,11 +29,6 @@ public class SiteController {
 		this.bookDAO = bookDAO;
 	}
 
-//	@RequestMapping({"/", "/homePage"})
-//	public String displayHomePage() {
-//		return "homePage";
-//	}
-
 	@RequestMapping("/aboutMe")
 	public String displayAboutMe() {
 		return "aboutMe";
@@ -52,8 +47,6 @@ public class SiteController {
 		InputParser ip = new InputParser();
 		Book bookRecordToSave = ip.getBookRecord(formInput);
 		bookDAO.saveNewBook(bookRecordToSave);
-		//This redirect reloads the page and prevents parts of the page 
-		//from not reloading after form submission
 		return "redirect:/bookRecommendations";
 	}
 	
@@ -62,9 +55,4 @@ public class SiteController {
 		bookDAO.deleteBookRecordsByBookId(id);
 		return "redirect:/bookRecommendations";
 	}
-	
-//	@RequestMapping("/pastLife")
-//	public String displayPastLife() {
-//		return "pastLife";
-//	}
 }
