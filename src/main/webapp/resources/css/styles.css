@@ -204,6 +204,10 @@ footer a:hover {
 
 /* Book Recommendations */
 
+.book-author {
+	word-break: break-word;
+}
+
 .modal-body p {
 	color: #474E5D;
 }

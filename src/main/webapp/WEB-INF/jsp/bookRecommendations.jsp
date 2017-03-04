@@ -156,8 +156,6 @@
 								    					</a>
 														<button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
 													</div>
-													<!-- <div class="modal-footer">
-													</div> -->
 												</div>
 											</div>
 										</div> <!-- .modal -->
