@@ -31,9 +31,9 @@ $(document).ready(function() {
         rand === '#D8AE47' ||
         rand === '#B76BA3' ||
         rand === '#88B04B') {
-    	$('.container-fluid, .book button').css('background-color', rand).css('color', '#2f2f2f');
+    	$('.container-fluid, .book .modal-close').css('background-color', rand).css('color', '#2f2f2f');
     } else {
-    	$('.container-fluid, .book button').css('background-color', rand).css('color', 'white');
+    	$('.container-fluid, .book .modal-close').css('background-color', rand).css('color', 'white');
     }
 	
 	var colors = ['#5484A4', '#F6D155', '#004B8D', '#F2552C', '#95DEE3', '#EDCDC2', '#88B04B', '#CE3175', '#5A7247'];

@@ -154,7 +154,7 @@
 														<a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
 								    						<i class="fa fa-amazon"></i>
 								    					</a>
-														<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+														<button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
 													</div>
 													<!-- <div class="modal-footer">
 													</div> -->
