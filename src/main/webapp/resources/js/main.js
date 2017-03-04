@@ -31,14 +31,14 @@ $(document).ready(function() {
         rand === '#D8AE47' ||
         rand === '#B76BA3' ||
         rand === '#88B04B') {
-    	$('.container-fluid').css('background-color', rand).css('color', '#2f2f2f');
+    	$('.container-fluid, .book button').css('background-color', rand).css('color', '#2f2f2f');
     } else {
-    	$('.container-fluid').css('background-color', rand).css('color', 'white');
+    	$('.container-fluid, .book button').css('background-color', rand).css('color', 'white');
     }
 	
 	var colors = ['#5484A4', '#F6D155', '#004B8D', '#F2552C', '#95DEE3', '#EDCDC2', '#88B04B', '#CE3175', '#5A7247'];
 	
-	$('.navbar-nav li a, .navbar-brand').mouseenter(function() {
+	$('.navbar-nav li a, .navbar-brand, .about-me-link, footer a').mouseenter(function() {
 	    var rand = colors[Math.floor(Math.random() * colors.length)];
 	    $(this).css('color', rand);
 	});
@@ -48,12 +48,7 @@ $(document).ready(function() {
 	    $(this).css('color', 'grey');
 	});
 	
-	$('footer a').mouseenter(function() {
-	    var rand = colors[Math.floor(Math.random() * colors.length)];
-	    $(this).css('color', rand);
-	});
-	
-	$('footer a').mouseleave(function() {
+	$('footer a, .about-me-link').mouseleave(function() {
 	    var rand = colors[Math.floor(Math.random() * colors.length)];
 	    $(this).css('color', 'white');
 	});

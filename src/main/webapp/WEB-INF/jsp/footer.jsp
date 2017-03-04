@@ -2,7 +2,7 @@
 
 		<footer class="footer bg-4">
       		<div class="container">
-				<a href="homePage">Drew Sullivan, DMA</a>
+				<a href="aboutMe">Drew Sullivan, DMA</a>
 				<a href="aboutMe">About Me</a>
 				<a href="bookRecommendations">Book Recommendations</a>
 				<!-- <a href="pastLife">Past Life</a> -->

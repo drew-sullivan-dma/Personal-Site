@@ -6,6 +6,7 @@
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
+<!-- <img src="resources/images/OB_Logo.png" class="ob-logo"/> -->
 <div class="secret-login-form" hidden>
     <form>
         <div class="form-group">
@@ -144,16 +145,19 @@
 											<div class="modal-dialog">
 											    <!-- Modal content-->
 												<div class="modal-content">
-													<div class="modal-header">
+													<!-- <div class="modal-header">
 														<button type="button" class="close" data-dismiss="modal">&times;</button>
 														<h4 class="modal-title">Modal Header</h4>
-													</div>
+													</div> -->
 													<div class="modal-body">
 														<p>${description.description}</p>
-													</div>
-													<div class="modal-footer">
+														<a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
+								    						<i class="fa fa-amazon"></i>
+								    					</a>
 														<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 													</div>
+													<!-- <div class="modal-footer">
+													</div> -->
 												</div>
 											</div>
 										</div> <!-- .modal -->

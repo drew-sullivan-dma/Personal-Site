@@ -29,17 +29,17 @@ public class SiteController {
 		this.bookDAO = bookDAO;
 	}
 
-	@RequestMapping({"/", "/homePage"})
-	public String displayHomePage() {
-		return "homePage";
-	}
+//	@RequestMapping({"/", "/homePage"})
+//	public String displayHomePage() {
+//		return "homePage";
+//	}
 
 	@RequestMapping("/aboutMe")
 	public String displayAboutMe() {
 		return "aboutMe";
 	}
 	
-	@RequestMapping("/bookRecommendations")
+	@RequestMapping({"/", "/bookRecommendations"})
 	public String displayBookRecommendations(ModelMap model) {
 		List<Category> categoryList = new ArrayList<>();
 		categoryList = categoryDAO.getAllCategories();

@@ -110,7 +110,7 @@ footer a {
 }
 
 footer a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 	color: white;
 }
 
@@ -204,6 +204,20 @@ footer a:hover {
 
 /* Book Recommendations */
 
+.modal-body p {
+	color: #474E5D;
+}
+
+.modal-body .fa-amazon {
+	color: #474E5D;
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	text-align: center;
+	
+}
+
 .book-recommendations .clickable {
 	cursor: pointer;
 }
@@ -215,10 +229,6 @@ footer a:hover {
 
 .book-recommendations h3 {
 	display: inline-block;
-}
-
-.book button {
-	background-color: red;
 }
 
 .btn-box i {
