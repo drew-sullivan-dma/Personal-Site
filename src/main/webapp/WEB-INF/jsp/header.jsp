@@ -13,9 +13,8 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  	<ul class="nav navbar-nav navbar-right">
-				    <li><a href="aboutMe">About Me</a></li>
 				    <li><a href="bookRecommendations">Book Recommendations</a></li>
-				    <!-- <li><a href="pastLife">Past Life</a></li> -->
+				    <li><a href="aboutMe">About Me</a></li>
 			  	</ul>
 			</div>
 		</div>

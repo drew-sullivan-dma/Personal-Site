@@ -204,6 +204,10 @@ footer a:hover {
 
 /* Book Recommendations */
 
+.modal-body p {
+	margin-bottom: 20px;
+}
+
 .book-author {
 	word-break: break-word;
 }
