@@ -31,6 +31,19 @@ public class SiteController {
 		this.bookDAO = bookDAO;
 	}
 	
+	@RequestMapping("/aboutMe")
+	public String displayAboutMe() {
+		return "aboutMe";
+	}
+//	
+//	@RequestMapping({"/", "/bookRecommendations"})
+//	public String displayBookRecommendations(ModelMap model) {
+//		List<Category> categoryList = new ArrayList<>();
+//		categoryList = categoryDAO.getAllCategories();
+//		model.put("categories", categoryList);
+//		return "bookRecommendations";
+//	}
+	
 //	@RequestMapping(path="/", method = RequestMethod.GET)
 //    public String init(ModelMap model) {
 //        model.addAttribute("msg", "Please Enter Your Login Details");

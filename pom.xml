@@ -5,32 +5,7 @@
 	<artifactId>Site_v.2</artifactId>
 	<version>2.0</version>
 	<packaging>war</packaging>
-	<!-- If it breaks, this is the new stuff -->
-	<!-- <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
-    </parent> -->
-    <!-- End new stuff -->
 	<dependencies>
-	
-	<!-- If it breaks, this is the new stuff -->
-	
-		<!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
-        </dependency> -->
-       <!-- End new stuff -->
         
 		<dependency>
 			<groupId>javax.servlet</groupId>
