@@ -24,13 +24,13 @@ p {
 }
 
 .bg-1 { 
-	/* background-color: #1abc9c; Green */
+	/* background-color: #1abc9c; */
 	color: #ffffff;
 }
 
 .bg-2 { 
-      background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
+      background-color: #e7e7e7; /* Grey with dark grey font */
+      color: #4d4d4d;
 }
 
 .bg-3 { 
@@ -58,7 +58,7 @@ p {
     color: lightgrey;
 }
 .mid-page h2 {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #4d4d4d;
 }
 
 .mid-page select {
@@ -73,9 +73,9 @@ p {
 }
 
 .modal-body,
-.modal-header h3,
+.modal-header,
 .modal-footer li {
-	color: #2f2f2f !important;
+	border-radius: 4px;
 }
 
 
@@ -90,6 +90,7 @@ p {
 	font-size: 12px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	color: #4d4d4d;
 }
   
   
@@ -114,64 +115,11 @@ footer a:hover {
 	color: white;
 }
 
-
-/* Home Page: */
-
-.home-page {
-	line-height: 1.8;
-	color: #f5f6f7;
-}
-
-.home-page h3 {
-	color: white;
-}
-.home-page h4 {
-	color: black;
-}
-
-.home-page .margin {
-	font-size: 40px;
-}
-
-.home-page p {font-size: 16px;}
-.home-page .margin {margin-bottom: 45px;}
-.home-page .fa {
-	padding-left: 40px;
-	padding-right: 40px;
-	font-size: 50px;
-	color: white;
-}
-
-.home-page .about-me {
-	border-radius: 7px;
-}
-
-.home-page .book-recommendations {
-	padding-top: 12px;
-	width: 43%;
-}
-
-.home-page .past-life {
-	padding-top: 25px;
-	width: 65%;
-}
-
 .test + .tooltip > .tooltip-inner {
     background-color: #2f2f2f; 
     color: #FFFFFF;
     border: 1px solid black;
 }
-
-.home-page .hero {
-	width: 50%;
-	border-radius: 4px;
-	box-shadow: 0 2px 5px black;
-}
-
-.home-page .container-fluid {
-	min-height: 0 !important;
-}
-
 
 /* Past Life: */
 
@@ -206,24 +154,13 @@ footer a:hover {
 
 .modal-body p {
 	margin-bottom: 20px;
-}
-
-.book-author {
-	word-break: break-word;
-}
-
-.modal-body p {
 	color: #474E5D;
 }
 
 .modal-body .fa-amazon {
 	color: #474E5D;
 	font-size: 40px;
-	margin: 0;
 	padding: 0;
-	display: block;
-	text-align: center;
-	
 }
 
 .book-recommendations .clickable {
@@ -243,6 +180,7 @@ footer a:hover {
 	float: right;
 	font-size: 30px;
 	padding-left: 10px;
+	color: #4d4d4d;
 }
 
 .book-recommendations .fa:hover:before {
@@ -252,7 +190,9 @@ footer a:hover {
 
 .book-author {
 	font-style: normal !important;
-	color: #c1bcbc;
+	color: #8c8c8c;
+	word-break: break-word;
+	
 }
 
 .book h3 {
@@ -262,8 +202,9 @@ footer a:hover {
 .book a {
 	text-align: right;
 	font-style: italic;
-	color: white;
+	color: #4d4d4d;
 	transition: .05s ease-out;
+	font-style: italic;
 }
 
 .secret-login-button {
@@ -275,7 +216,7 @@ footer a:hover {
 .mid-page .book {
 	font-size: 18px;
 	padding: 15px 0;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #8c8c8c;
 }
 
 .book-recommendations i {
@@ -284,20 +225,12 @@ footer a:hover {
 }
 
 .book-recommendations a {
-	color: white;
+	color: #4d4d4d;
 }
 
 .book-recommendations a:hover {
 	color: #c1bcbc;
 	text-decoration: none;
-}
-
-.book a {
-	font-style: italic;
-}
-
-.btn-box i {
-	color: white;
 }
 
 .secret-login-form,

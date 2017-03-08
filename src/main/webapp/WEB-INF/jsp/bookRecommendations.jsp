@@ -144,12 +144,12 @@
 										<div class="modal fade" id="largeModal${book.id}" role="dialog">
 											<div class="modal-dialog">
 											    <!-- Modal content-->
-												<div class="modal-content">
-													<div class="modal-header">
+												<div class="modal-content bg-2">
+													<div class="modal-header bg-2">
 														<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 														<h3 class="modal-title">${book.title}</h3>
 													</div>
-													<div class="modal-body">
+													<div class="modal-body bg-2">
 														<p>${description.description}</p>
 														<a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
 								    						<i class="fa fa-amazon pull-right"></i>
