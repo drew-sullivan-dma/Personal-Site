@@ -15,6 +15,7 @@
 			  	<ul class="nav navbar-nav navbar-right">
 				    <li><a href="bookRecommendations">Book Recommendations</a></li>
 				    <li><a href="aboutMe">About Me</a></li>
+				    <li><a href="login">Login</a>
 			  	</ul>
 			</div>
 		</div>

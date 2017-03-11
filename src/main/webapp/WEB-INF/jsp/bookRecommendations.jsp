@@ -6,8 +6,7 @@
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-<!-- <img src="resources/images/OB_Logo.png" class="ob-logo"/> -->
-<div class="secret-login-form" hidden>
+<%-- <div class="secret-login-form" hidden>
     <form>
         <div class="form-group">
             <label>Password</label>
@@ -17,7 +16,7 @@
     </form>
 </div>
 <div class="secret-input-form" hidden>
-    <form <%-- action="bookRecommendations" --%> action="?newBook" method="POST">
+    <form action="?newBook" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
             <input type="text" name="title" class="form-control" placeholder="Title">
@@ -57,9 +56,7 @@
         </c:forEach>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-</div>
-<!-- <img src="resources/images/OBLogo.png"> -->
-</img>
+</div> --%>
 <div class="container-fluid bg-1 text-center book-recommendations">
 	<div class="mid-page bg-2">
 	    <div class="row">
@@ -71,7 +68,7 @@
 	        <div class="col-md-12">
 		        <p>I've read a ton of great stuff. Please consider purchasing by clicking through to Amazon.com from this site. 
 		        I get a small kickback, and it helps me improve the list. <a href="mailto:drew.sullivan.dma@gmail.com">Click here</a> to contact me.</p>
-		        <button class="secret-login-button">(Login)</button>
+		        <!-- <a href="/bookInputForm" class="secret-login-button">(Login)</a> -->
 	        </div>
 	    </div>
 	    <div class="row">
@@ -98,7 +95,7 @@
         				<div class="book book-category-${category.categoryId} book-book-id-${book.id}">
         					<div class="row">
 	        					<div class="col-sm-9">
-	        						<div class="delete-book" hidden>
+	        						<div class="delete-book">
 						        		<form action="?deleteBook" method="POST" class="book-delete-form">
 			        						<input name="id" type="hidden" value="${book.id}">
 			        						<button type="submit" onClick="return confirm('Are you sure?')" class="btn btn-danger">
@@ -106,7 +103,7 @@
 							                </button>
 							            </form>
 						            </div>
-		        					<h3><a class="clickable" type="button" data-toggle="modal" data-target="#largeModal${book.id}">${book.title}</a></h3>
+		        					<h3><a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">${book.title}</a></h3>
 	       							<div class="book-author">
 		        						<c:forEach items="${book.authors}" var="author" varStatus="loop">
 		        							<c:choose>
@@ -162,8 +159,8 @@
 									</c:forEach>
         						</div> <!-- .col-sm-9 -->
         						<div class="col-sm-3 btn-box">
-								    <a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
-								    	<i class="fa fa-amazon"></i>
+	        						<a class="clickable" type="button" data-toggle="modal" data-target="#largeModal${book.id}">
+								    	<i class="fa fa-question-circle"></i>
 								    </a>
 								    <img src="//ir-na.amazon-adsystem.com/e/ir?t=drewsullivand-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 								</div> <!-- .col-sm-3 -->
@@ -173,12 +170,7 @@
 		        </div>
 		    </div>
 		</c:forEach> 
-	
-
-
-  
-</div>
-    </div>
+	</div>
 </div> <!-- container -->
 
 <c:import url="/WEB-INF/jsp/footer.jsp" />

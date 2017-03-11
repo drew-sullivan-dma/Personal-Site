@@ -43,6 +43,11 @@
       		<artifactId>heroku-jdbc</artifactId>
       		<version>0.1.0</version>
     	</dependency>
+    	<dependency>
+	        <groupId>org.springframework.security</groupId>
+	        <artifactId>spring-security-core</artifactId>
+	        <version>4.0.2.RELEASE</version>
+    	</dependency>
 	    <dependency>
 	      	<groupId>org.jscience</groupId>
 	      	<artifactId>jscience</artifactId>

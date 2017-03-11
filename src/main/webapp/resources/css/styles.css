@@ -43,6 +43,61 @@ p {
       color: #fff;
 }
 
+.bg-5 {
+	background-color: #4C6A92; /* "Riverside (smoky dark blue)" */
+	color: white;
+}
+
+.bg-6 {
+	background-color: #92B6D5; /* Sky Blue */
+	color: black;
+}
+
+.bg-7 {
+	background-color: #B93A32; /* "Aurora Red" */
+	color: white;
+}
+
+.bg-8 {
+	background-color: #AF9483; /* "Warm Taupe" */
+	color: white;
+}
+
+.bg-9 {
+	background-color: #AD5D5D; /* "Dusty Cedar" */
+	color: white;
+}
+
+.bg-10 {
+	background-color: #006E51; /* "Lush Meadow" */
+	color: white;
+}
+
+.bg-11 {
+	background-color: #D8AE47; /* Spicy Mustard */
+	color: black;
+}
+
+.bg-12 {
+	background-color: #9E4624; /* Potter's Clay */
+	color: white;
+}
+
+.bg-13 {
+	background-color: #B76BA3; /* Bodacious */
+	color: black;
+}
+
+.bg-14 {
+	background-color: #F2552C; /* Flame */
+	color: white;
+}
+
+.bg-15 {
+	background-color: #88B04B; /* Greenery */
+	color: black;
+}
+
 .container-fluid {
     padding: 45px !important;
     min-height: calc(100vh - 40px);
@@ -262,7 +317,7 @@ footer a:hover {
 .about-me .fa {
 	font-size: 250%;
 	padding: 25px;
-	color: white;
+	color: #4d4d4d;
 }
 
 .about-me .fa:hover {
@@ -294,10 +349,7 @@ footer a:hover {
 	}
 	.mid-page {
 		padding: 15px;
-	}
-	.home-page .fa {
-		padding-left: 10px;
-		padding-right: 10px;
+		border-radius: 0;
 	}
 	.home-page .margin {
 		margin-bottom: 20px;

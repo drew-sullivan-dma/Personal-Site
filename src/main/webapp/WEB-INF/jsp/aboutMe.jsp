@@ -27,6 +27,12 @@
 	        	<p>Thanks for reading, and please reach out and say hi. I love hearing from new people.</p>
             </div>
 	    </div> <!-- row -->
+	    <div class="text-center">
+	       	<a href="https://www.linkedin.com/in/drew-sullivan"><i class="fa fa-linkedin-square about-me-link"></i></a>
+			<a href="https://github.com/drew-sullivan-dma"><i class="fa fa-github-square about-me-link"></i></a>
+			<a href="mailto:drew.sullivan.dma@gmail.com"><i class="fa fa-envelope-o about-me-link"></i></a>
+			<a href="tel:+19094188114" class="fa fa-mobile test about-me-link" data-toggle="tooltip" data-placement="right" title="(909) 418-8114"></a>
+		</div>
 	    <div class="row">
 		    <div class="col-md-6 col-sm-12 rach-embed">
                 <h5>Yes, they really do offer a doctorate in clarinet. Here's a very small sample of what I used to do (The big solo starts at about 0:36 :D )</h5>
@@ -35,12 +41,6 @@
 	            </div>
 	        </div>
         </div>
-	    <div class="text-center">
-	       	<a href="https://www.linkedin.com/in/drew-sullivan"><i class="fa fa-linkedin-square about-me-link"></i></a>
-			<a href="https://github.com/drew-sullivan-dma"><i class="fa fa-github-square about-me-link"></i></a>
-			<a href="mailto:drew.sullivan.dma@gmail.com"><i class="fa fa-envelope-o about-me-link"></i></a>
-			<a href="tel:+19094188114" class="fa fa-mobile test about-me-link" data-toggle="tooltip" data-placement="right" title="(909) 418-8114"></a>
-		</div>
 	</div> <!-- mid-page -->
 </div> <!-- container-fluid -->
 	

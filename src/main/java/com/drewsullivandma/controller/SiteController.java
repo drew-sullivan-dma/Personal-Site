@@ -36,26 +36,26 @@ public class SiteController {
 		return "aboutMe";
 	}
 	
-//	@RequestMapping(path="/", method = RequestMethod.GET)
-//    public String init(ModelMap model) {
-//        model.addAttribute("msg", "Please Enter Your Login Details");
-//        return "login";
-//    }
+	@RequestMapping(path="/login", method = RequestMethod.GET)
+    public String init(ModelMap model) {
+        model.addAttribute("welcomeMessage", "Please Enter Your Username and Password");
+        return "login";
+    }
 	
-//	@RequestMapping(method = RequestMethod.POST)
-//    public String submit(ModelMap model, @ModelAttribute("loginBean") LoginBean loginBean) {
-//        if (loginBean != null && loginBean.getUserName() != null & loginBean.getPassword() != null) {
-//            if (loginBean.getUserName().equals("drew") && loginBean.getPassword().equals("yas82zgp")) {
-//                return "redirect:/bookRecommendations";
-//            } else {
-//                model.addAttribute("error", "Incorrect Username or Password");
-//                return "login";
-//            }
-//        } else {
-//            model.addAttribute("error", "Incorrect Username or Password");
-//            return "login";
-//        }
-//    }
+	@RequestMapping(method = RequestMethod.POST)
+    public String submit(ModelMap model, @ModelAttribute("loginBean") LoginBean loginBean) {
+        if (loginBean != null && loginBean.getUserName() != null & loginBean.getPassword() != null) {
+            if (loginBean.getUserName().equals("drew") && loginBean.getPassword().equals("1")) {
+                return "redirect:/bookInputForm";
+            } else {
+                model.addAttribute("error", "Incorrect Username or Password");
+                return "login";
+            }
+        } else {
+            model.addAttribute("error", "Incorrect Username or Password");
+            return "login";
+        }
+    }
 	
 	@RequestMapping({"/", "/bookRecommendations"})
 	public String displayBookRecommendations(ModelMap model) {
@@ -65,13 +65,30 @@ public class SiteController {
 		return "bookRecommendations";
 	}
 
-	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST, params="newBook")
+	@RequestMapping("/bookInputForm")
+	public String displayBookInputForm(ModelMap model) {
+		List<Category> categoryList = new ArrayList<>();
+		categoryList = categoryDAO.getAllCategories();
+		model.put("categories", categoryList);
+		return "bookInputForm";
+	}
+	
+	@RequestMapping(path="/bookInputForm", method=RequestMethod.POST, params="newBook")
 	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
 		InputParser ip = new InputParser();
 		Book bookRecordToSave = ip.getBookRecord(formInput);
 		bookDAO.saveNewBook(bookRecordToSave);
-		return "redirect:/bookRecommendations";
+		return "bookInputForm";
 	}
+	
+//	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST, params="newBook")
+//	public String processBookSubmission(@RequestParam Map<String, String> formInput) {
+//		InputParser ip = new InputParser();
+//		Book bookRecordToSave = ip.getBookRecord(formInput);
+//		bookDAO.saveNewBook(bookRecordToSave);
+//		return "redirect:/bookRecommendations";
+//	}
+	
 	
 	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST, params="deleteBook")
 	public String deleteBookRecordsByBookId(@RequestParam int id) {
