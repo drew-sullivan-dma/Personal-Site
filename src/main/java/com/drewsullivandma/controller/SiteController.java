@@ -32,7 +32,7 @@ public class SiteController {
 		this.bookDAO = bookDAO;
 	}
 	
-	@RequestMapping("/aboutMe")
+	@RequestMapping(path="/aboutMe")
 	public String displayAboutMe() {
 		return "aboutMe";
 	}
@@ -88,11 +88,13 @@ public class SiteController {
 		return "redirect:/bookRecommendations";
 	}
 	
-	@RequestMapping(path="/bookRecommendations/{category}", method=RequestMethod.GET)
-	public String displayCategoryPage(@PathVariable String category, ModelMap model) {
+	@RequestMapping(path="/bookRecommendations/{categoryId}", method=RequestMethod.GET)
+	public String displayCategoryPage(@PathVariable int categoryId, ModelMap model) {
 		List<Book> bookList = new ArrayList<>();
-		bookList = bookDAO.getBooksByCategory(category);
-		model.put("category", category);
+		String categoryName = categoryDAO.getCategoryNameByCategoryId(categoryId);
+		bookList = bookDAO.getBooksByCategoryId(categoryId);
+		model.put("categoryName", categoryName);
+		model.put("category", categoryId);
 		model.put("books", bookList);
 		return "bookCategoryTemplate";
 	}

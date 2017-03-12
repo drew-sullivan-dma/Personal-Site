@@ -6,9 +6,9 @@
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-<div class="container-fluid bg-1 text-center book-recommendations">
-	<h1 class="book-recommendations-header">${category}</h1>
-	<div class="mid-page bg-2">
+<div class="container-fluid bg-0 text-center book-recommendations-template">
+	<h1 class="book-recommendations-header bg-${categoryId} border-radius-top">${categoryName}</h1>
+	<div class="mid-page bg-white">
        	<c:forEach items="${books}" var="book">
        		<input id="book" name="book-id-${book.id}" type="hidden" value="${book.id}"></input>
     		<div class="row">
@@ -60,16 +60,16 @@
 							<div class="modal-dialog">
 							    <!-- Modal content-->
 								<div class="modal-content bg-2">
-									<div class="modal-header bg-2">
+									<div class="modal-header border-radius-bottom-0 bg-white">
 										<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 										<h3 class="modal-title">${book.title}</h3>
 									</div>
-									<div class="modal-body bg-2">
+									<div class="modal-body border-radius-top-0 bg-white">
 										<p>${description.description}</p>
 										<a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
 				    						<i class="fa fa-amazon pull-right"></i>
 				    					</a>
-										<button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
+										<button type="button" class="btn bg-white modal-close" data-dismiss="modal">Close</button>
 									</div>
 								</div>
 							</div>

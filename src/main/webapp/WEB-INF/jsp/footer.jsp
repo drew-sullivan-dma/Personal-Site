@@ -1,10 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-		<footer class="footer bg-4">
+		<footer class="footer bg-navbar">
       		<div class="container">
-				<a href="aboutMe">Drew Sullivan, DMA</a>
-				<a href="bookRecommendations">Book Recommendations</a>
-				<a href="aboutMe">About Me</a>
+				<a href="/Site_v.2/aboutMe">Drew Sullivan, DMA</a>
+				<a href="/Site_v.2/bookRecommendations">Book Recommendations</a>
+				<a href="/Site_v.2/aboutMe">About Me</a>
+				<a href="/Site_v.2/login">Login</a>
 			</div>
     	</footer>
     	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" 

@@ -39,6 +39,16 @@ public class JDBCCategoryDAO implements CategoryDAO{
 		category.setName(results.getString("name"));
 		return category;
 	}
+
+	@Override
+	public String getCategoryNameByCategoryId(int categoryId) {
+		SqlRowSet result = jdbcTemplate.queryForRowSet("SELECT c.name "
+													 + "FROM category c "
+													 + "WHERE c.category_id = ?;", categoryId);
+		result.next();
+		String categoryName = result.getString("name");
+		return categoryName;
+	}
 	
 }
 

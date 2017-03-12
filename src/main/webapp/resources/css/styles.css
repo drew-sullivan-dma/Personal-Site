@@ -23,79 +23,137 @@ p {
 	margin-bottom: 45px;
 }
 
+.bg-white {
+	background-color: white;
+	color: #4b5658;
+}
+
+.bg-0 {
+	background-color: #EDEFF0; /* Grey */
+}
+
 .bg-1 { 
-	/* background-color: #1abc9c; */
-	color: #ffffff;
+	background-color: #F092B0; 
 }
 
 .bg-2 { 
-      background-color: #e7e7e7; /* Grey with dark grey font */
-      color: #4d4d4d;
+	background-color: #2C9676; 
 }
 
 .bg-3 { 
-      background-color: #ffffff !important; /* White */
-      color: #555555;
+    background-color: #3079AB !important; 
 }
 
 .bg-4 { 
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
+    background-color: #53BBB4; 
 }
 
 .bg-5 {
-	background-color: #4C6A92; /* "Riverside (smoky dark blue)" */
-	color: white;
+	background-color: #9E4D83; 
 }
 
 .bg-6 {
-	background-color: #92B6D5; /* Sky Blue */
-	color: black;
+	background-color: #C25975; 
 }
 
 .bg-7 {
-	background-color: #B93A32; /* "Aurora Red" */
-	color: white;
+	background-color: #9E4D83;
 }
 
 .bg-8 {
-	background-color: #AF9483; /* "Warm Taupe" */
-	color: white;
+	background-color: #E15258; 
 }
 
 .bg-9 {
-	background-color: #AD5D5D; /* "Dusty Cedar" */
-	color: white;
+	background-color: #53BBB4; 
 }
 
 .bg-10 {
-	background-color: #006E51; /* "Lush Meadow" */
-	color: white;
+	background-color: #5CB860; 
 }
 
 .bg-11 {
-	background-color: #D8AE47; /* Spicy Mustard */
-	color: black;
+	background-color: #7D669E;
 }
 
 .bg-12 {
-	background-color: #9E4624; /* Potter's Clay */
-	color: white;
+	background-color: #838CC7;
 }
 
 .bg-13 {
-	background-color: #B76BA3; /* Bodacious */
-	color: black;
+	background-color: #95D26C; 
 }
 
 .bg-14 {
-	background-color: #F2552C; /* Flame */
-	color: white;
+	background-color: #C25975; 
 }
 
 .bg-15 {
-	background-color: #88B04B; /* Greenery */
-	color: black;
+	background-color: #EB7728; 
+}
+
+.bg-16 {
+	background-color: #838CC7; 
+}
+
+.bg-17 {
+	background-color: #53BBB4; 
+}
+
+.bg-18 {
+	background-color: #EB7728; 
+}
+
+.bg-19 {
+	background-color: #F092B0; 
+}
+
+.bg-20 {
+	background-color: #C25975; 
+}
+
+.bg-21 {
+	background-color: #E15258; 
+}
+
+.bg-22 {
+	background-color: #2C9676; 
+}
+
+.bg-23 {
+	background-color: #F092B0; 
+}
+
+.bg-24 {
+	background-color: #53BBB4; 
+}
+
+.bg-25 {
+	background-color: #C38CD4; 
+}
+
+.bg-26 {
+	background-color: #C25975; 
+}
+
+.bg-27 {
+	background-color: #20898C;
+}
+
+.bg-28 {
+	background-color: #5CB860;
+}
+
+.bg-29 {
+	background-color: #F092B0; 
+}
+
+.bg-30 {
+	background-color: #2C9676; 
+}
+
+.bg-31 {
+	background-color: #3079AB; 
 }
 
 .container-fluid {
@@ -139,21 +197,30 @@ p {
 .navbar {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	border: 0;
 	border-radius: 0 !important;
 	margin-bottom: 0 !important;
 	font-size: 12px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	color: #4d4d4d;
 }
   
-  
+.bg-navbar {
+	background-color: #3E474F;
+}
+
+.bg-navbar a {
+	color: #b2bbbd;
+}
+
+.navbar a:hover {
+	background-color: #3E474F !important;
+	color: white;
+	transition: .2s ease-in-out;
+}
   
 /* Footer:  */
 
 footer {
-	background-color: #474e5d !important;
 	padding: 20px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -168,6 +235,7 @@ footer a {
 footer a:hover {
 	text-decoration: none;
 	color: white;
+	transition: .2s ease-in-out;
 }
 
 .test + .tooltip > .tooltip-inner {
@@ -207,11 +275,23 @@ footer a:hover {
 
 /* Book Recommendations */
 
-.book-recommendations-header {
-	background-color: rebeccapurple;
-    margin: 0 27%;
-    border-top-left-radius: 5px;
+.border-radius-top {
+	border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.border-radius-top-0 {
+	border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.border-radius-bottom-0 {
+	border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.book-recommendations-header {
+    margin: 0 27%;
     box-shadow: 0 2px 5px black;
     padding: 50px;
 }
@@ -221,13 +301,60 @@ footer a:hover {
 	color: #474E5D;
 }
 
-.modal-body .fa-amazon {
+.modal-body .fa-amazon, 
+.fa-question-circle,
+.about-me .fa {
 	color: #474E5D;
 	font-size: 40px;
 	padding: 0;
 }
 
-.book-recommendations .clickable {
+.fa-amazon:hover, 
+.fa-question-circle:hover,
+.about-me .fa:hover {
+	color: #8c8c8c;
+	transition: .2s ease-in-out;
+}
+
+.about-me .fa {
+	font-size: 250%;
+	padding: 25px;
+}
+
+.about-me .fa:hover {
+	transition: .2s ease-in-out;
+	text-decoration: none;
+}
+
+
+.book-recommendations button {
+	background-color: white;
+	border: 2px solid #474E5D;
+	transition: .2s ease-in-out;
+}
+
+.book-recommendations button:hover {
+	border: 2px solid #8c8c8c;
+}
+
+.book-recommendations .dropdown {
+	display: inline-block;
+}
+
+.show {
+	display: inline-block !important;	
+}
+
+.modal button {
+	border: 2px solid #474E5D;
+	transition: .2s ease-in-out;
+}
+
+.modal button:hover {
+	border: 2px solid #8c8c8c;
+}
+
+.book-recommendations-template .clickable {
 	cursor: pointer;
 }
 
@@ -249,7 +376,7 @@ footer a:hover {
 
 .book-recommendations .fa:hover:before {
 	color: #c1bcbc;
-	transition: .15s;
+	transition: .2s ease-in-out;
 }
 
 .book-author {
@@ -267,7 +394,7 @@ footer a:hover {
 	text-align: right;
 	font-style: italic;
 	color: #4d4d4d;
-	transition: .05s ease-out;
+	transition: .2s ease-in-out;
 	font-style: italic;
 }
 
@@ -288,11 +415,11 @@ footer a:hover {
 	padding-top: 8%;
 }
 
-.book-recommendations a {
+.book-recommendations-template a {
 	color: #4d4d4d;
 }
 
-.book-recommendations a:hover {
+.book-recommendations-template a:hover {
 	color: #c1bcbc;
 	text-decoration: none;
 }
@@ -321,18 +448,6 @@ footer a:hover {
     margin-top: 5px;
     width: 40%;
     border-radius: 4px;
-}
-
-.about-me .fa {
-	font-size: 250%;
-	padding: 25px;
-	color: #4d4d4d;
-}
-
-.about-me .fa:hover {
-	transition: .15s;
-	color: #c1bcbc;
-	text-decoration: none;
 }
 
 

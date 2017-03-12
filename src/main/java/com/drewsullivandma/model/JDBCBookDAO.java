@@ -22,7 +22,7 @@ public class JDBCBookDAO implements BookDAO {
 	}
 	
 	@Override
-	public List<Book> getBooksByCategory(String category) {
+	public List<Book> getBooksByCategoryId(int categoryId) {
 		List<Book> bookList = new ArrayList<>();
 		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
 													  + "FROM book_category bc "
@@ -30,8 +30,8 @@ public class JDBCBookDAO implements BookDAO {
 													  + "JOIN category c ON bc.category_id = c.category_id "
 													  + "JOIN author_book ab ON b.book_id = ab.book_id "
 													  + "JOIN author a ON ab.author_id = a.author_id "
-													  + "WHERE c.name = ? "
-													  + "ORDER BY a.last_name;", category);
+													  + "WHERE c.category_id = ? "
+													  + "ORDER BY a.last_name;", categoryId);
 		while(results.next()) {
 			Book b = new Book();
 			b = mapRowToBook(results);
