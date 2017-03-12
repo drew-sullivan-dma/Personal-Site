@@ -83,7 +83,7 @@ CREATE TABLE author_book (
 INSERT INTO category (name) VALUES ('Fiction'); --1
 INSERT INTO category (name) VALUES ('Biography'); --2
 INSERT INTO category (name) VALUES ('Self-Help'); --3
-INSERT INTO category (name) VALUES ('Behavioral-/Social-Economics'); --4
+INSERT INTO category (name) VALUES ('Behavioral and Social-Economics'); --4
 INSERT INTO category (name) VALUES ('Career-Development'); --5
 INSERT INTO category (name) VALUES ('Plain-Old Interesting'); --6
 INSERT INTO category (name) VALUES ('Skill-Development'); --7

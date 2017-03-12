@@ -104,7 +104,7 @@ p {
 }
 
 .mid-page {
-    border-radius: 4px;
+    border-radius: 0 0 5px 5px;
     padding: 30px;
     box-shadow: 0 2px 5px black;
 }
@@ -206,6 +206,15 @@ footer a:hover {
 
 
 /* Book Recommendations */
+
+.book-recommendations-header {
+	background-color: rebeccapurple;
+    margin: 0 27%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 2px 5px black;
+    padding: 50px;
+}
 
 .modal-body p {
 	margin-bottom: 20px;
@@ -351,6 +360,10 @@ footer a:hover {
 		padding: 15px;
 		border-radius: 0;
 	}
+	.book-recommendations-header {
+		margin: 0;
+		border-radius: 0;
+	}
 	.home-page .margin {
 		margin-bottom: 20px;
 	}
@@ -377,8 +390,15 @@ footer a:hover {
 }
 
 /* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .book-recommendations-header {
+        margin: 0;
+    }
+}
+
+/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-    .mid-page  {
+    .mid-page, .book-recommendations-header {
         margin-left: 15% !important;    
         margin-right: 15% !important;
     }
@@ -386,7 +406,7 @@ footer a:hover {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-    .mid-page {
+    .mid-page, .book-recommendations-header {
         margin-left: 22% !important;    
         margin-right: 22% !important;
     }
@@ -394,7 +414,7 @@ footer a:hover {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1450px) {
-    .mid-page  {
+    .mid-page, .book-recommendations-header  {
         margin-left: 27% !important;    
         margin-right: 27% !important;
     }
