@@ -13,9 +13,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  	<ul class="nav navbar-nav navbar-right">
-				    <li><a href="/Site_v.2/bookRecommendations">Book Recommendations</a></li>
-				    <li><a href="/Site_v.2/aboutMe">About Me</a></li>
-				    <li><a href="/Site_v.2/login">Login</a></li>
+				    <li><a href="${pageContext.request.contextPath}/bookRecommendations">Book Recommendations</a></li>
+				    <li><a href="${pageContext.request.contextPath}/aboutMe">About Me</a></li>
+				    <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
 			  	</ul>
 			</div>
 		</div>

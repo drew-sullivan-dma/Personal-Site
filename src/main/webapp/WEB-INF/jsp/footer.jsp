@@ -2,10 +2,10 @@
 
 		<footer class="footer bg-navbar">
       		<div class="container">
-				<a href="/Site_v.2/aboutMe">Drew Sullivan, DMA</a>
-				<a href="/Site_v.2/bookRecommendations">Book Recommendations</a>
-				<a href="/Site_v.2/aboutMe">About Me</a>
-				<a href="/Site_v.2/login">Login</a>
+				<a href="${pageContext.request.contextPath}/aboutMe">Drew Sullivan, DMA</a>
+				<a href="${pageContext.request.contextPath}/bookRecommendations">Book Recommendations</a>
+				<a href="${pageContext.request.contextPath}/aboutMe">About Me</a>
+				<a href="${pageContext.request.contextPath}/login">Login</a>
 			</div>
     	</footer>
     	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" 
