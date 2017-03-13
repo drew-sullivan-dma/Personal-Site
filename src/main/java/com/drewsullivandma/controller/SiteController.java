@@ -94,7 +94,7 @@ public class SiteController {
 		String categoryName = categoryDAO.getCategoryNameByCategoryId(categoryId);
 		bookList = bookDAO.getBooksByCategoryId(categoryId);
 		model.put("categoryName", categoryName);
-		model.put("category", categoryId);
+		model.put("categoryId", categoryId);
 		model.put("books", bookList);
 		return "bookCategoryTemplate";
 	}
