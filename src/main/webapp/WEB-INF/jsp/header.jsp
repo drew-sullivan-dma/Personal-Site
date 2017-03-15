@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				</button>
-			  	<a class="navbar-brand" href="aboutMe">Drew Sullivan, DMA</a>
+			  	<a class="navbar-brand" href="${pageContext.request.contextPath}/aboutMe">Drew Sullivan, DMA</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  	<ul class="nav navbar-nav navbar-right">

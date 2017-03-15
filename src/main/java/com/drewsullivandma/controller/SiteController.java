@@ -79,10 +79,10 @@ public class SiteController {
 		InputParser ip = new InputParser();
 		Book bookRecordToSave = ip.getBookRecord(formInput);
 		bookDAO.saveNewBook(bookRecordToSave);
-		return "bookInputForm";
+		return "redirect:/bookInputForm";
 	}
 	
-	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST, params="deleteBook")
+	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
 	public String deleteBookRecordsByBookId(@RequestParam int id) {
 		bookDAO.deleteBookRecordsByBookId(id);
 		return "redirect:/bookRecommendations";
