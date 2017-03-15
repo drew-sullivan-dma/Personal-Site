@@ -6,24 +6,29 @@
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-    <form name="submitForm" method="POST">
-        <div align="center">
-            <table>
-                <tr>
-                    <td>User Name</td>
-                    <td><input type="text" name="userName" /></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="password" /></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Submit" /></td>
-                </tr>
-            </table>
-            <div style="color: red">${error}</div>
-        </div>
-    </form>
+<div class="container-fluid bg-0 text-center book-recommendations">
+	<div class="mid-page bg-white border-radius-top">
+		<h1>Please Login</h1>
+	    <div style="color: red">${error}</div>
+			<form>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Email</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Password</label>
+					<div class="col-sm-10">
+				    	<input type="password" class="form-control" placeholder="Password">
+				  	</div>
+				</div>
+				<div class="form-group row">
+				  	<button type="submit" class="btn bg-white util-block pull-right">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div> <!-- container-fluid -->
     
 <c:import url="/WEB-INF/jsp/footer.jsp" />

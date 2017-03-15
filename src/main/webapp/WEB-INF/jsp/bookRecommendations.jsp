@@ -16,7 +16,8 @@
 	    <div class="row">
 	        <div class="col-md-12">
 		        <p>I've read a ton of great stuff. Please consider purchasing by clicking through to Amazon.com from this site. 
-		        I get a small kickback, and it helps me improve the list. Let me know if there's something you think I should read. 
+		        I get a small kickback, and it helps me improve the list. Let me know if there's something you think I should read.
+		        </p> 
 	        </div>
 	    </div>
 	    <div class="row">

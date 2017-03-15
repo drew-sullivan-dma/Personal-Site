@@ -434,6 +434,17 @@ footer a:hover {
     color: #474e5d;
 }
 
+.category-checks {
+	width: 50%;
+}
+
+.util-inline-block {
+	display: inline-block;
+}
+
+.util-block {
+	display: block;
+}
 
 /* About Me */
 

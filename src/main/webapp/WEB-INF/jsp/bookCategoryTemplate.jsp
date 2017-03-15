@@ -23,39 +23,39 @@
 		            </div>
       				<h3><a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">${book.title}</a></h3>
    					<div class="book-author">
-     						<c:forEach items="${book.authors}" var="author" varStatus="loop">
-     							<c:choose>
-     								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">
-     									${author.firstName}&nbsp;${author.lastName}
-     								</c:when>
-     								<c:when test="${author.middleInitials != null && author.postNominalInitials == null}">
-     									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}
-     								</c:when>
-     								<c:when test="${author.middleInitials == null && author.postNominalInitials != null}">
-     									${author.firstName}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
-     								</c:when>
-     								<c:otherwise>
-     									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
-     								</c:otherwise>
-     							</c:choose>
-       						<c:choose>
-        						<c:when test="${fn:length(book.authors) == 2}">
-        							<c:if test="${!loop.last}">
-        								and
-        							</c:if>
-        						</c:when>
-        						<c:when test="${fn:length(book.authors) gt 2}">
-        							<c:if test="${!loop.last}">
-	        							<c:choose>
-		        							<c:when test="${loop.index == fn:length(book.authors) - 2}">,&nbsp;and&nbsp;</c:when>
-		        							<c:otherwise>,&nbsp;</c:otherwise>
-	        							</c:choose>
-        							</c:if>
-        						</c:when>
-       						</c:choose>
-     						</c:forEach>
-     					</div>
-     					<c:forEach items="${book.descriptions}" var="description">
+   						<c:forEach items="${book.authors}" var="author" varStatus="loop">
+   							<c:choose>
+   								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">
+   									${author.firstName}&nbsp;${author.lastName}
+   								</c:when>
+   								<c:when test="${author.middleInitials != null && author.postNominalInitials == null}">
+   									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}
+   								</c:when>
+   								<c:when test="${author.middleInitials == null && author.postNominalInitials != null}">
+   									${author.firstName}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
+   								</c:when>
+   								<c:otherwise>
+   									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
+   								</c:otherwise>
+   							</c:choose>
+     						<c:choose>
+      						<c:when test="${fn:length(book.authors) == 2}">
+      							<c:if test="${!loop.last}">
+      								and
+      							</c:if>
+      						</c:when>
+      						<c:when test="${fn:length(book.authors) gt 2}">
+      							<c:if test="${!loop.last}">
+       							<c:choose>
+        							<c:when test="${loop.index == fn:length(book.authors) - 2}">,&nbsp;and&nbsp;</c:when>
+        							<c:otherwise>,&nbsp;</c:otherwise>
+       							</c:choose>
+      							</c:if>
+      						</c:when>
+     						</c:choose>
+   						</c:forEach>
+   					</div>
+    				<c:forEach items="${book.descriptions}" var="description">
 						<div class="modal fade" id="largeModal${book.id}" role="dialog">
 							<div class="modal-dialog">
 							    <!-- Modal content-->
@@ -82,7 +82,7 @@
 		    		</a>
 		    		<img src="//ir-na.amazon-adsystem.com/e/ir?t=drewsullivand-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 				</div> <!-- .col-sm-3 -->
-   			</div> <!-- .row -->
+ 			</div> <!-- .row -->
        	</c:forEach>
 	</div>
 </div> <!-- container -->

@@ -3,15 +3,6 @@
 <c:import url="/WEB-INF/jsp/headerLinks.jsp" />
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-<div class="secret-login-form">
-    <form>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password" placeholder="Password" id="password">
-        </div>
-        <input type="button" value="Login" id="submit" class="btn btn-primary login-btn"/>
-    </form>
-</div>
 <div class="secret-input-form">
     <form action="?newBook" method="POST">
         <div class="form-group">
@@ -43,15 +34,17 @@
             </button>
         </div>
         <br>
-        <label for="exampleInputPassword1">Categories</label>
-        <c:forEach items="${categories}" var="category">
-	        <div class="form-check">
+        <label for="exampleInputPassword1" class="util-block">Categories</label>
+        <div class="category-checks">
+       	<c:forEach items="${categories}" var="category">
+	        <div class="form-check util-inline-block">
 	            <label class="form-check-label">
 	                <input class="form-check-input" name="category-${category.name}" type="checkbox" value="${category.categoryId}">&nbsp;${category.name}
 	            </label>
 	        </div>
-        </c:forEach>
-        <button type="submit" class="btn btn-primary">Submit</button>
+	    </c:forEach>
+	    </div>
+        <button type="submit" class="btn btn-primary util-block">Submit</button>
     </form>
 </div>
 
