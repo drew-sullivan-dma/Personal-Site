@@ -8,45 +8,32 @@
 
 <div class="container-fluid bg-0 text-center book-recommendations">
 	<div class="mid-page bg-white border-radius-top">
-		
-	    
-			<form>
-				
-				
-				
-			</form>
-		</div>
-	</div>
-</div> <!-- container-fluid -->
-
-<div class="container-fluid bg-0 text-center book-recommendations">
-	<div class="mid-page bg-white border-radius-top">
-	    <div class="row">
-	        <div class="col-md-12">
-	        	<h1>Please Login</h1>
-	        	<div style="color: red">${error}</div>
-	        </div>
-	    </div>
-	    <div class="form-group row">
-			<label class="col-sm-2 col-form-label">Email</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" placeholder="Email">
+		<form name="submitForm" method="POST">
+		    <div class="row">
+		        <div class="col-md-12">
+		        	<h1>Please Login</h1>
+		        	<div style="color: red">${error}</div>
+		        </div>
+		    </div>
+		    <div class="form-group row">
+				<label class="col-sm-2 col-form-label">Username</label>
+				<div class="col-sm-10">
+					<input type="text" name="userName" class="form-control" placeholder="Username"/>
+				</div>
 			</div>
-		</div>
-		<div class="form-group row">
-			<label class="col-sm-2 col-form-label">Password</label>
-			<div class="col-sm-10">
-		    	<input type="password" class="form-control" placeholder="Password">
-		  	</div>
-		</div>
-	    <div class="row">
-	        <div class="col-md-12">
-				<a href="mailto:drew.sullivan.dma@gmail.com"><button type="submit" class="btn bg-white pull-right">Submit</button></a>
-	        </div>
-    	</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Password</label>
+				<div class="col-sm-10">
+			    	<input type="password" name="password" class="form-control" placeholder="Password" />
+			  	</div>
+			</div>
+		    <div class="row">
+		        <div class="col-md-12">
+					<button type="submit" class="btn bg-white pull-right" value="Submit">Submit</button>
+		        </div>
+	    	</div>
+	    </form>
 	</div>
-</div> <!-- container -->
-
-
+</div> <!-- .container-fluid -->
     
 <c:import url="/WEB-INF/jsp/footer.jsp" />

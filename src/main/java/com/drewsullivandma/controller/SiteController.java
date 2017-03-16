@@ -43,7 +43,7 @@ public class SiteController {
         return "login";
     }
 	
-	@RequestMapping(method=RequestMethod.POST)
+	@RequestMapping(path="/login", method=RequestMethod.POST)
     public String submit(ModelMap model, @ModelAttribute("loginBean") LoginBean loginBean) {
         if (loginBean != null && loginBean.getUserName() != null & loginBean.getPassword() != null) {
             if (loginBean.getUserName().equals("drew") && loginBean.getPassword().equals("1")) {
