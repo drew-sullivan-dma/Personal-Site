@@ -16,7 +16,7 @@
      				<div class="delete-book">
 		        		<form action="${pageContext.request.contextPath}/bookRecommendations" method="POST" class="book-delete-form">
        						<input name="id" type="hidden" value="${book.id}">
-       						<button type="submit" onClick="return confirm('Are you sure?')" class="btn btn-danger">
+       						<button type="submit" onClick="return confirm('Are you sure you want to delete ${book.title}?')" class="btn btn-danger">
 			                	<span class="glyphicon glyphicon-remove"></span>
 			                </button>
 			            </form>
