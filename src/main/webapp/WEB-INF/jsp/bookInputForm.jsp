@@ -46,6 +46,20 @@
 	    </div>
         <button type="submit" class="btn btn-primary util-block">Submit</button>
     </form>
+    <div class="delete-book">
+	    <c:forEach items="${books}" var="book">
+			<form action="${pageContext.request.contextPath}/bookRecommendations" method="POST" class="book-delete-form">
+				<input name="id" type="hidden" value="${book.id}">
+				<p class="util-inline-block">${book.title}</p>
+				<button type="submit" onClick="return confirm('Are you sure you want to delete ${book.title}?')" class="btn btn-danger">
+			     	<span class="glyphicon glyphicon-remove"></span>
+			     </button>
+			 </form>
+		</c:forEach>
+	</div>
+    
+    	
+   
 </div>
 
 <c:import url="/WEB-INF/jsp/footer.jsp" />

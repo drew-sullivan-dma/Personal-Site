@@ -69,8 +69,11 @@ public class SiteController {
 	@RequestMapping("/bookInputForm")
 	public String displayBookInputForm(ModelMap model) {
 		List<Category> categoryList = new ArrayList<>();
+		List<Book> bookList = new ArrayList<>();
 		categoryList = categoryDAO.getAllCategories();
+		bookList = bookDAO.getAllBooks();
 		model.put("categories", categoryList);
+		model.put("books", bookList);
 		return "bookInputForm";
 	}
 	

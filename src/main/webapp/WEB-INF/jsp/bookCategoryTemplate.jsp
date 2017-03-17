@@ -13,14 +13,6 @@
        		<input id="book" name="book-id-${book.id}" type="hidden" value="${book.id}"></input>
     		<div class="row">
      			<div class="col-sm-9">
-     				<div class="delete-book">
-		        		<form action="${pageContext.request.contextPath}/bookRecommendations" method="POST" class="book-delete-form">
-       						<input name="id" type="hidden" value="${book.id}">
-       						<button type="submit" onClick="return confirm('Are you sure you want to delete ${book.title}?')" class="btn btn-danger">
-			                	<span class="glyphicon glyphicon-remove"></span>
-			                </button>
-			            </form>
-		            </div>
       				<h3><a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">${book.title}</a></h3>
    					<div class="book-author">
    						<c:forEach items="${book.authors}" var="author" varStatus="loop">

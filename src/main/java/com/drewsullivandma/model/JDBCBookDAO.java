@@ -22,6 +22,26 @@ public class JDBCBookDAO implements BookDAO {
 	}
 	
 	@Override
+	public List<Book> getAllBooks() {
+		List<Book> bookList = new ArrayList<>();
+		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
+													  + "FROM book;");
+		while(results.next()) {
+			Book b = new Book();
+			b = mapRowToBook2(results);
+			bookList.add(b);
+		}
+		return bookList;
+	}
+	
+	private Book mapRowToBook2(SqlRowSet results) {
+		Book book = new Book();
+		book.setId(results.getInt("book_id"));
+		book.setTitle(results.getString("title"));
+		return book;
+	}
+	
+	@Override
 	public List<Book> getBooksByCategoryId(int categoryId) {
 		List<Book> bookList = new ArrayList<>();
 		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
