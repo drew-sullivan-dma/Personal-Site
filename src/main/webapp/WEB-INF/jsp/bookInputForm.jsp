@@ -53,7 +53,10 @@
 				<p class="util-inline-block">${book.title}</p>
 				<button type="submit" onClick="return confirm('Are you sure you want to delete ${book.title}?')" class="btn btn-danger">
 			     	<span class="glyphicon glyphicon-remove"></span>
-			     </button>
+			    </button>
+			    <c:forEach items="${categories}" var="category">
+			    	<p class="util-inline-block">&nbsp;${category.name}</p>
+	    		</c:forEach>
 			 </form>
 		</c:forEach>
 	</div>

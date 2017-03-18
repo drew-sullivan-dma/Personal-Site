@@ -41,7 +41,7 @@ p {
 }
 
 .bg-3 { 
-    background-color: #3079AB !important; 
+    background-color: #3079AB; 
 }
 
 .bg-4 { 
@@ -304,9 +304,16 @@ footer a:hover {
     padding: 50px;
 }
 
-.book-recommendations .mid-page,
-. {
+.book-recommendations .mid-page {
 	margin-top: 15%;
+}
+
+.book-recommendations-template h3 {
+	margin: 0;
+}
+
+.book-title-and-author {
+	padding: 0;
 }
 
 .modal-body p {
@@ -340,13 +347,13 @@ footer a:hover {
 }
 
 
-.book-recommendations button {
+.book-recommendations button, .login-button {
 	background-color: white;
 	border: 2px solid #474E5D;
 	transition: .2s ease-in-out;
 }
 
-.book-recommendations button:hover {
+.book-recommendations button:hover, .login-button:hover {
 	border: 2px solid #8c8c8c;
 }
 
@@ -380,11 +387,20 @@ footer a:hover {
 	display: inline-block;
 }
 
+.btn-box {
+	padding-right: 0;
+}
+
 .btn-box i {
 	float: right;
 	font-size: 30px;
 	padding-left: 10px;
 	color: #4d4d4d;
+}
+
+.book-info {
+	border-bottom: 1px solid #3E474F;
+	margin: 15px;
 }
 
 .book-recommendations .fa:hover:before {
@@ -409,12 +425,6 @@ footer a:hover {
 	color: #4d4d4d;
 	transition: .2s ease-in-out;
 	font-style: italic;
-}
-
-.secret-login-button {
-	background: transparent;
-    border: none !important;
-    font-size: 0;
 }
 
 .mid-page .book {
