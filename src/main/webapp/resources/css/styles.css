@@ -165,6 +165,7 @@ p, li {
     border-radius: 0 0 5px 5px;
     padding: 30px;
     box-shadow: 0 2px 5px black;
+    margin-top: 0;
 }
 
 .mid-page a:active {
