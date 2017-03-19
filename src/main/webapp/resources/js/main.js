@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	
+	$('.about-me button').click(function() {
+		$('.story-long-p').toggle('slow');
+	});
 
 	$('[data-toggle="tooltip"]').tooltip();
 		

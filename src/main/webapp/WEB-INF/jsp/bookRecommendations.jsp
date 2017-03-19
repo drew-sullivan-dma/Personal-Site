@@ -7,12 +7,8 @@
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
 <div class="container-fluid bg-0 text-center book-recommendations">
-	<div class="mid-page bg-white border-radius-top">
-	    <div class="row">
-	        <div class="col-md-12">
-	        	<h1>Book Recommendations</h1>
-	        </div>
-	    </div>
+	<h1 class="border-radius-top book-recommendations-header bg-8">Book Recommendations</h1>
+	<div class="mid-page bg-white">
 	    <div class="row">
 	        <div class="col-md-12">
 		        <p>I've read a ton of great stuff. Please consider purchasing by clicking through to Amazon.com from this site. 

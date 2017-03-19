@@ -8,7 +8,7 @@
 
 <div class="container-fluid bg-0 text-center">
 	<h1 class="border-radius-top book-recommendations-header bg-6">Please Login</h1>
-		<div class="mid-page bg-white">
+	<div class="mid-page bg-white">
 		<form name="submitForm" method="POST">
 		    <div class="row">
 		        <div class="col-md-12">

@@ -88,7 +88,7 @@ public class SiteController {
 	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
 	public String deleteBookRecordsByBookId(@RequestParam int id) {
 		bookDAO.deleteBookRecordsByBookId(id);
-		return "redirect:/bookRecommendations";
+		return "redirect:/bookInputForm";
 	}
 	
 	@RequestMapping(path="/bookRecommendations/{categoryId}", method=RequestMethod.GET)

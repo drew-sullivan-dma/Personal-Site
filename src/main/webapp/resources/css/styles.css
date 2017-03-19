@@ -15,7 +15,7 @@ body {
 	color: #f5f6f7;
 }
 
-p {
+p, li {
 	font-size: 16px;
 }
   
@@ -304,12 +304,12 @@ footer a:hover {
     padding: 50px;
 }
 
-.book-recommendations .mid-page {
-	margin-top: 15%;
-}
-
 .book-recommendations-template h3 {
 	margin: 0;
+}
+
+.book-recommendations-template h3 a{
+	transition: .1s ease-in-out;
 }
 
 .book-title-and-author {
@@ -341,19 +341,23 @@ footer a:hover {
 	padding: 25px;
 }
 
+.about-me h4 {
+	text-decoration: underline;
+}
+
 .about-me .fa:hover {
 	transition: .2s ease-in-out;
 	text-decoration: none;
 }
 
 
-.book-recommendations button, .login-button {
+.book-recommendations button, .login-button, #story-short-long  {
 	background-color: white;
 	border: 2px solid #474E5D;
 	transition: .2s ease-in-out;
 }
 
-.book-recommendations button:hover, .login-button:hover {
+.book-recommendations button:hover, .login-button:hover, #story-short-long:hover {
 	border: 2px solid #8c8c8c;
 }
 
