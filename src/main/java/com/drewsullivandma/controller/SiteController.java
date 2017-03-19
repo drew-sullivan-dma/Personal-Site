@@ -46,7 +46,7 @@ public class SiteController {
 	@RequestMapping(path="/login", method=RequestMethod.POST)
     public String submit(ModelMap model, @ModelAttribute("loginBean") LoginBean loginBean) {
         if (loginBean != null && loginBean.getUserName() != null & loginBean.getPassword() != null) {
-            if (loginBean.getUserName().equals("drew") && loginBean.getPassword().equals("1")) {
+            if (loginBean.getUserName().toLowerCase().equals("drew") && loginBean.getPassword().equals("4rLsHMW@UW97JvVT*=ACyVww")) {
                 return "redirect:/bookInputForm";
             } else {
                 model.addAttribute("error", "Incorrect Username or Password");
