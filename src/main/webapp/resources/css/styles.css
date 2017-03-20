@@ -200,9 +200,12 @@ p, li {
 	padding-bottom: 15px;
 	border-radius: 0 !important;
 	margin-bottom: 0 !important;
-	font-size: 12px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+}
+
+.navbar a {
+	font-size: 12px;
 }
   
 .bg-navbar {
