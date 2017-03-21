@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.drewsullivandma.model.Author;
+import com.drewsullivandma.model.AuthorDAO;
+//import com.drewsullivandma.model.AuthorFormatter;
 import com.drewsullivandma.model.Book;
 import com.drewsullivandma.model.BookDAO;
 import com.drewsullivandma.model.Category;
@@ -25,6 +28,7 @@ public class SiteController {
 	
 	CategoryDAO categoryDAO;
 	BookDAO bookDAO;
+	AuthorDAO authorDAO;
 	
 	@Autowired
 	public SiteController(CategoryDAO categoryDAO, BookDAO bookDAO) {
@@ -94,6 +98,7 @@ public class SiteController {
 	@RequestMapping(path="/bookRecommendations/{categoryId}", method=RequestMethod.GET)
 	public String displayCategoryPage(@PathVariable int categoryId, ModelMap model) {
 		List<Book> bookList = new ArrayList<>();
+		List<Author> authorList = new ArrayList<>();
 		String categoryName = categoryDAO.getCategoryNameByCategoryId(categoryId);
 		bookList = bookDAO.getBooksByCategoryId(categoryId);
 		model.put("categoryName", categoryName);

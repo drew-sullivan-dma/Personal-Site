@@ -9,8 +9,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				</button>
-			  	<a class="navbar-brand" href="${pageContext.request.contextPath}/aboutMe">
-			  		<!-- <img src="resources/images/C.png" /> --> Drew
+			  	<a class="navbar-brand nav-logo" href="${pageContext.request.contextPath}/aboutMe">
+			  		<img src="resources/images/logo.png" />
 			  	</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">

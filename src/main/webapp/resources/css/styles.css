@@ -213,7 +213,7 @@ p, li {
 }
 
 .bg-navbar a {
-	color: #b2bbbd;
+	color: #949494;
 }
 
 .navbar a:hover {
@@ -228,6 +228,16 @@ p, li {
 
 .navbar button {
 	border-color: #b2bbbd;
+}
+
+.nav-logo {
+	padding: 0;
+}
+
+.navbar img {
+	width: 280px;
+	padding-top: 5px;
+	position: relative;
 }
   
 /* Footer:  */
