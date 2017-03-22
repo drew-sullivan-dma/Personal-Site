@@ -20,10 +20,18 @@
 	    </div>
 	    <div class="row">
 	        <div class="col-md-12 home-page-buttons">
-	        	<a href="${pageContext.request.contextPath}/bookRecommendations"><button class="btn bg-white home-page-button" type="button">Book Recommendations</button></a>
-				<a href="${pageContext.request.contextPath}/aboutMe"><button class="btn bg-white home-page-button" type="button">About Me</button></a>
-				<a href="https://github.com/drew-sullivan-dma/Personal-Site"><button class="btn bg-white home-page-button" type="button">The Code</button></a>
+	        	<!-- <div class="col-md-3"> -->
+	        		<a href="${pageContext.request.contextPath}/bookRecommendations"><button class="btn bg-white home-page-button" type="button">Book Recommendations</button></a>
+	        	<!-- </div>
+	        	<div class="col-md-3"> -->
+					<a href="${pageContext.request.contextPath}/aboutMe"><button class="btn bg-white home-page-button" type="button">About Me</button></a>
+				<!-- </div>
+	        	<div class="col-md-3"> -->
+					<a href="https://github.com/drew-sullivan-dma/Personal-Site"><button class="btn bg-white home-page-button" type="button">The Code</button></a>
+				<!-- </div>
+	        	<div class="col-md-3"> -->
 				<a href="mailto:drew.sullivan.dma@gmail.com"><button class="btn bg-white home-page-button pull-right" type="button">Contact Me</button></a>
+				<!-- </div> -->
 	        </div>
     	</div>
 	</div>
