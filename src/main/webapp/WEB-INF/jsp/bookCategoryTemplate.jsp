@@ -17,13 +17,13 @@
    					<div class="book-author">
    						<c:forEach items="${book.authors}" var="author" varStatus="loop">
    							<c:choose>
-   								<c:when test="${author.middleInitials == null && author.postNominalInitials == null}">
+   								<c:when test="${fn:length(author.middleInitials) lt 1 && fn:length(author.postNominalInitials) lt 1}">
    									${author.firstName}&nbsp;${author.lastName}
    								</c:when>
-   								<c:when test="${author.middleInitials != null && author.postNominalInitials == null}">
+   								<c:when test="${fn:length(author.middleInitials) gt 0 && fn:length(author.postNominalInitials) lt 1}">
    									${author.firstName}&nbsp;${author.middleInitials}&nbsp;${author.lastName}
    								</c:when>
-   								<c:when test="${author.middleInitials == null && author.postNominalInitials != null}">
+   								<c:when test="${fn:length(author.middleInitials) lt 1 && fn:length(author.postNominalInitials) gt 0}">
    									${author.firstName}&nbsp;${author.lastName}&nbsp;${author.postNominalInitials}
    								</c:when>
    								<c:otherwise>
