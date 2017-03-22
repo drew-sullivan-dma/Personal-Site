@@ -372,22 +372,30 @@ footer a:hover {
 }
 
 
-.book-recommendations button, .login-button, #story-short-long, .home-page button  {
+.book-recommendations button, 
+.login-button, 
+#story-short-long, 
+.home-page button,
+.book-recommendations-template button {
 	background-color: white;
 	border: 2px solid #474E5D;
 	transition: .2s ease-in-out;
 }
 
-.book-recommendations button:hover, .login-button:hover, #story-short-long:hover {
+.book-recommendations button:hover, 
+.login-button:hover, 
+#story-short-long:hover, 
+.home-page button:hover,
+.book-recommendations-template button:hover {
 	border: 2px solid #8c8c8c;
+}
+
+.book-recommendations-template button {
+	margin: 0 15px;
 }
 
 .book-recommendations .dropdown {
 	display: inline-block;
-}
-
-.show {
-	display: inline-block !important;	
 }
 
 .modal button {
@@ -560,6 +568,16 @@ footer a:hover {
 	.book-recommendations i {
     	padding-left: 25px;
     	padding-top: 0;
+    }
+    .home-page button,
+    .book-recommendations-template button {
+    	display: block;
+    	width: 100%;
+    	margin-bottom: 5px;
+    }
+    .footer a {
+    	display: block;
+    	text-align: center;
     }
 	
 }

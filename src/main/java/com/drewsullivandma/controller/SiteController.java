@@ -67,7 +67,7 @@ public class SiteController {
         }
     }
 	
-	@RequestMapping({"/", "/bookRecommendations"})
+	@RequestMapping("/bookRecommendations")
 	public String displayBookRecommendations(ModelMap model) {
 		List<Category> categoryList = new ArrayList<>();
 		categoryList = categoryDAO.getAllCategories();
@@ -102,14 +102,15 @@ public class SiteController {
 	
 	@RequestMapping(path="/bookRecommendations/{categoryId}", method=RequestMethod.GET)
 	public String displayCategoryPage(@PathVariable int categoryId, ModelMap model) {
+		List<Category> categoryList = new ArrayList<>();
 		List<Book> bookList = new ArrayList<>();
-		List<Author> authorList = new ArrayList<>();
+		categoryList = categoryDAO.getAllCategories();
 		String categoryName = categoryDAO.getCategoryNameByCategoryId(categoryId);
 		bookList = bookDAO.getBooksByCategoryId(categoryId);
 		model.put("categoryName", categoryName);
 		model.put("categoryId", categoryId);
+		model.put("categories", categoryList);
 		model.put("books", bookList);
 		return "bookCategoryTemplate";
 	}
-	
 }

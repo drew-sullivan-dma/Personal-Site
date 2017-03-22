@@ -9,6 +9,20 @@
 <div class="container-fluid bg-0 text-center book-recommendations-template">
 	<h1 class="book-recommendations-header bg-${categoryId} border-radius-top">${categoryName}</h1>
 	<div class="mid-page bg-white">
+		<div class="row">
+	        <div class="col-md-12">
+	            <div class="dropdown">
+					<button class="btn bg-white dropdown-toggle" type="button" data-toggle="dropdown">Visit Another Category
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+					    <c:forEach items="${categories}" var="category">
+                        	<li><a href="${pageContext.request.contextPath}/bookRecommendations/${category.categoryId}">${category.name}</a></li>
+                        </c:forEach>
+					</ul>
+				</div>
+	        </div>
+    	</div>
        	<c:forEach items="${books}" var="book">
        		<input id="book" name="book-id-${book.id}" type="hidden" value="${book.id}"></input>
     		<div class="row book-info">
@@ -53,7 +67,6 @@
 							    <!-- Modal content-->
 								<div class="modal-content bg-2">
 									<div class="modal-header border-radius-bottom-0 bg-white">
-										<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 										<h3 class="modal-title">${book.title}</h3>
 									</div>
 									<div class="modal-body border-radius-top-0 bg-white">

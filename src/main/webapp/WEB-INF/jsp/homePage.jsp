@@ -7,7 +7,7 @@
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
 <div class="container-fluid bg-0 text-center home-page">
-	<h1 class="border-radius-top book-recommendations-header bg-15">Hi, I'm Drew.</br><small>I built this site from scratch, and I read a lot of books.</small></h1>
+	<h1 class="border-radius-top book-recommendations-header bg-15">Hi, I'm Drew.</br><small>I built this site,</br> and I read a lot of books.</small></h1>
 	<div class="mid-page bg-white">
 	    <div class="row">
 	        <div class="col-md-12">
