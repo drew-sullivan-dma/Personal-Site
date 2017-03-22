@@ -36,6 +36,11 @@ public class SiteController {
 		this.bookDAO = bookDAO;
 	}
 	
+	@RequestMapping(path={"/", "/homePage"}, method=RequestMethod.GET)
+		public String displayHomePage() {
+		return "homePage";
+	}
+	
 	@RequestMapping(path="/aboutMe")
 	public String displayAboutMe() {
 		return "aboutMe";

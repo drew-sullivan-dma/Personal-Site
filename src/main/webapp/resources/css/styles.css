@@ -192,6 +192,10 @@ p, li {
 	border-radius: 4px;
 }
 
+.home-page small {
+	color: white;
+}
+
 
 /* Header: */
 
@@ -223,11 +227,11 @@ p, li {
 }
 
 .navbar span {
-	background-color: #b2bbbd;
+	background-color: #949494;
 }
 
 .navbar button {
-	border-color: #b2bbbd;
+	border-color: #949494;
 }
 
 .nav-logo {
@@ -236,7 +240,6 @@ p, li {
 
 .navbar img {
 	width: 280px;
-	padding-top: 5px;
 	position: relative;
 }
   
@@ -365,7 +368,7 @@ footer a:hover {
 }
 
 
-.book-recommendations button, .login-button, #story-short-long  {
+.book-recommendations button, .login-button, #story-short-long, .home-page button  {
 	background-color: white;
 	border: 2px solid #474E5D;
 	transition: .2s ease-in-out;

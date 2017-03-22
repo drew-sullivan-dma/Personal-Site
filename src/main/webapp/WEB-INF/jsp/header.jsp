@@ -9,18 +9,16 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				</button>
-			  	<a class="navbar-brand nav-logo" href="${pageContext.request.contextPath}/aboutMe">
-			  		<img src="resources/images/logo.png" />
+			  	<a class="navbar-brand nav-logo" href="${pageContext.request.contextPath}/homePage">
+			  		<img src="${pageContext.request.contextPath}/resources/images/logo.png" />
 			  	</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  	<ul class="nav navbar-nav navbar-right">
-				    <li><a href="${pageContext.request.contextPath}/bookRecommendations">Book Recommendations</a></li>
+				    <li><a href="${pageContext.request.contextPath}/bookRecommendations">Books</a></li>
 				    <li><a href="${pageContext.request.contextPath}/aboutMe">About Me</a></li>
 				    <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
 			  	</ul>
 			</div>
 		</div>
 	</header>
-	
-	<!-- <img src="resources/images/C.png" /> -->

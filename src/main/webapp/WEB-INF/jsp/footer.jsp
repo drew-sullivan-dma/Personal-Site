@@ -3,7 +3,7 @@
 		<footer class="footer bg-navbar">
       		<div class="container">
 				<a href="${pageContext.request.contextPath}/aboutMe">Drew Sullivan, DMA</a>
-				<a href="${pageContext.request.contextPath}/bookRecommendations">Book Recommendations</a>
+				<a href="${pageContext.request.contextPath}/bookRecommendations">Books</a>
 				<a href="${pageContext.request.contextPath}/aboutMe">About Me</a>
 				<a href="${pageContext.request.contextPath}/login">Login</a>
 			</div>
