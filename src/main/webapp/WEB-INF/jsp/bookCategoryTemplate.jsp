@@ -26,9 +26,9 @@
        	<c:forEach items="${books}" var="book">
        		<input id="book" name="book-id-${book.id}" type="hidden" value="${book.id}"></input>
     		<div class="row book-info">
-     			<div class="col-sm-9 book-title-and-author">
+     			<div class="col-xs-11 book-title-and-author">
       				<h3><a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">${book.title}</a></h3>
-   					<div class="book-author">
+   					<div class="book-author truncate">
    						<c:forEach items="${book.authors}" var="author" varStatus="loop">
    							<c:choose>
    								<c:when test="${fn:length(author.middleInitials) lt 1 && fn:length(author.postNominalInitials) lt 1}">
@@ -67,26 +67,25 @@
 							    <!-- Modal content-->
 								<div class="modal-content bg-2">
 									<div class="modal-header border-radius-bottom-0 bg-white">
-										<h3 class="modal-title">${book.title}</h3>
+										<a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
+				    						<h3 class="modal-title">${book.title}</h3>
+				    					</a>
 									</div>
 									<div class="modal-body border-radius-top-0 bg-white">
 										<p>${description.description}</p>
-										<a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">
-				    						<i class="fa fa-amazon pull-right"></i>
-				    					</a>
 										<button type="button" class="btn bg-white modal-close" data-dismiss="modal">Close</button>
 									</div>
 								</div>
 							</div>
 						</div> <!-- .modal -->
 					</c:forEach>
-    			</div> <!-- .col-sm-9 -->
-  				<div class="col-sm-3 btn-box">
+    			</div> <!-- .col-sm-11 -->
+  				<div class="col-xs-1 btn-box">
    					<a class="clickable" type="button" data-toggle="modal" data-target="#largeModal${book.id}">
 		    			<i class="fa fa-question-circle"></i>
 		    		</a>
 		    		<img src="//ir-na.amazon-adsystem.com/e/ir?t=drewsullivand-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-				</div> <!-- .col-sm-3 -->
+				</div> <!-- .col-sm-1 -->
  			</div> <!-- .row -->
        	</c:forEach>
 	</div>
