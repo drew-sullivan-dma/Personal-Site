@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-/* .category {
-	display: none;
-} */
-
 * {
 	font-family: 'Montserrat', sans-serif;
 	/* border: 1px solid red; */
@@ -192,13 +188,17 @@ p, li {
 	border-radius: 4px;
 }
 
+
+
+/* Home Page: */
+
 .home-page small {
 	color: white;
 }
 
-/* Home Page: */
-
-
+.home-page .logo {
+	width: 100%;
+}
 
 
 /* Header: */
@@ -583,6 +583,9 @@ footer a:hover {
     .footer a {
     	display: block;
     	text-align: center;
+    }
+    .home-page h1 {
+    	display: none;
     }
 	
 }
