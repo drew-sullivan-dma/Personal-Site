@@ -48,10 +48,8 @@ public class JDBCBookDAO implements BookDAO {
 													  + "FROM book_category bc "
 													  + "JOIN book b ON bc.book_id = b.book_id "
 													  + "JOIN category c ON bc.category_id = c.category_id "
-													  + "JOIN author_book ab ON b.book_id = ab.book_id "
-													  + "JOIN author a ON ab.author_id = a.author_id "
 													  + "WHERE c.category_id = ? "
-													  + "ORDER BY a.last_name;", categoryId);
+													  + "ORDER BY b.title;", categoryId);
 		while(results.next()) {
 			Book b = new Book();
 			b = mapRowToBook(results);
