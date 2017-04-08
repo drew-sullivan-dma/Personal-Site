@@ -78,6 +78,26 @@ public class JDBCBookDAO implements BookDAO {
 		deleteBookRecord(id);
 	}
 	
+//	@Override
+//	public void updateBookRecordByBookId(int id) {
+//		updateBookCategoryRecord(id);
+//		updateAuthorBookRecord(id);
+//		updateBookDescriptionRecord(id);
+//		updateBookRecord(id);
+//	}
+//	
+//	private void updateBookCategoryRecord(int id) {
+//		String sqlUpdateBookBookCategoryRecord = "DELETE FROM book_category bc "
+// 			 			 					   + "WHERE bc.book_id = ?;";
+//		jdbcTemplate.update(sqlDeleteBookBookCategoryRecord, id);
+//	}
+	
+	private void updateBookRecord(int id) {
+		String sqlDeleteBook = "DELETE FROM book "
+				 			 + "WHERE book_id = ?;";
+		jdbcTemplate.update(sqlDeleteBook, id);
+	}
+	
 	private void deleteBookRecord(int id) {
 		String sqlDeleteBook = "DELETE FROM book "
 				 			 + "WHERE book_id = ?;";

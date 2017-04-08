@@ -100,6 +100,11 @@ public class SiteController {
 		return "redirect:/bookInputForm";
 	}
 	
+//	@RequestMapping(path="/bookRecommendations", method=RequestMethod.POST)
+//	public String updateBookRecordsById(@RequestParam int id) {
+//		bookDAO.
+//	}
+	
 	@RequestMapping(path="/bookRecommendations/{categoryId}", method=RequestMethod.GET)
 	public String displayCategoryPage(@PathVariable int categoryId, ModelMap model) {
 		List<Category> categoryList = new ArrayList<>();
@@ -113,4 +118,10 @@ public class SiteController {
 		model.put("books", bookList);
 		return "bookCategoryTemplate";
 	}
+	
+	@RequestMapping(path="/ihm")
+	public String displayIhm() {
+		return "ihm";
+	}
+	
 }
