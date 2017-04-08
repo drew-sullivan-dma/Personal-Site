@@ -119,7 +119,7 @@ public class SiteController {
 		return "bookCategoryTemplate";
 	}
 	
-	@RequestMapping(path="/ihm")
+	@RequestMapping(path="/ihm", method=RequestMethod.GET)
 	public String displayIhm() {
 		return "ihm";
 	}
