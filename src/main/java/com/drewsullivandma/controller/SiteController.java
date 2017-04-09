@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.drewsullivandma.model.Author;
-import com.drewsullivandma.model.AuthorDAO;
-//import com.drewsullivandma.model.AuthorFormatter;
 import com.drewsullivandma.model.Book;
 import com.drewsullivandma.model.BookDAO;
 import com.drewsullivandma.model.Category;
@@ -28,7 +25,6 @@ public class SiteController {
 	
 	CategoryDAO categoryDAO;
 	BookDAO bookDAO;
-	AuthorDAO authorDAO;
 	
 	@Autowired
 	public SiteController(CategoryDAO categoryDAO, BookDAO bookDAO) {
@@ -46,26 +42,26 @@ public class SiteController {
 		return "aboutMe";
 	}
 	
-	@RequestMapping(path="/login", method=RequestMethod.GET)
-    public String init(ModelMap model) {
-        model.addAttribute("welcomeMessage", "Please Enter Your Username and Password");
-        return "login";
-    }
+//	@RequestMapping(path="/login", method=RequestMethod.GET)
+//    public String init(ModelMap model) {
+//        model.addAttribute("welcomeMessage", "Please Enter Your Username and Password");
+//        return "login";
+//    }
 	
-	@RequestMapping(path="/login", method=RequestMethod.POST)
-    public String submit(ModelMap model, @ModelAttribute("loginBean") LoginBean loginBean) {
-        if (loginBean != null && loginBean.getUserName() != null & loginBean.getPassword() != null) {
-            if (loginBean.getUserName().toLowerCase().equals("drew") && loginBean.getPassword().equals("4rLsHMW@UW97JvVT*=ACyVww")) {
-                return "redirect:/bookInputForm";
-            } else {
-                model.addAttribute("error", "Incorrect Username or Password");
-                return "login";
-            }
-        } else {
-            model.addAttribute("error", "Incorrect Username or Password");
-            return "login";
-        }
-    }
+//	@RequestMapping(path="/login", method=RequestMethod.POST)
+//    public String submit(ModelMap model, @ModelAttribute("loginBean") LoginBean loginBean) {
+//        if (loginBean != null && loginBean.getUserName() != null & loginBean.getPassword() != null) {
+//            if (loginBean.getUserName().toLowerCase().equals("drew") && loginBean.getPassword().equals("4rLsHMW@UW97JvVT*=ACyVww")) {
+//                return "redirect:/bookInputForm";
+//            } else {
+//                model.addAttribute("error", "Incorrect Username or Password");
+//                return "login";
+//            }
+//        } else {
+//            model.addAttribute("error", "Incorrect Username or Password");
+//            return "login";
+//        }
+//    }
 	
 	@RequestMapping("/bookRecommendations")
 	public String displayBookRecommendations(ModelMap model) {
