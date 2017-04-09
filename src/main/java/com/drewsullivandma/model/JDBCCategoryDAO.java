@@ -24,7 +24,8 @@ public class JDBCCategoryDAO implements CategoryDAO{
 	public List<Category> getAllCategories() {
 		List<Category> categoryList = new ArrayList<>();
 		SqlRowSet results = jdbcTemplate.queryForRowSet("SELECT * "
-													  + "FROM category;");
+													  + "FROM category "
+													  + "ORDER BY name ASC;");
 		while(results.next()) {
 			Category c = new Category();
 			c = mapRowToCategory(results);
