@@ -27,7 +27,7 @@
        		<input id="book" name="book-id-${book.id}" type="hidden" value="${book.id}"></input>
     		<div class="row book-info">
      			<div class="col-xs-11 book-title-and-author">
-      				<h3><a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">${book.title}</a></h3>
+      				<h3 class="truncate"><a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=drewsullivand-20&linkCode=ur2&linkId=fb8b29794ada8afbd24c93c9f7a08f58&camp=1789&creative=9325&index=books&keywords=${book.title}">${book.title}</a></h3>
    					<div class="book-author truncate">
    						<c:forEach items="${book.authors}" var="author" varStatus="loop">
    							<c:choose>
